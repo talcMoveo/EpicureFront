@@ -1,15 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './normalize.css';
-import Header from './components/Header';
-import Hero from './components/Hero';
+
+import Homepage from './components/Homepage/Homepage';
 
 function App() {
+
   return (
     <div className="App">
-      <Header></Header>
-      <Hero></Hero>
+      <Homepage></Homepage>
     </div>
   );
 }

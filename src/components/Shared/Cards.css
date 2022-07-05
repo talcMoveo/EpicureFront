@@ -1,0 +1,75 @@
+.card-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 379px;
+    padding-bottom: 15px;
+    background-color: #F9F4EA;
+}
+
+.restaurant-card-wrapper img {
+    height: 236px;
+    width: 379px;
+}
+
+.card-name {
+    margin-top: 18px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+}
+
+.restaurant-chef {
+    margin-top: 8px;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.restaurant-rating-img img{
+    margin-top: 8px;
+    height: 40px;
+    width: 40px;
+}
+
+.dish-ingredients {
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1.97px;
+    margin-top: 8px;
+    max-width: 295px;
+}
+
+.dish-0 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.dish-1 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.dish-2 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+
+.dish-0, .dish-1, .dish-2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: stretch;
+    background-color: #F9F4EA;
+
+}
+
+.feature-svg {
+    /* grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center; */
+    margin-bottom: 5px;
+    width: 35px;
+    height: auto;
+}

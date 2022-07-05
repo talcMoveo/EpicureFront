@@ -1,7 +1,6 @@
 import React from 'react';
+import SearchBar from '../Shared/SearchBar';
 import './Hero.css';
-
-// import background from '../Assets/Hero/hero-picture.png';
 
 const Hero: React.FC = () => {
   const heroText = 'Epicure works with the top chef restaurants in Tel Aviv';
@@ -12,7 +11,7 @@ const Hero: React.FC = () => {
             <span className='hero-text'>
                 {heroText}
             </span>
-            Search bar placeholder
+            <SearchBar />
         </div>
     </div>
   );

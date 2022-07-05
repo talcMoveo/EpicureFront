@@ -1,5 +1,5 @@
 export enum features {
-    spicy,
-    vegetarian,
-    vegan
+    spicy = 'spicy',
+    vegetarian = 'veg',
+    vegan = 'vegan'
 }

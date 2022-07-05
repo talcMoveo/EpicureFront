@@ -1,18 +1,16 @@
 import Restaurant from "./restaurant";
 
-
-
 class Chef {
     // id: string;
     name: string;
-    photoSrc: string;
-    description: string;
-    restaurants: Restaurant[] = [];
+    // photoSrc: string;
+    // description: string;
+    // restaurants: Restaurant[] = [];
   
-    constructor(name: string, photoSrc: string, description: string) {
+    constructor(name: string) {
       this.name = name;
-      this.photoSrc = photoSrc;
-      this.description = description;
+      // this.description = description;
+      // this.photoSrc = photoSrc;
     }
   }
   
