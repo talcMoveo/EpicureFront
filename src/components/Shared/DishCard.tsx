@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cards.css';
+import './Cards.scss';
 
 import Dish from '../../models/dish';
 import priceLine from '../../Assets/Dishes/logos/dishPriceLine.svg'
@@ -49,7 +49,7 @@ const DishCard: React.FC<{dish: Dish, dishId: number}> = (props) => {
             <img src={priceLine} />
           </div>)
         } else {
-          return <img className='feature-svg' src={feat} key={index}/>
+          return <img className='feature-img' src={feat} key={index}/>
         }
       })}
     </div>
@@ -57,12 +57,3 @@ const DishCard: React.FC<{dish: Dish, dishId: number}> = (props) => {
 };
 
 export default DishCard;
-
-/**   
- * name: string;
-    photoSrc: string;
-    ingredients: string[];
-    price: number;
-    features: features[];
- * 
- */

@@ -1,0 +1,58 @@
+.shopping-cart {
+    position: absolute;
+    width: 497px;
+    height: 586px;
+    left: 943px;
+    top: 64px;
+    
+    background: #FFFFFF;
+    box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .shopping-cart-empty {
+        padding: 0px;
+        gap: 16px;
+    
+        position: absolute;
+        width: 121px;
+        height: 105px;
+        left: 188px;
+        top: 241px;
+    
+        opacity: 0.5;
+        
+        img {
+            width: 44.92px;
+            height: 44.92px;
+        }
+        
+        p {
+            font-weight: 200;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 1.97px;
+        }
+    }
+    
+    
+    button {
+        background-color: transparent;
+        width: 220px;
+        height: 48px;
+        top: 495px;
+        border: 1px solid #000000;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 2.67px;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+}

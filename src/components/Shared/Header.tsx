@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Header.css';
+import './Header.scss';
 
 import logo from '../../Assets/General/logo.svg';
 import search from '../../Assets/Header/searchLogo.svg';
@@ -14,10 +14,10 @@ const Header: React.FC = () => {
   return (
     <div className='header-wrapper'>
       <div className='header-pages-links'>
-        <img src={logo} className='header-logo' alt="logo" />
-        <nav className='header-nav'>
-          <a className='header-nav-item'>Restaurants</a>
-          <a className='header-nav-item'>Chefs</a>
+        <img src={logo}  alt="logo" />
+        <nav>
+          <a>Restaurants</a>
+          <a>Chefs</a>
         </nav>
       </div>
       <div className='header-actions'>

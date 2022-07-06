@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cards.css';
+import './Cards.scss';
 
 import Restaurant from '../../models/restaurant';
 import emptyStar from '../../Assets/Restaurants/StarEmpty.svg';
@@ -27,7 +27,7 @@ const RestaurantCard: React.FC<{restaurant: Restaurant, cardType: CardType}> = (
       {
         (props.cardType === 'full') && 
         <div>
-          <div className='restaurant-chef'>{props.restaurant.chef.name}</div>
+          <div className='restaurant-chef-name'>{props.restaurant.chef.name}</div>
           <div className='restaurant-rating-img'>
             {[...Array(props.restaurant.rating)].map((i, index) => {
               return <img src={fullStar} alt="logo" key={index}/>

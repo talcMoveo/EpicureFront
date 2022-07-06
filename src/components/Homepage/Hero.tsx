@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import './Hero.css';
+import './Hero.scss';
 import search from '../../Assets/Header/searchLogo.svg';
 import erase from '../../Assets/General/x.svg';
 
@@ -17,6 +17,10 @@ const Hero: React.FC = () => {
     setEnteredInput('');
   }
 
+  const searchClickHandler = () => {
+    // not implemented yet
+  }
+
   return (
     <div className='hero-wrapper'>
         <div className='hero-inside-wrapper'>
@@ -24,7 +28,7 @@ const Hero: React.FC = () => {
                 {heroText}
             </span>
             <input placeholder='Search for restaurant cuisine, chef' onChange={event => handleChange(event)} value={enteredInput}/>
-            <img className='search-img' src={search} />
+            <img className='search-img' src={search} onClick={searchClickHandler}/>
             {(enteredInput.trim().length !== 0) && <img className='erase-img' src={erase} onClick={eraseClickHandler}/>}
         </div>
     </div>

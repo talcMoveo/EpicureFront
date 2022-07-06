@@ -1,5 +1,5 @@
 import React from 'react';
-import './Homepage.css';
+import './Homepage.scss';
 
 import Header from '../Shared/Header';
 import Hero from './Hero';
@@ -71,8 +71,8 @@ const Homepage: React.FC = () => {
       <Header></Header>
       <Hero></Hero>
 
-      <div className='pre-cards-text'>{"popular restaurants in epicure:".toLocaleUpperCase()}</div>
-      <div className='cards'>
+      <div className='cards-main-title'>{"popular restaurants in epicure:".toLocaleUpperCase()}</div>
+      <div className='restaurant-cards'>
         {restaurants.map((item, index) => {
           return <RestaurantCard
             restaurant={item}
@@ -86,7 +86,7 @@ const Homepage: React.FC = () => {
         <img src={seeMore}/>
       </button>
 
-      <div className='pre-cards-text'>{"signature dish of:".toLocaleUpperCase()}</div>
+      <div className='cards-main-title'>{"signature dish of:".toLocaleUpperCase()}</div>
       <div className='dish-cards'>
         {dishes.map((item, index) => {
           return <DishCard
@@ -97,9 +97,9 @@ const Homepage: React.FC = () => {
         })}
       </div>
 
-      <div className='icon-meanings'>
+      <div className='icons-meaning'>
         <p>{'the meaning of our icons:'.toLocaleUpperCase()}</p>
-        <div className='icons'>
+        <div className='icons-dict'>
           <div>
             <img className='spicy-icon' src={spicy} />
             <p className='spicy-icon-text'>Spicy</p>
@@ -116,13 +116,13 @@ const Homepage: React.FC = () => {
       </div>
 
       <p>{'chef of the week:'.toLocaleUpperCase()}</p>
-      <div className='chef-of-the-week'>
+      <div className='weekly-chef'>
         <img src={yossiShitrit}/>
-        <p className='chef-desc'>{chefs[3].description}</p>
-      </div>
-      <div className='chef-restaurants'>
-        <p className='chef-of-the-week-dishes-title'>{chefs[3].name.split(" ")[0]}'s Restaurants:</p>
-        <div className='chef-of-the-week-dish-cards'>
+        <p className='weekly-chef-desc'>{chefs[3].description}</p>
+      </div>  
+      <div className='weekly-chef-restaurants'>
+        <p className='weekly-chef-dishes-title'>{chefs[3].name.split(" ")[0]}'s Restaurants:</p>
+        <div className='weekly-chef-dish-cards'>
           {yossiRestaurants.map((item, index) => {
             return <RestaurantCard
               restaurant={item}

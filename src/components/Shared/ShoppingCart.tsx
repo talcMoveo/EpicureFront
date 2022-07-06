@@ -1,5 +1,5 @@
 import React from 'react';
-import './ShoppingCart.css';
+import './ShoppingCart.scss';
 
 import cartLogo from '../../Assets/Header/cartLogo.svg';
 import Dish from '../../models/dish';

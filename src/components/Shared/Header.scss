@@ -1,0 +1,115 @@
+.header-wrapper {
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+    margin-left: 127px;
+    
+    .header-pages-links {
+        display: flex;
+        align-items: center;
+        
+        img {
+            width: 162px;
+            height: 33px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            cursor: pointer;
+        }
+    }
+    
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 32px;
+        width: 193px;
+        height: 22px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    
+    a {
+        width: 108px;
+        height: 22px;
+        margin-left: 32px;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 1.92px;
+        
+        &:hover {
+            border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
+            cursor: pointer;
+        }
+    }
+    
+    .header-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        
+        input {
+            position: absolute;
+            right: 220px;
+            
+            background-color: transparent;
+            box-sizing: border-box;
+            border: 0.5px solid #000000;
+            border-radius: 4px;
+            
+            width: 500px;
+            height: 48px;
+            
+            font-weight: 200;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 1.29px;
+            
+            padding-left: 15px;
+            padding-right: 45px;
+            
+            &:focus {
+                outline: 1px;
+            }
+            
+            &::-webkit-input-placeholder {
+                color: #000000;
+            }
+
+            &:focus::-webkit-input-placeholder {
+                opacity: 20%;
+            }
+        }
+        
+        .search-btn {
+            right: 223px;
+        }
+        
+        .profile-btn {
+            right: 175.5px;
+        }
+        
+        .cart-btn {
+            right: 128px;
+        }
+    }
+    
+    button {
+        width: auto;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        background-color: transparent;
+    }
+}
+
+
+
+
