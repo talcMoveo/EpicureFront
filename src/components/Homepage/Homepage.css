@@ -1,17 +1,13 @@
-.homepage-wrapper {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* align-content: center; */
-    /* margin: auto; */
-    /* position: relative; */
+* {
+    font-family: Helvetica Neue;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 35px;
+    letter-spacing: 1.25px;
 }
 
 .pre-cards-text {
-    margin-top: 80px;
-    font-weight: 200;
-    font-size: 30px;
-    line-height: 35px;
+    margin-top: 120px;
 }
 
 .cards {
@@ -25,24 +21,144 @@
 .dish-cards {
     display: grid;
     grid-template-columns: [line1] 126px [line2] auto [line3] 24px [line4] auto [line5] 24px [line6] auto [line7] 126px;
-    grid-template-rows: [row1] 40px [row2] auto [row3] 60px [row4] 80px;
-    /* diving into lines */
-
+    grid-template-rows: [row1] 40px [row2] auto [row3] 80px;
 }
 
-.all-restaurants-text {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    margin-top: 41px;
+.all-restaurants-btn {
+    background-color: transparent;
+    border: none;
+    float: right;
     margin-right: 110px;
+    margin-left: 127.5px;
     font-weight: 400;
     font-size: 24px;
     line-height: 35px;
 }
 
-.all-restaurants-text img {
+.all-restaurants-btn img {
     margin-left: 12px;
     width: 24px;
     height: 18px;
+}
+
+.icon-meanings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 265px;
+    background: #FAFAFA;
+    margin-bottom: 80px;
+}
+
+.icon-meanings p {
+    font-size: 30px;
+    letter-spacing: 2.14px;
+}
+
+.icon-meanings .icons img {
+    height: 60px;
+    width: 77.42px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+}
+
+.chef-of-the-week {
+    margin-top: 40px;
+    margin-bottom: 43px;
+    display: flex;
+    flex-direction: row;
+}
+
+.chef-of-the-week img {
+    margin-left: 127.5px;
+}
+
+.chef-of-the-week .chef-desc {
+    margin-right: 129px;
+    margin-left: 63.5px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.chef-restaurants {
+    text-align: left;
+    margin-left: 127.5px;
+    margin-top: 45px;
+}
+
+.chef-of-the-week-dishes-title {
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+
+.chef-of-the-week-dish-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 357px;
+    gap: 16px;
+}
+
+.about-us {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    padding-left: 132px;
+    height: 529px;
+    background: #FAFAFA;
+}
+
+.about-us img {
+    margin-bottom: 30px;
+}
+
+.about-us-text {
+    display: flex;
+    flex-direction: row;
+    gap: 432px;
+}
+
+.about-us-text p {
+    width: 569px;
+    height: auto;
+    text-align: left;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 2.14px;
+    align-items: center;
+}
+
+.about-us-buttons {
+    margin-top: 20px;
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-us-buttons button {
+    background-color: transparent;
+    border: none;
+    width: 180px;
+    height: 52px;
+    margin-right: 16px;
+    align-items: center;
+    padding: 0;
+}
+
+.about-us-buttons img {
+    width: 180px;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
 }

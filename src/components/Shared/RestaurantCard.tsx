@@ -5,21 +5,39 @@ import Restaurant from '../../models/restaurant';
 import emptyStar from '../../Assets/Restaurants/StarEmpty.svg';
 import fullStar from '../../Assets/Restaurants/StarFull.svg';
 
+export enum CardType {
+  full= 'full',
+  small= 'small'
+}
 
-const RestaurantCard: React.FC<Restaurant> = (props) => {
+
+const RestaurantCard: React.FC<{restaurant: Restaurant, cardType: CardType}> = (props) => {
+
+  let cardWrapperClass = 'card-wrapper'
+  let cardNameClass = 'card-name';
+  if (props.cardType === 'small') {
+    cardWrapperClass = 'card-wrapper-small'
+    cardNameClass = 'card-name-small';
+  }
+
   return (
-    <div className='card-wrapper'>
-      <img src={props.photoSrc} alt="logo" />
-      <div className='card-name'>{props.name}</div>
-      <div className='restaurant-chef'>{props.chef.name}</div>
-      <div className='restaurant-rating-img'>
-        {[...Array(props.rating)].map((i) => {
-          return <img src={fullStar} alt="logo" />
-        })}
-        {[...Array(5 - props.rating)].map((i) => {
-          return <img src={emptyStar} alt="logo" />
-        })}
-      </div>
+    <div className={cardWrapperClass}>
+      <img src={props.restaurant.photoSrc} alt={props.restaurant.name} />
+      <div className={cardNameClass}>{props.restaurant.name}</div>
+      {
+        (props.cardType === 'full') && 
+        <div>
+          <div className='restaurant-chef'>{props.restaurant.chef.name}</div>
+          <div className='restaurant-rating-img'>
+            {[...Array(props.restaurant.rating)].map((i, index) => {
+              return <img src={fullStar} alt="logo" key={index}/>
+            })}
+            {[...Array(5 - props.restaurant.rating)].map((i, index) => {
+              return <img src={emptyStar} alt="logo" key={index}/>
+            })}
+          </div>
+        </div>
+      }
     </div>
   );
 };

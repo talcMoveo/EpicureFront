@@ -28,10 +28,8 @@
     align-items: flex-start;
     padding: 0px;
     gap: 32px;
-
     width: 193px;
     height: 22px;
-
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -40,11 +38,7 @@
 .header-nav-item {
     width: 108px;
     height: 22px;
-    
     margin-left: 32px;
-    /* font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 200; */
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 1.92px;
@@ -60,17 +54,61 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding: 0px;
-    gap: 24px;
-
-    width: 767px;
-    height: 36px;
-
-    flex: none;
-    order: 2;
-    flex-grow: 0;
 }
 
 .header-action-logo {
     cursor: pointer;
+}
+
+.header-actions input {
+    position: absolute;
+    right: 220px;
+    
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 0.5px solid #000000;
+    border-radius: 4px;
+    
+    width: 500px;
+    height: 48px;
+    
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1.29px;
+    
+    padding-left: 15px;
+    padding-right: 45px
+}
+
+.header-actions input:focus {
+    outline: 1px;
+}
+
+.header-actions input::-webkit-input-placeholder {
+    color: #000000;
+}
+
+.header-actions input:focus::-webkit-input-placeholder {
+    opacity: 20%;
+}
+
+.header-wrapper button {
+    width: auto;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+}
+
+.search-btn {
+    right: 223px;
+}
+
+.profile-btn {
+    right: 175.5px;
+}
+
+.cart-btn {
+    right: 128px;
 }

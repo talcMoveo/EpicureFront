@@ -4,12 +4,13 @@ class Chef {
     // id: string;
     name: string;
     // photoSrc: string;
-    // description: string;
-    // restaurants: Restaurant[] = [];
+    description: string;
+    restaurants: Restaurant[];
   
-    constructor(name: string) {
+    constructor(name: string, description: string, restaurants: Restaurant[]) {
       this.name = name;
-      // this.description = description;
+      this.description = description;
+      this.restaurants = restaurants;
       // this.photoSrc = photoSrc;
     }
   }
