@@ -2,8 +2,9 @@ import React from 'react';
 import './Cards.scss';
 
 import Restaurant from '../../models/restaurant';
-import emptyStar from '../../Assets/Restaurants/StarEmpty.svg';
-import fullStar from '../../Assets/Restaurants/StarFull.svg';
+import emptyStar from '../../assets/Restaurants/StarEmpty.svg';
+import fullStar from '../../assets/Restaurants/StarFull.svg';
+import { isPropertySignature } from 'typescript';
 
 export enum CardType {
   full= 'full',
@@ -12,6 +13,8 @@ export enum CardType {
 
 
 const RestaurantCard: React.FC<{restaurant: Restaurant, cardType: CardType}> = (props) => {
+
+  console.log('res', props);
 
   let cardWrapperClass = 'card-wrapper'
   let cardNameClass = 'card-name';
@@ -22,12 +25,12 @@ const RestaurantCard: React.FC<{restaurant: Restaurant, cardType: CardType}> = (
 
   return (
     <div className={cardWrapperClass}>
-      <img src={props.restaurant.photoSrc} alt={props.restaurant.name} />
+      <img src={require("../../" + props.restaurant.photoSrc)} alt={props.restaurant.name} />
       <div className={cardNameClass}>{props.restaurant.name}</div>
       {
         (props.cardType === 'full') && 
         <div>
-          <div className='restaurant-chef-name'>{props.restaurant.chef.name}</div>
+          <div className='restaurant-chef-name'>{props.restaurant.chef}</div>
           <div className='restaurant-rating-img'>
             {[...Array(props.restaurant.rating)].map((i, index) => {
               return <img src={fullStar} alt="logo" key={index}/>

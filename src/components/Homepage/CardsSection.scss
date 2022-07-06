@@ -1,0 +1,46 @@
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin width-height ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.cards-main-title {
+    margin-top: 120px; 
+}
+
+.restaurant-cards {
+    @include flex-row();
+    justify-content: space-between;
+    margin: 40px 126px;
+    align-items: center;
+}
+
+.dish-cards {
+    display: grid;
+    grid-template-columns: [line1] 126px [line2] auto [line3] 24px [line4] auto [line5] 24px [line6] auto [line7] 126px;
+    grid-template-rows: [row1] 40px [row2] auto [row3] 80px;
+}
+
+.all-restaurants-btn {
+    background-color: transparent;
+    border: none;
+    float: right;
+    margin-right: 125.5px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.all-restaurants-btn img {
+    margin-left: 12px;
+    @include width-height(24px, 18px);
+}

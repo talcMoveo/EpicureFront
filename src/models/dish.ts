@@ -5,9 +5,9 @@ class Dish {
     photoSrc: string;
     ingredients: string[];
     price: number;
-    features: features[];
+    features: string[];
 
-    constructor(name: string, photoSrc: string, ingredients: string[], price: number = -1, features: features[] = []) {
+    constructor(name: string, photoSrc: string, ingredients: string[], price: number = -1, features: string[] = []) {
       this.name = name;
       this.photoSrc = photoSrc;
       this.ingredients = ingredients;

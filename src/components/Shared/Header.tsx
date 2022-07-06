@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Header.scss';
 
-import logo from '../../Assets/General/logo.svg';
-import search from '../../Assets/Header/searchLogo.svg';
-import profile from '../../Assets/Header/profileLogo.svg';
-import cart from '../../Assets/Header/cartLogo.svg';
+import logo from '../../assets/General/logo.svg';
+import search from '../../assets/Header/searchLogo.svg';
+import profile from '../../assets/Header/profileLogo.svg';
+import cart from '../../assets/Header/cartLogo.svg';
 import ShoppingCart from '../Shared/ShoppingCart';
 
 const Header: React.FC = () => {

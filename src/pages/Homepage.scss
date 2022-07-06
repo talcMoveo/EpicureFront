@@ -1,0 +1,168 @@
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin width-height ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+* {
+    font-family: Helvetica Neue;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 35px;
+    letter-spacing: 1.25px;
+    
+    button {
+        cursor: pointer;
+    }
+}
+
+// .cards-main-title {
+//     margin-top: 120px; 
+// }
+
+// .restaurant-cards {
+//     @include flex-row();
+//     justify-content: space-between;
+//     margin: 40px 126px;
+//     align-items: center;
+// }
+
+// .dish-cards {
+//     display: grid;
+//     grid-template-columns: [line1] 126px [line2] auto [line3] 24px [line4] auto [line5] 24px [line6] auto [line7] 126px;
+//     grid-template-rows: [row1] 40px [row2] auto [row3] 80px;
+// }
+
+// .all-restaurants-btn {
+//     background-color: transparent;
+//     border: none;
+//     float: right;
+//     margin-right: 125.5px;
+//     font-weight: 400;
+//     font-size: 24px;
+//     line-height: 35px;
+// }
+
+// .all-restaurants-btn img {
+//     margin-left: 12px;
+//     @include width-height(24px, 18px);
+// }
+
+// .icons-meaning {
+//     @include flex-col();
+//     align-items: center;
+//     gap: 10px;
+//     height: 265px;
+//     background: #FAFAFA;
+//     margin-bottom: 80px;
+    
+//     p {
+//         font-size: 30px;
+//         letter-spacing: 2.14px;
+//     }
+    
+//     .icons-dict {
+//         @include flex-row();
+//         gap: 65px;
+        
+//         img {
+//             @include width-height(77.42px, 60px);
+//         }
+//     }
+    
+// }
+
+// .weekly-chef {
+//     @include flex-row();
+//     margin: 40px 0px 43px 0px;
+    
+//     img {
+//         margin-left: 127.5px;
+//     }
+    
+//     .weekly-chef-desc {
+//         margin-right: 129px;
+//         margin-left: 63.5px;
+//         font-style: normal;
+//         font-weight: 200;
+//         font-size: 24px;
+//         line-height: 35px;
+//         text-align: left;
+//     }
+// }
+
+
+// .weekly-chef-restaurants {
+//     text-align: left;
+//     margin-left: 127.5px;
+//     margin-top: 45px;
+    
+//     .weekly-chef-dishes-title {
+//         margin-top: 45px;
+//         margin-bottom: 40px;
+//     }
+    
+//     .weekly-chef-dish-cards {
+//         @include flex-row();
+//         align-items: flex-start;
+//         height: 357px;
+//         gap: 16px;
+//     }
+// }
+
+
+// .about-us {
+//     @include flex-col();
+//     align-items: flex-start;
+//     margin-top: 80px;
+    
+//     padding-left: 132px;
+//     height: 529px;
+//     background: #FAFAFA;
+    
+//     img {
+//         margin-bottom: 30px;
+//     }
+    
+//     .about-us-text {
+//         @include flex-row();
+//         gap: 432px;
+        
+//         p {
+//             @include width-height(569px, auto);
+//             text-align: left;
+//             font-size: 20px;
+//             line-height: 30px;
+//             letter-spacing: 2.14px;
+//             align-items: center;
+//         }
+//     }
+    
+//     .about-us-buttons {
+//         @include flex-row();
+//         margin-top: 20px;
+//         width: 180px;
+        
+//         button {
+//             @include width-height(180px, 52px);
+//             background-color: transparent;
+//             border: none;
+//             margin-right: 16px;
+//             align-items: center;
+//             padding: 0;
+//         }
+        
+//         img {
+//             @include width-height(180px, auto);
+//         }
+//     }
+// }

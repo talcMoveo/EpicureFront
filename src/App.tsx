@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './normalize.css';
 
-import Homepage from './components/Homepage/Homepage';
+import Homepage from './pages/Homepage';
 
 function App() {
 

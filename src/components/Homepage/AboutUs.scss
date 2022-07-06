@@ -1,0 +1,61 @@
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin width-height ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.about-us {
+    @include flex-col();
+    align-items: flex-start;
+    margin-top: 80px;
+    
+    padding-left: 132px;
+    height: 529px;
+    background: #FAFAFA;
+    
+    img {
+        margin-bottom: 30px;
+    }
+    
+    .about-us-text {
+        @include flex-row();
+        gap: 432px;
+        
+        p {
+            @include width-height(569px, auto);
+            text-align: left;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 2.14px;
+            align-items: center;
+        }
+    }
+    
+    .about-us-buttons {
+        @include flex-row();
+        margin-top: 20px;
+        width: 180px;
+        
+        button {
+            @include width-height(180px, 52px);
+            background-color: transparent;
+            border: none;
+            margin-right: 16px;
+            align-items: center;
+            padding: 0;
+        }
+        
+        img {
+            @include width-height(180px, auto);
+        }
+    }
+}

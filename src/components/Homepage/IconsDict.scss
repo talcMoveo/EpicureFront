@@ -1,0 +1,38 @@
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin width-height ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.icons-meaning {
+    @include flex-col();
+    align-items: center;
+    gap: 10px;
+    height: 265px;
+    background: #FAFAFA;
+    margin-bottom: 80px;
+    
+    p {
+        font-size: 30px;
+        letter-spacing: 2.14px;
+    }
+    
+    .icons-dict {
+        @include flex-row();
+        gap: 65px;
+        
+        img {
+            @include width-height(77.42px, 60px);
+        }
+    }
+    
+}

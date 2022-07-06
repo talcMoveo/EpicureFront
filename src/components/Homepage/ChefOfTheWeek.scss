@@ -1,0 +1,52 @@
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin width-height ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.weekly-chef {
+    @include flex-row();
+    margin: 40px 0px 43px 0px;
+    
+    img {
+        margin-left: 127.5px;
+    }
+    
+    .weekly-chef-desc {
+        margin-right: 129px;
+        margin-left: 63.5px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 24px;
+        line-height: 35px;
+        text-align: left;
+    }
+}
+
+
+.weekly-chef-restaurants {
+    text-align: left;
+    margin-left: 127.5px;
+    margin-top: 45px;
+    
+    .weekly-chef-dishes-title {
+        margin-top: 45px;
+        margin-bottom: 40px;
+    }
+    
+    .weekly-chef-dish-cards {
+        @include flex-row();
+        align-items: flex-start;
+        height: 357px;
+        gap: 16px;
+    }
+}

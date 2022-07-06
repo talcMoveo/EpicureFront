@@ -2,11 +2,13 @@ import React from 'react';
 import './Cards.scss';
 
 import Dish from '../../models/dish';
-import priceLine from '../../Assets/Dishes/logos/dishPriceLine.svg'
-import shekelLogo from '../../Assets/Dishes/logos/shekelLogo.svg'
-import spicy from '../../Assets/Dishes/logos/spicy.svg'
-import veg from '../../Assets/Dishes/logos/vegetarian.svg'
-import vegan from '../../Assets/Dishes/logos/vegan.svg'
+import priceLine from '../../assets/Dishes/logos/dishPriceLine.svg'
+import shekelLogo from '../../assets/Dishes/logos/shekelLogo.svg'
+import spicy from '../../assets/Dishes/logos/spicy.svg'
+import veg from '../../assets/Dishes/logos/vegetarian.svg'
+import vegan from '../../assets/Dishes/logos/vegan.svg'
+
+import padKiMao from '../../assets/Dishes/PadKiMao.png'
 
 const DishCard: React.FC<{dish: Dish, dishId: number}> = (props) => {
 
@@ -30,7 +32,7 @@ const DishCard: React.FC<{dish: Dish, dishId: number}> = (props) => {
   return (
     <div className={'dish-' + props.dishId}>
       <div className='card-wrapper'>
-        <img src={props.dish.photoSrc} alt="logo" />
+        <img src={require("../../" + props.dish.photoSrc)} alt="logo" />
         <div className='card-name'>{props.dish.name}</div>
         <div className='dish-ingredients'>
           {props.dish.ingredients.map((ingredient, index) => {

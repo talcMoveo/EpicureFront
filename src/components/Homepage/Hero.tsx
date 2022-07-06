@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import './Hero.scss';
-import search from '../../Assets/Header/searchLogo.svg';
-import erase from '../../Assets/General/x.svg';
+import search from '../../assets/Header/searchLogo.svg';
+import erase from '../../assets/General/x.svg';
 
 
 const Hero: React.FC = () => {
