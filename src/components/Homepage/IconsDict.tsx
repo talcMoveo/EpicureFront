@@ -8,19 +8,19 @@ import vegan from '../../assets/Dishes/logos/vegan.svg'
 const IconsDict: React.FC = () => {
     return (
         <div className='icons-meaning'>
-            <p>{'the meaning of our icons:'.toLocaleUpperCase()}</p>
+            <p className='icons-meaning-txt'>{'the meaning of our icons:'.toLocaleUpperCase()}</p>
             <div className='icons-dict'>
                 <div>
-                    <img className='spicy-icon' src={spicy} />
-                    <p className='spicy-icon-text'>Spicy</p>
+                    <img className='spicy-icon icons-meaning-img' src={spicy} />
+                    <p className='spicy-icon-text icons-meaning-txt'>Spicy</p>
                 </div>
                 <div>
-                    <img className='veg-icon' src={veg} />
-                    <p className='veg-icon-text'>Vegetarian</p>
+                    <img className='veg-icon icons-meaning-img' src={veg} />
+                    <p className='veg-icon-text icons-meaning-txt'>Vegetarian</p>
                 </div>
                 <div>
-                    <img className='vegan-icon' src={vegan} />
-                    <p className='vegan-icon-text'>Vegan</p>
+                    <img className='vegan-icon icons-meaning-img' src={vegan} />
+                    <p className='vegan-icon-text icons-meaning-txt'>Vegan</p>
                 </div>
             </div>
         </div>

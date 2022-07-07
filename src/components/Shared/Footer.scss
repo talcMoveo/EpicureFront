@@ -1,3 +1,5 @@
+@import '../../pages/Homepage.scss';
+
 .footer-wrapper {
     height: 84px;
     display: flex;
@@ -6,7 +8,7 @@
     justify-content: center;
     gap: 40px;
     
-    button {
+    .footer-btn {
         background-color: transparent;
         cursor: pointer;
         border: none;

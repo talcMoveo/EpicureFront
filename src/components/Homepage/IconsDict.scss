@@ -1,17 +1,4 @@
-@mixin flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-@mixin width-height ($width, $height) {
-    width: $width;
-    height: $height;
-}
+@import '../../pages/Homepage.scss';
 
 .icons-meaning {
     @include flex-col();
@@ -21,7 +8,7 @@
     background: #FAFAFA;
     margin-bottom: 80px;
     
-    p {
+    .icons-meaning-txt {
         font-size: 30px;
         letter-spacing: 2.14px;
     }
@@ -30,7 +17,7 @@
         @include flex-row();
         gap: 65px;
         
-        img {
+        .icons-meaning-img {
             @include width-height(77.42px, 60px);
         }
     }

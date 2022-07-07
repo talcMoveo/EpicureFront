@@ -1,8 +1,8 @@
 import React from 'react';
 import './ChefOfTheWeek.scss';
 
-import RestaurantCard from '../Shared/RestaurantCard';
-import { CardType } from '../Shared/RestaurantCard';
+import Card from '../Shared/Card';
+import { CardType } from '../Shared/Card';
 
 const ChefOfTheWeek: React.FC<any> = (props) => {
     console.log('chef', props);
@@ -15,18 +15,14 @@ const ChefOfTheWeek: React.FC<any> = (props) => {
         <div>
             <p>{'chef of the week:'.toLocaleUpperCase()}</p>
             <div className='weekly-chef'>
-                <img src={chefPhotoSrc}/>
+                <img className='weekly-chef-img' src={chefPhotoSrc}/>
                 <p className='weekly-chef-desc'>{chefDesc}</p>
             </div>  
             <div className='weekly-chef-restaurants'>
                 <p className='weekly-chef-dishes-title'>{chefName.split(" ")[0]}'s Restaurants:</p>
                 <div className='weekly-chef-dish-cards'>
                 {chefRestaurants.map((item:any, index:number) => {
-                    return <RestaurantCard
-                    restaurant={item}
-                    cardType={CardType.small}
-                    key={index}
-                    />
+                    return <Card cardType={CardType.restaurantSmall} item={item} key={index}/>
                 })}
                 </div>
             </div>

@@ -1,23 +1,10 @@
-@mixin flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-@mixin width-height ($width, $height) {
-    width: $width;
-    height: $height;
-}
+@import '../../pages/Homepage.scss';
 
 .weekly-chef {
     @include flex-row();
     margin: 40px 0px 43px 0px;
     
-    img {
+    .weekly-chef-img {
         margin-left: 127.5px;
     }
     
@@ -31,7 +18,6 @@
         text-align: left;
     }
 }
-
 
 .weekly-chef-restaurants {
     text-align: left;

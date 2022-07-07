@@ -1,3 +1,5 @@
+@import '../../pages/Homepage.scss';
+
 .shopping-cart {
     position: absolute;
     width: 497px;
@@ -5,7 +7,7 @@
     left: 943px;
     top: 64px;
     
-    background: #FFFFFF;
+    background: $white;
     box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);   
     display: flex;
     flex-direction: column;
@@ -23,13 +25,12 @@
     
         opacity: 0.5;
         
-        img {
+        .shopping-cart-empty-img {
             width: 44.92px;
             height: 44.92px;
         }
         
-        p {
-            font-weight: 200;
+        .shopping-cart-empty-txt {
             font-size: 16px;
             line-height: 20px;
             text-align: center;
@@ -38,21 +39,19 @@
     }
     
     
-    button {
+    .order-history-btn {
         background-color: transparent;
         width: 220px;
         height: 48px;
         top: 495px;
-        border: 1px solid #000000;
+        border: 1px solid $black;
         font-weight: 400;
         font-size: 18px;
         line-height: 20px;
         text-align: center;
         letter-spacing: 2.67px;
-        
-        &:hover {
-            cursor: pointer;
-        }
+        position: absolute;
+        cursor: pointer;
     }
     
 }

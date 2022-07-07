@@ -1,17 +1,4 @@
-@mixin flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-@mixin width-height ($width, $height) {
-    width: $width;
-    height: $height;
-}
+@import '../../pages/Homepage.scss';
 
 .about-us {
     @include flex-col();
@@ -22,15 +9,15 @@
     height: 529px;
     background: #FAFAFA;
     
-    img {
+    .about-us-logo {
         margin-bottom: 30px;
     }
     
-    .about-us-text {
+    .about-us-text-wrapper {
         @include flex-row();
         gap: 432px;
         
-        p {
+        .about-us-text {
             @include width-height(569px, auto);
             text-align: left;
             font-size: 20px;
@@ -40,12 +27,12 @@
         }
     }
     
-    .about-us-buttons {
+    .about-us-buttons-wrapper {
         @include flex-row();
         margin-top: 20px;
         width: 180px;
         
-        button {
+        .about-us-buttons {
             @include width-height(180px, 52px);
             background-color: transparent;
             border: none;
@@ -54,7 +41,7 @@
             padding: 0;
         }
         
-        img {
+        .about-us-img {
             @include width-height(180px, auto);
         }
     }

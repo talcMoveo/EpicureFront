@@ -9,16 +9,16 @@ const AboutUs: React.FC<any> = (props) => {
     return (
         <div className='about-us'>
           <p>{'about us'.toLocaleUpperCase()}</p>
-          <div className='about-us-text'>
+          <div className='about-us-text-wrapper'>
             <div>
-                <p>{props.aboutUsText[0]}</p>
-                <p>{props.aboutUsText[1]}</p>
+                <p className='about-us-text'>{props.aboutUsText[0]}</p>
+                <p className='about-us-text'>{props.aboutUsText[1]}</p>
             </div>
             <img className='about-us-logo' src={verticalLogo} />
           </div>
-          <div className='about-us-buttons'>
-            <button type="button"><img src={appStore}/></button>
-            <button type="button"><img src={googlePlay}/></button>
+          <div className='about-us-buttons-wrapper'>
+            <button type="button" className='about-us-buttons'><img src={appStore} className='about-us-img'/></button>
+            <button type="button" className='about-us-buttons'><img src={googlePlay} className='about-us-img'/></button>
           </div>
       </div>
     );

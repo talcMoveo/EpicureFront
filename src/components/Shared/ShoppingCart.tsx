@@ -13,11 +13,11 @@ const ShoppingCart: React.FC = (props) => {
             {
                 (cart.length == 0) && 
                 <div className='shopping-cart-empty'>
-                    <img src={cartLogo} />
-                    <p>{'your bag is empty'.toLocaleUpperCase()}</p>
+                    <img className='shopping-cart-empty-img' src={cartLogo} />
+                    <p className='shopping-cart-empty-txt'>{'your bag is empty'.toLocaleUpperCase()}</p>
                 </div>
             }
-            <button type="button">{'order history'.toLocaleUpperCase()}</button>
+            <button className='order-history-btn' type="button">{'order history'.toLocaleUpperCase()}</button>
         </div>
     );
 };

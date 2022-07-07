@@ -1,3 +1,5 @@
+@import '../../pages/Homepage.scss';
+
 .hero-wrapper {
     display: flex;
     align-items: center;
@@ -22,15 +24,15 @@
             font-size: 32px;
             line-height: 40px;
             letter-spacing: 1.97px;
-            color: #000000;
+            color: $black;
         }
         
-        input {
+        .hero-input {
             width: 470px;
             height: 48px;
             margin-top: 18px;
             background-color: transparent;
-            border: 0.5px solid rgb(0, 0, 0);
+            border: 0.5px solid $black;
             border-radius: 4px;
             font-weight: 200;
             font-size: 24px;
@@ -44,7 +46,7 @@
             }
 
             &::-webkit-input-placeholder {
-                color: #000000;
+                color: $black;
             }
 
             &:focus::-webkit-input-placeholder {

@@ -14,17 +14,20 @@ const Header: React.FC = () => {
   return (
     <div className='header-wrapper'>
       <div className='header-pages-links'>
-        <img src={logo}  alt="logo" />
-        <nav>
-          <a>Restaurants</a>
-          <a>Chefs</a>
+        <img className='header-logo' src={logo}  alt="logo" />
+        <nav id='navbar'>
+          <a className='navbar-link'>Restaurants</a>
+          <a className='navbar-link'>Chefs</a>
         </nav>
       </div>
       <div className='header-actions'>
-        {(showSearch) && <input placeholder='Search for restaurant cuisine, chef' />}
-        <button className='search-btn' type="button"  onClick={() => {setShowSearch(!showSearch)}}><img src={search} /></button>
-        <button className='profile-btn' type="button" ><img src={profile} /></button>
-        <button className='cart-btn' type="button"  onClick={() => {setShowCart(!showCart)}}><img src={cart} /></button>
+        {(showSearch) && <input className='header-input' placeholder='Search for restaurant cuisine, chef' />}
+        <button className='header-btn search-btn' type="button"  onClick={() => {setShowSearch(!showSearch)}}>
+          <img src={search} /></button>
+        <button className='header-btn profile-btn' type="button" >
+          <img src={profile} /></button>
+        <button className='header-btn cart-btn' type="button"  onClick={() => {setShowCart(!showCart)}}>
+          <img src={cart} /></button>
         {(showCart) && <ShoppingCart />}
       </div>
     </div>

@@ -1,41 +1,33 @@
-@mixin width-height ($width, $height) {
-    width: $width;
-    height: $height;
-}
-
-@mixin font-w-s-h($weight, $size, $height) {
-    font-weight: $weight;
-    font-size: $size;
-    line-height: $height;
-}
+@import '../../pages/Homepage.scss';
 
 .card-wrapper {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 379px;
     padding-bottom: 15px;
-    background-color: #F9F4EA;
+    background-color: $cardBackground;
 }
 
-.card-wrapper-small {
+.restaurant-small {
     @include width-height(231px, 100%);
-    background-color: #F9F4EA;
     
-    img {
+    .card-img {
         @include width-height(100%, 224px);
     }
     
-    .card-name-small {
+    .card-title {
         @include font-w-s-h(400, 30px, 47px);
-        margin-top: 16px;
         text-align: center;
         letter-spacing: 2.67px;
+        position: absolute;
+        margin-top: 250px;
+        width: 220px;
     }
 }
 
-.card-name {
+.card-title {
     @include font-w-s-h(400, 40px, 47px);
     margin-top: 18px;
 }
@@ -45,10 +37,11 @@
     margin-top: 8px;
 }
 
-.restaurant-rating-img img{
+.restaurant-rating-img .rating-img{
     @include width-height(40px, 40px);
     margin-top: 8px;
 }
+
 
 .dish-0 {
     grid-column: 2 / 3;
@@ -65,8 +58,6 @@
 .dish-0, .dish-1, .dish-2 {
     grid-row: 2 / 3;
     justify-self: stretch;
-    background-color: #F9F4EA;
-    
 }
 
 .dish-ingredients {
@@ -83,7 +74,7 @@
     align-items: center;
     gap: 5.5px;
     
-    span {
+    .feature-span {
         margin-right: 2.5px;
     }
     
