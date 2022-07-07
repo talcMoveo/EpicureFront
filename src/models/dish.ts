@@ -12,7 +12,6 @@ class Dish {
       this.photoSrc = photoSrc;
       this.ingredients = ingredients;
       this.features = features;
-      // what to do if no price?
       this.price = price
     }
   }

@@ -1,8 +1,5 @@
 import React from 'react';
-import './Cards.scss';
-
-import Restaurant from '../../models/restaurant';
-import Dish from '../../models/dish';
+import './Card.scss';
 
 import emptyStar from '../../assets/Restaurants/StarEmpty.svg';
 import fullStar from '../../assets/Restaurants/StarFull.svg';

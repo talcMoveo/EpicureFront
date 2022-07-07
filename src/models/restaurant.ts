@@ -1,14 +1,13 @@
 import Chef from "./chef";
 
-
 class Restaurant {
   // id: string;
+  // cusine: // implement using enum
+  // dishes: [] = [];
   name: string;
   photoSrc: string;
   chef: string;
   rating: number;
-  // cusine: // implement using enum
-  // dishes: [] = [];
   
     constructor(name: string, photoSrc: string, chef: string, rating: number) {
       this.name = name;

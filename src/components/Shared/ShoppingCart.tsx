@@ -5,7 +5,6 @@ import cartLogo from '../../assets/Header/cartLogo.svg';
 import Dish from '../../models/dish';
 
 const ShoppingCart: React.FC = (props) => {
-
     const cart: Dish[] = [];
 
     return (

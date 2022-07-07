@@ -2,8 +2,8 @@ import Restaurant from "./restaurant";
 
 class Chef {
     // id: string;
-    name: string;
     // photoSrc: string;
+    name: string;
     description: string;
     restaurants: Restaurant[];
   
