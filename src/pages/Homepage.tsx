@@ -9,9 +9,6 @@ import IconsDict from '../components/Homepage/IconsDict';
 import ChefOfTheWeek from '../components/Homepage/ChefOfTheWeek';
 import AboutUs from '../components/Homepage/AboutUs';
 import Footer from '../components/Shared/Footer';
-import Card from '../components/Shared/Card';
-
-import { CardType } from '../components/Shared/Card';
 
 const Homepage: React.FC = () => {
   return (
