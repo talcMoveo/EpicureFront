@@ -51,66 +51,51 @@
         }
     }
     
-    
     .header-actions {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+        gap: 25px;
+        width: 80%;
+        margin-inline-end: 128px;
         
-        .header-input {
-            position: absolute;
-            right: 220px;
-            
-            background-color: transparent;
-            box-sizing: border-box;
-            border: 0.5px solid $black;
-            border-radius: 4px;
-            
-            width: 500px;
-            height: 48px;
-            
-            font-weight: 200;
-            font-size: 18px;
-            line-height: 22px;
-            letter-spacing: 1.29px;
-            
-            padding-left: 15px;
-            padding-right: 45px;
-            
-            &:focus {
-                outline: 1px;
-            }
-            
-            &::-webkit-input-placeholder {
-                color: $black;
-            }
+        .header-btn {
+            width: auto;
+            z-index: 10;
+        }
+    }
+    .header-input {
+        position: absolute;
+        margin-inline-start: 570px;
+        
+        box-sizing: border-box;
+        border: 0.5px solid $black;
+        border-radius: 4px;
+        
+        width: 500px;
+        height: 48px;
+        
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 1.29px;
+        
+        padding-left: 15px;
+        padding-right: 45px;
+        
+        &:focus {
+            outline: 1px;
+        }
+        
+        &::-webkit-input-placeholder {
+            color: $black;
+        }
 
-            &:focus::-webkit-input-placeholder {
-                opacity: 20%;
-            }
-        }
-        
-        .search-btn {
-            right: 223px;
-        }
-        
-        .profile-btn {
-            right: 175.5px;
-        }
-        
-        .cart-btn {
-            right: 128px;
+        &:focus::-webkit-input-placeholder {
+            opacity: 20%;
         }
     }
     
-    .header-btn {
-        width: auto;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        background-color: transparent;
-    }
 }
 
 

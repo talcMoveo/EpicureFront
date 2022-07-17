@@ -1,9 +1,9 @@
 import React from 'react';
 import './IconsDict.scss';
 
-import spicy from '../../assets/Dishes/logos/spicy.svg'
-import veg from '../../assets/Dishes/logos/vegetarian.svg'
-import vegan from '../../assets/Dishes/logos/vegan.svg'
+import spicy from '../../assets/Dishes/logos/spicy.svg';
+import veg from '../../assets/Dishes/logos/vegetarian.svg';
+import vegan from '../../assets/Dishes/logos/vegan.svg';
 
 const IconsDict: React.FC = () => {
     return (
@@ -25,6 +25,6 @@ const IconsDict: React.FC = () => {
             </div>
         </div>
     );
-  };
-  
-  export default IconsDict;
+};
+
+export default IconsDict;

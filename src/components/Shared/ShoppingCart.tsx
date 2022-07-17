@@ -10,7 +10,7 @@ const ShoppingCart: React.FC = (props) => {
     return (
         <div className='shopping-cart'>
             {
-                (cart.length == 0) && 
+                (cart.length == 0) &&
                 <div className='shopping-cart-empty'>
                     <img className='shopping-cart-empty-img' src={cartLogo} />
                     <p className='shopping-cart-empty-txt'>{'your bag is empty'.toLocaleUpperCase()}</p>

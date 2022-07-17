@@ -1,18 +1,17 @@
-import { features } from "./featuresEnum";
-
 class Dish {
-    name: string;
-    photoSrc: string;
-    ingredients: string[];
-    price: number;
-    features: string[];
+  name: string;
+  photoSrc: string;
+  ingredients: string[];
+  price: number;
+  features: string[];
 
-    constructor(name: string, photoSrc: string, ingredients: string[], price: number = -1, features: string[] = []) {
-      this.name = name;
-      this.photoSrc = photoSrc;
-      this.ingredients = ingredients;
-      this.features = features;
-      this.price = price
-    }
+  constructor(name: string, photoSrc: string, ingredients: string[], price: number = -1, features: string[] = []) {
+    this.name = name;
+    this.photoSrc = photoSrc;
+    this.ingredients = ingredients;
+    this.features = features;
+    this.price = price;
   }
-  export default Dish;
+}
+
+export default Dish;

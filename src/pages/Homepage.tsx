@@ -15,10 +15,10 @@ const Homepage: React.FC = () => {
     <div className='homepage-wrapper'>
       <Header />
       <Hero />
-      <CardsSection popularRestaurants={mockData.popularRestaurants} signatureDishes={mockData.signatureDishes}/>
+      <CardsSection popularRestaurants={mockData.popularRestaurants} signatureDishes={mockData.signatureDishes} />
       <IconsDict />
-      <ChefOfTheWeek chefOfTheWeekData={mockData.chefOfTheWeekData} chefOfTheWeekRestaurants={mockData.chefOfTheWeekRestaurants}/>
-      <AboutUs aboutUsText={mockData.AboutUsText}/>
+      <ChefOfTheWeek chefOfTheWeekData={mockData.chefOfTheWeekData} chefOfTheWeekRestaurants={mockData.chefOfTheWeekRestaurants} />
+      <AboutUs aboutUsText={mockData.AboutUsText} />
       <Footer />
     </div>
   );

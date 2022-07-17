@@ -14,22 +14,22 @@ const Header: React.FC = () => {
   return (
     <div className='header-wrapper'>
       <div className='header-pages-links'>
-        <img className='header-logo' src={logo}  alt="logo" />
+        <img className='header-logo' src={logo} alt="logo" />
         <nav id='navbar'>
           <a className='navbar-link'>Restaurants</a>
           <a className='navbar-link'>Chefs</a>
         </nav>
       </div>
       <div className='header-actions'>
-        {(showSearch) && <input className='header-input' placeholder='Search for restaurant cuisine, chef' />}
-        <button className='header-btn search-btn' type="button"  onClick={() => {setShowSearch(!showSearch)}}>
+        <button className='header-btn search-btn' type="button" onClick={() => {setShowSearch(!showSearch);}}>
           <img src={search} /></button>
         <button className='header-btn profile-btn' type="button" >
           <img src={profile} /></button>
-        <button className='header-btn cart-btn' type="button"  onClick={() => {setShowCart(!showCart)}}>
+        <button className='header-btn cart-btn' type="button" onClick={() => {setShowCart(!showCart);}}>
           <img src={cart} /></button>
-        {(showCart) && <ShoppingCart />}
       </div>
+      {(showSearch) && <input className='header-input' placeholder='Search for restaurant cuisine, chef' />}
+      {(showCart) && <ShoppingCart />}
     </div>
   );
 };
