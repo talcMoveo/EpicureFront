@@ -71,29 +71,17 @@
         
         box-sizing: border-box;
         border: 0.5px solid $black;
-        border-radius: 4px;
         
         width: 500px;
         height: 48px;
         
         font-size: 18px;
         line-height: 26px;
-        letter-spacing: 1.29px;
         
         padding-left: 15px;
         padding-right: 45px;
         
-        &:focus {
-            outline: 1px;
-        }
         
-        &::-webkit-input-placeholder {
-            color: $black;
-        }
-
-        &:focus::-webkit-input-placeholder {
-            opacity: 20%;
-        }
     }
     
 }
