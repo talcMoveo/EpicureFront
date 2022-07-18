@@ -1,12 +1,20 @@
 @import '../../pages/Homepage.scss';
 
 .footer-wrapper {
-    height: 84px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex-col();
+    margin-top: 32px;
+    margin-bottom: 24px;
     justify-content: center;
+    align-items: flex-start;
+    padding-inline-start: 8%;
     gap: 40px;
+    
+    @media screen and (min-width: 960px) {
+        @include flex-row();
+        align-items: center;
+        margin-bottom: 52px;
+        padding-inline-start: 0;
+    }
     
     .footer-link {
         font-size: 18px;

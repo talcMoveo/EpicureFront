@@ -22,7 +22,7 @@ const ChefOfTheWeek: React.FC<props> = (props) => {
 
     return (
         <div>
-            <p>{'chef of the week:'.toLocaleUpperCase()}</p>
+            <p className='weekly-chef-title'>{'chef of the week:'.toLocaleUpperCase()}</p>
             <div className='weekly-chef'>
                 <img className='weekly-chef-img' src={chefPhotoSrc} />
                 <p className='weekly-chef-desc'>{chefDesc}</p>

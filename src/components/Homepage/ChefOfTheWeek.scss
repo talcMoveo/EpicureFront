@@ -1,38 +1,77 @@
 @import '../../pages/Homepage.scss';
 
-.weekly-chef {
-    @include flex-row();
-    margin: 40px 0px 43px 0px;
-    
-    .weekly-chef-img {
-        margin-left: 127.5px;
+.weekly-chef-title {
+    text-align: left;
+    margin-inline-start: 5%;
+    @media screen and (min-width: 960px) {
+        text-align: center;
     }
+}
+
+.weekly-chef {
+    @include flex-col();
+    align-items: center;
+    justify-content: space-around;
     
+    @media screen and (min-width: 960px) {
+        @include flex-row();
+        margin: 40px 0px 43px 0px;
+    }
+        
+        .weekly-chef-img {
+            width: 90%;
+            height: auto;
+            
+            @media screen and (min-width: 960px) {
+                margin-left: 127.5px;
+            }
+        }
+        
     .weekly-chef-desc {
-        margin-right: 129px;
-        margin-left: 63.5px;
+        text-align: justify;
         font-style: normal;
+        width: 90%;
         font-weight: 200;
-        font-size: 24px;
+        font-size: 18px;
         line-height: 35px;
-        text-align: left;
+        
+        @media screen and (min-width: 960px) {
+            text-align: left;
+            font-size: 24px;
+            margin-right: 129px;
+            margin-left: 63.5px;
+        }
     }
 }
 
 .weekly-chef-restaurants {
     text-align: left;
-    margin-left: 127.5px;
-    margin-top: 45px;
     
     .weekly-chef-dishes-title {
-        margin-top: 45px;
-        margin-bottom: 40px;
+        text-align: left;
     }
     
     .weekly-chef-dish-cards {
-        @include flex-row();
-        align-items: flex-start;
-        height: 357px;
-        gap: 16px;
+        // carousle
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .weekly-chef-restaurants {
+        text-align: left;
+        margin-left: 127.5px;
+        margin-top: 45px;
+        
+        .weekly-chef-dishes-title {
+            margin-top: 45px;
+            margin-bottom: 40px;
+        }
+        
+        .weekly-chef-dish-cards {
+            @include flex-row();
+            align-items: flex-start;
+            height: 357px;
+            gap: 16px;
+        }
     }
 }

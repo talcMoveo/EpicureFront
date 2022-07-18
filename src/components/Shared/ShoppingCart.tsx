@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import './ShoppingCart.scss';
 
@@ -16,7 +17,7 @@ const ShoppingCart: React.FC = (props) => {
                     <p className='shopping-cart-empty-txt'>{'your bag is empty'.toLocaleUpperCase()}</p>
                 </div>
             }
-            <button className='order-history-btn' type="button">{'order history'.toLocaleUpperCase()}</button>
+            { (window.innerWidth > 960) && <button className='order-history-btn' type="button">{'order history'.toLocaleUpperCase()}</button>}
         </div>
     );
 };

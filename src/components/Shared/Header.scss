@@ -1,25 +1,60 @@
 @import '../../pages/Homepage.scss';
 
 .header-wrapper {
-    height: 65px;
+    height: 46px;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 32px;
-    margin-left: 127px;
     
-    .header-pages-links {
+    .header-links-desktop {
+        display: none;
+    }
+    
+    .header-links-mobile {
+        margin-inline-start: 5%;
         display: flex;
-        align-items: center;
+        flex-direction: row;
+        width: 45%;
         
-        .header-logo {
-            width: 162px;
-            height: 33px;
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-            cursor: pointer;
+        .header-btn {
+            padding: 0;
+            padding-top: 0;
+            background-position: center;
+
+            .header-btn-img {
+                height: 16px;
+                width: 16px;
+            }
+        }
+    }
+    
+    .header-logo-mobile {
+        align-self: center;
+        height: 32px;
+        width: 33px;
+    }
+    
+    @media screen and (min-width: 960px) {
+        height: 65px;
+        margin-left: 127px;
+
+        .header-links-mobile, .header-logo-mobile {
+            display: none;
+        }
+
+        .header-links-desktop {
+            display: flex;
+            align-items: center;
+            
+            .header-logo {
+                width: 162px;
+                height: 33px;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                cursor: pointer;
+            }
         }
     }
     
@@ -32,9 +67,6 @@
         gap: 32px;
         width: 193px;
         height: 22px;
-        flex: none;
-        order: 1;
-        flex-grow: 0;
 
         .navbar-link {
             width: 108px;
@@ -55,37 +87,42 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        align-items: center;
-        gap: 25px;
-        width: 80%;
-        margin-inline-end: 128px;
+        gap: 6px;
+        width: 50%;
+        margin-inline-end: 3%;
         
         .header-btn {
             width: auto;
             z-index: 10;
         }
+        
+        @media screen and (min-width: 960px) {
+            width: 60%;
+            gap: 25px;
+        }
     }
-    .header-input {
-        position: absolute;
-        margin-inline-start: 570px;
+
+    .header-search-mobile {
         
-        box-sizing: border-box;
-        border: 0.5px solid $black;
-        
-        width: 500px;
-        height: 48px;
-        
-        font-size: 18px;
-        line-height: 26px;
-        
-        padding-left: 15px;
-        padding-right: 45px;
-        
-        
+        @media screen and (min-width: 960px) {
+            display: none;
+        }
+
+        .header-input {
+            display: none;
+
+            @media screen and (min-width: 960px) {
+                display: block;
+                position: absolute;
+                margin-inline-start: 20%;
+                box-sizing: border-box;
+                
+                width: 500px;
+                margin-inline-start: 570px;
+                width: 500px;
+                height: 48px;
+            }
+        }
     }
     
 }
-
-
-
-

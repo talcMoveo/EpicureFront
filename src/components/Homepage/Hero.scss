@@ -3,8 +3,14 @@
 .hero-wrapper {
     display: flex;
     align-items: center;
-    height: 693px;
+    height: 273px;
     background-image: url('../../assets/Hero/hero-picture.png');
+    background-size: cover;
+    background-position: 80%;
+
+    @media screen and (min-width: 960px) {
+        height: 693px;
+    }
     
     .hero-inside-wrapper {
         display: flex;
@@ -12,49 +18,86 @@
         align-items: center;
         margin: auto;
         background: rgba(255, 255, 255, 0.88);
-    
-        width: 850px;
-        height: 270px;
+        
+        width: 90%;
+        height: 144px;
+        
+        @media screen and (min-width: 960px) {
+            width: 55%;
+            height: 270px;
+        }
         
         .hero-text {
-            width: 450px;
+            width: 95%;
             height: 80px;
-            margin-top: 50px;
-        
-            font-size: 32px;
-            line-height: 40px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            
+            font-size: 24px;
+            line-height: 32px;
             letter-spacing: 1.97px;
             color: $black;
+            
+            @media screen and (min-width: 960px) {
+                font-size: 32px;
+                width: 450px;
+                height: 80px;
+                margin-top: 50px;
+            }
         }
         
         .hero-input {
-            width: 470px;
-            height: 48px;
-            margin-top: 18px;
-            border: 0.5px solid $black;
+            width: 65%;
+            height: 30px;
 
-            font-size: 24px;
-            line-height: 29px;
+            font-size: 12px;
+            padding-left: 40px;
             
-            padding-left: 60px;
-            padding-right: 40px;
+            @media screen and (min-width: 960px) {
+                width: 470px;
+                margin-top: 18px;
+    
+                font-size: 24px;
+                line-height: 29px;
+                
+                padding-left: 60px;
+                padding-right: 40px;
+
+                height: 48px;
+            }
         }
         
         .search-img {
             position: relative;
-            bottom: 43px;
-            right: 260px;
-            width: 32px;
-            height: 32px;
+            bottom: 23px;
+            left: -40%;
+            height: 20px;
             cursor: pointer;
+
+            @media screen and (min-width: 960px) {
+                position: relative;
+                bottom: 42px;
+                left: -258px;
+                width: 32px;
+                height: 32px;
+            }
         }
         
         .erase-img {
             width: 14.83px;
             height: 14.83px;
+
             position: relative;
-            bottom: 63.5px;
-            left: 265px;
+            bottom: 35px;
+            left: 140px;
+            
+            @media screen and (min-width: 960px) {
+                width: 14.83px;
+                height: 14.83px;
+                position: relative;
+                bottom: 63.5px;
+                left: 265px;
+            }
         }
     }
 }
