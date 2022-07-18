@@ -46,13 +46,13 @@
 
 .weekly-chef-restaurants {
     text-align: left;
+    margin-inline-start: 20px;
     
     .weekly-chef-dishes-title {
         text-align: left;
     }
     
     .weekly-chef-dish-cards {
-        // carousle
     }
 }
 
@@ -70,8 +70,15 @@
         .weekly-chef-dish-cards {
             @include flex-row();
             align-items: flex-start;
+            width: 60%;
             height: 357px;
             gap: 16px;
         }
+        
+        .slick-dots {
+            top: 380px;
+            left: -20px;
+        }
     }
+    
 }

@@ -3,89 +3,164 @@
 .card-wrapper {
     display: inline-flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    width: 379px;
+    align-items: flex-start;
+    
+    width: 245px;
     padding-bottom: 15px;
     background-color: $cardBackground;
+    
+    @media screen and (min-width: 960px) {
+        width: 379px;
+        align-items: center;
+    }
+    
+    .card-img {
+        @include width-height(245px, 152px);
+        
+        @media screen and (min-width: 960px) {
+            @include width-height(379px, 236px);
+        }
+    }
+
+    .card-title {
+        @include font-w-s-h(400, 18px, 21px);
+        margin-inline-start: 16px;
+        margin-top: 16px;
+        
+        @media screen and (min-width: 960px) {
+            @include font-w-s-h(400, 40px, 47px);
+            margin-inline-start: 0px;
+        }
+    }
+}
+
+.dish {
+    @include width-height(245px, 390px);
+    
+    .card-title {
+        position: absolute;
+        margin-top: 170px;
+        
+        @media screen and (min-width: 960px) {
+            // position: inherit;
+        }
+    }
+    
+    .dish-card-continue {
+        @include flex-col();
+        align-items: flex-start;
+        text-align: left;
+        margin-inline-start: 16px;
+        
+        .dish-ingredients {
+            position: absolute;
+            margin-top: -120px;
+            // margin-bottom: 16px;
+            width: 200px;
+            
+            @media screen and (min-width: 960px) {
+                @include width-height(295px, 176px);
+                @include font-w-s-h(200, 24px, 30px);
+                letter-spacing: 1.97px;
+                margin-top: 8px;
+                margin-bottom: 0;
+            }
+        }
+        
+        .feature-img {
+            @include width-height(30px, auto);
+            padding-bottom: 8px;
+            
+            @media screen and (min-width: 960px) {
+                @include width-height(35px, auto);
+                margin: auto;
+                padding-bottom: 16px;
+            }
+        }
+    
+        .dish-price {
+            @include flex-row();
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5.5px;
+            margin-top: 10px;
+            @include font-w-s-h(400, 16px, 19px);
+            
+            @media screen and (min-width: 960px) {
+                @include font-w-s-h(200, 24px, 30px);
+                justify-content: center;
+            }
+            
+            .feature-span {
+                margin-right: 2.5px;
+            }
+            
+            .shekel-logo {
+                @include width-height(8px, 11px);
+                margin-top: 4px;
+                
+                @media screen and (min-width: 960px) {
+                    @include width-height(14px, 19px);
+                    margin-top: 13px;
+                    margin-left: 2.5px;
+                }
+            }
+        }
+    }
 }
 
 .restaurant-small {
-    @include width-height(231px, 100%);
+    @include width-height(245px, 233px);
+    
+    @media screen and (min-width: 960px) {
+        @include width-height(231px, 360px);
+    }
     
     .card-img {
-        @include width-height(100%, 224px);
+        @include width-height(100%, 152px);
+        object-fit: cover;
+        object-position: center;
+
+        @media screen and (min-width: 960px) {
+            @include width-height(245px, 224px);
+        }
     }
     
     .card-title {
-        @include font-w-s-h(400, 30px, 47px);
-        text-align: center;
-        letter-spacing: 2.67px;
+        @include font-w-s-h(400, 18px, 21px);
+        text-align: left;
         position: absolute;
-        margin-top: 250px;
-        width: 220px;
+        margin-top: 170px;
+
+        @media screen and (min-width: 960px) {
+            @include width-height(245px, 224px);
+            @include font-w-s-h(400, 30px, 47px);
+            text-align: center;
+            letter-spacing: 2.67px;
+            margin-top: 250px;
+            width: 220px;
+        }
     }
 }
 
-.card-title {
-    @include font-w-s-h(400, 40px, 47px);
-    margin-top: 18px;
-}
 
 .restaurant-chef-name {
-    @include font-w-s-h(200, 24px, 30px);
+    @include font-w-s-h(200, 16px, 20px);
+    margin-inline-start: 16px;
     margin-top: 8px;
-}
-
-.restaurant-rating-img .rating-img{
-    @include width-height(40px, 40px);
-    margin-top: 8px;
-}
-
-
-.dish-0 {
-    grid-column: 2 / 3;
-}
-
-.dish-1 {
-    grid-column: 4 / 5;
-}
-
-.dish-2 {
-    grid-column: 6 / 7;
-}
-
-.dish-0, .dish-1, .dish-2 {
-    grid-row: 2 / 3;
-    justify-self: stretch;
-}
-
-.dish-ingredients {
-    @include width-height(295px, 176px);
-    @include font-w-s-h(200, 24px, 30px);
-    letter-spacing: 1.97px;
-    margin-top: 8px;
-}
-
-.feature-price {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5.5px;
     
-    .feature-span {
-        margin-right: 2.5px;
-    }
-    
-    .shekel-logo {
-        @include width-height(14px, 19px);
-        margin-top: 13px;
-        margin-left: 2.5px;
+    @media screen and (min-width: 960px) {
+        @include font-w-s-h(200, 24px, 30px);
+        margin-inline-start: 0px;
     }
 }
 
-.feature-img {
-    @include width-height(35px, auto);
-    margin-bottom: 5px;
+.restaurant-rating-img {
+    @include flex-row();
+    .rating-img{
+        @include width-height(40px, 40px);
+        margin-top: 8px;
+    }
 }
+

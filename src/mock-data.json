@@ -7,17 +7,29 @@
     "chefOfTheWeekRestaurants": [
         { "name": "Onza", "photoSrc": "assets/Restaurants/onza.png", "chef": "Yossi Shitrit", "rating": 0 },
         { "name": "Kitchen Market", "photoSrc": "assets/Restaurants/kitchenMarket.png", "chef": "Yossi Shitrit", "rating": 0 },
+        { "name": "Mashya", "photoSrc": "assets/Restaurants/mashya.png", "chef": "Yossi Shitrit", "rating": 0 },
+        { "name": "Onza", "photoSrc": "assets/Restaurants/onza.png", "chef": "Yossi Shitrit", "rating": 0 },
+        { "name": "Kitchen Market", "photoSrc": "assets/Restaurants/kitchenMarket.png", "chef": "Yossi Shitrit", "rating": 0 },
+        { "name": "Mashya", "photoSrc": "assets/Restaurants/mashya.png", "chef": "Yossi Shitrit", "rating": 0 },
+        { "name": "Onza", "photoSrc": "assets/Restaurants/onza.png", "chef": "Yossi Shitrit", "rating": 0 },
+        { "name": "Kitchen Market", "photoSrc": "assets/Restaurants/kitchenMarket.png", "chef": "Yossi Shitrit", "rating": 0 },
         { "name": "Mashya", "photoSrc": "assets/Restaurants/mashya.png", "chef": "Yossi Shitrit", "rating": 0 }
     ],
     "popularRestaurants": [
         { "name": "Claro", "photoSrc": "assets/Restaurants/claro.png", "chef": "Ran Shmueli", "rating": 4 },
         { "name": "Lumina", "photoSrc": "assets/Restaurants/Lumina.png", "chef": "Meir Adoni", "rating": 3 },
+        { "name": "Tiger Lily", "photoSrc": "assets/Restaurants/tiger-lily.png", "chef": "Yanir Green", "rating": 4 },
+        { "name": "Claro", "photoSrc": "assets/Restaurants/claro.png", "chef": "Ran Shmueli", "rating": 4 },
+        { "name": "Lumina", "photoSrc": "assets/Restaurants/Lumina.png", "chef": "Meir Adoni", "rating": 3 },
         { "name": "Tiger Lily", "photoSrc": "assets/Restaurants/tiger-lily.png", "chef": "Yanir Green", "rating": 4 }
     ],
     "signatureDishes": [
-        {"name": "Pad Ki Mao", "photoSrc": "assets/Dishes/PadKiMao.png", "ingredients": ["Shrimps", "Glass Noodles", "Kemiri Nuts", "Shallots", "Lemon Grass", "Magic Chili Brown Coconut"], "price": -1, "features": ["spicy"]},
+        {"name": "Pad Ki Mao", "photoSrc": "assets/Dishes/PadKiMao.png", "ingredients": ["Shrimps", "Glass Noodles", "Kemiri Nuts", "Shallots", "Lemon Grass", "Magic Chili Brown Coconut"], "price": 86, "features": ["spicy"]},
         {"name": "Garbanzo Frito", "photoSrc": "assets/Dishes/GarbanzoFrito.png", "ingredients": ["Polenta fingers", "veal cheek", "magic chili cured lemon cream", "yellow laksa"], "price": 98, "features": []},
-        {"name": "Smoked Pizza", "photoSrc": "assets/Dishes/SmokedPizza.png", "ingredients": ["Basil dough", "cashew \"butter\"", "demi-glace", "bison & radish"], "price": -1, "features": ["vegan"]}
+        {"name": "Smoked Pizza", "photoSrc": "assets/Dishes/SmokedPizza.png", "ingredients": ["Basil dough", "cashew \"butter\"", "demi-glace", "bison & radish"], "price": 87, "features": ["vegan"]},
+        {"name": "Pad Ki Mao", "photoSrc": "assets/Dishes/PadKiMao.png", "ingredients": ["Shrimps", "Glass Noodles", "Kemiri Nuts", "Shallots", "Lemon Grass", "Magic Chili Brown Coconut"], "price": 86, "features": ["spicy"]},
+        {"name": "Garbanzo Frito", "photoSrc": "assets/Dishes/GarbanzoFrito.png", "ingredients": ["Polenta fingers", "veal cheek", "magic chili cured lemon cream", "yellow laksa"], "price": 98, "features": []},
+        {"name": "Smoked Pizza", "photoSrc": "assets/Dishes/SmokedPizza.png", "ingredients": ["Basil dough", "cashew \"butter\"", "demi-glace", "bison & radish"], "price": 87, "features": ["vegan"]}
     ],
     "AboutUsText": [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non eu ipsum. Cras porta malesuada eros, eget blandit turpis suscipit at.  Vestibulum sed massa in magna sodales porta.  Vivamus elit urna, dignissim a vestibulum.",

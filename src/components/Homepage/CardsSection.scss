@@ -1,37 +1,54 @@
 @import '../../pages/Homepage.scss';
 
 .cards-main-title {
-    margin-top: 48px; 
+    margin-top: 48px;
+    text-align: left;
+    margin-inline-start: 16px;
+    margin-bottom: 16px;
+    
     @media screen and (min-width: 960px) {
+        text-align: center;
         margin-top: 120px; 
     }
 }
 
 .restaurant-cards {
-    @include flex-row();
-    justify-content: space-between;
-    margin: 40px 126px;
-    align-items: center;
-    gap: 24px;
-}
-
-.dish-cards {
-    display: grid;
-    grid-template-columns: [line1] 126px [line2] auto [line3] 24px [line4] auto [line5] 24px [line6] auto [line7] 126px;
-    grid-template-rows: [row1] 40px [row2] auto [row3] 80px;
+    .slick-dots {
+        top: 400px;
+    }
 }
 
 .all-restaurants-btn {
     background-color: transparent;
     border: none;
-    float: right;
-    margin-right: 125.5px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 35px;
+    float: left;
+    margin-top: 16px;
+    margin-inline-start: 16px;
+
+    @include flex-row();
+    gap: 8px;
+    align-items: center;
+    @include font-w-s-h(400, 16px, 35px);
+    
+    @media screen and (min-width: 960px) {
+        float: right;
+        margin-right: 125.5px;
+        font-size: 24px;
+    }
     
     .all-restaurants-btn-img {
-        margin-left: 12px;
-        @include width-height(24px, 18px);
+        @include width-height(18px, 16px);
+        
+        @media screen and (min-width: 960px) {
+            margin-left: 12px;
+            @include width-height(24px, 18px);
+        }
     }
 }
+
+.dish-cards {
+    .slick-dots {
+        top: 530px;
+    }
+}
+

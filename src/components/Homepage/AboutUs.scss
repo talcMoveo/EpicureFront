@@ -55,6 +55,7 @@
                 line-height: 30px;
                 letter-spacing: 2.14px;
                 align-items: center;
+                padding-right: 20px;
                 
                 @media screen and (min-width: 960px) {
                     @include width-height(569px, auto);
