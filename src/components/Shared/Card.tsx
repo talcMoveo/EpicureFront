@@ -27,9 +27,9 @@ enum features {
 }
 
 const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: number }> = (props) => {
-    let cardWrapperClass = 'card-wrapper restaurant-big';
+    let cardWrapperClass = 'card-wrapper restaurant restaurant-big';
     if (props.cardType === 'restaurant-small') {
-        cardWrapperClass = 'card-wrapper restaurant-small';
+        cardWrapperClass = 'card-wrapper restaurant restaurant-small';
     } else if (props.cardType === 'dish') {
         cardWrapperClass = 'card-wrapper dish';
     }
@@ -53,7 +53,7 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
         return featureLogos;
     };
 
-    const dishProps = () => {
+    const dishProperties = () => {
         if (window.innerWidth <= 960) {
             return (<div className='dish-price'>
                         <img className='shekel-logo' src={shekelLogo} />
@@ -69,6 +69,21 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
         };
     }
 
+    const dishIngredients = () => {
+        let ingredientsStr = '';
+        if (isDish(currentItem)) {
+            const ingredients = currentItem.ingredients;
+            ingredients.map((ingredient: string, index: number) => {
+                if (index == ingredients.length - 1) {
+                    ingredientsStr += ingredient;
+                } else {
+                    ingredientsStr += ingredient + ", ";
+                }
+            })
+        }
+        return ingredientsStr;
+    }
+
     return (
         <div className={cardWrapperClass}>
             <img className='card-img' src={require('../../' + currentItem.photoSrc)} alt={currentItem.name} />
@@ -78,18 +93,13 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
                 <div className='dish-card-continue'>
                     <div>
                         <div className='dish-ingredients'>
-                            {currentItem.ingredients.map((ingredient: string, index: number) => {
-                                if (index == currentItem.ingredients.length - 1) {
-                                    return ingredient;
-                                }
-                                return (ingredient + ", ");
-                            })}
+                            { dishIngredients() }
                         </div>
                     </div>
                     {getFeatures().map((feat, index) => {
                         return <img className='feature-img' src={feat} key={index} />;
                     })}
-                    { dishProps() }
+                    { dishProperties() }
                 </div>
             }
             {

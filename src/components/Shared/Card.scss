@@ -26,7 +26,6 @@
     .card-title {
         @include font-w-s-h(400, 18px, 21px);
         margin-inline-start: 16px;
-        margin-top: 16px;
         
         @media screen and (min-width: 960px) {
             @include font-w-s-h(400, 40px, 47px);
@@ -35,48 +34,29 @@
     }
 }
 
-
 .dish {
-    height: 390px;
-    
+    @include width-height(245px, 410px);
+
     .card-title {
         position: absolute;
         margin-top: 170px;
-        
-        @media screen and (min-width: 960px) {
-            margin-top: 270px;
-        }
     }
     
     .dish-card-continue {
-        @include flex-col();
-        align-items: flex-start;
         text-align: left;
         margin-inline-start: 16px;
+        display: grid;
+        grid-template-rows: [row1] 140px [row2] 45px [row3] 26px;
         
         .dish-ingredients {
-            position: absolute;
-            margin-top: -120px;
-            width: 200px;
-            
-            @media screen and (min-width: 960px) {
-                @include width-height(295px, 176px);
-                @include font-w-s-h(200, 24px, 30px);
-                letter-spacing: 1.97px;
-                // margin-bottom: 0;
-                margin-top: -250px;
-            }
+            padding-right: 10px;
+            grid-row: 1 / 2;
         }
         
         .feature-img {
             @include width-height(30px, auto);
-            padding-bottom: 8px;
-            
-            @media screen and (min-width: 960px) {
-                @include width-height(35px, auto);
-                margin: auto;
-                padding-bottom: 16px;
-            }
+            justify-self: start;
+            grid-row: 2 / 3;
         }
         
         .dish-price {
@@ -84,63 +64,77 @@
             justify-content: flex-start;
             align-items: center;
             gap: 5.5px;
-            margin-top: 10px;
-            @include font-w-s-h(400, 16px, 19px);
-            
-            @media screen and (min-width: 960px) {
-                @include font-w-s-h(200, 24px, 30px);
-                justify-content: center;
-            }
-            
-            .feature-span {
-                margin-right: 2.5px;
-            }
-            
+            grid-row: 3 / 4;
+
             .shekel-logo {
-                @include width-height(8px, 11px);
+                @include width-height(12px, auto);
                 margin-top: 4px;
-                
-                @media screen and (min-width: 960px) {
-                    @include width-height(14px, 19px);
-                    margin-top: 13px;
-                    margin-left: 2.5px;
-                }
             }
-        }
-    }
-
-
-    /// ?????
-    @media screen and (min-width: 960px) {
-        display: grid;
-        grid-template-columns: [col1] 93px [col2] 194px [col3] 93px;
-        grid-template-rows: [row1] 306px [row2] 126px [row3] 176px [row4] 46px;
-        // height: 655px;
-    
-        .card-img {
-            grid-area: 1 / 1 / 2 / 4;
-        }
-    
-        .card-title {
-            grid-area: 2 / 2 / 3 / 3;
-        }
-    
-        .dish-ingredients {
-            grid-area: 3 / 1 / 4 / 4;
-        }
-    
-        .dish-price {
-            grid-area: 4 / 1 / 5 / 4;
         }
     }
 }
 
+@media screen and (min-width: 960px) {
+    .dish {
+        @include width-height(380px, 655px);
+        
+        .card-img {
+            @include width-height(380px, 306px);
+            object-fit: cover;
+
+        }
+        
+        .card-title {
+            margin-top: 340px;
+            width: 200px;
+        }
+        
+        .dish-card-continue {
+            @include width-height(380px, auto);
+            margin-inline-start: 0;
+            display: grid;
+            grid-template-rows: [row1] 150px [row2] 30px;
+            
+            .dish-ingredients {
+                @include font-w-s-h(200, 24px, 30px);
+                padding-inline-start: 30px;
+                padding-inline-end: 30px;
+                text-align: center;
+                align-self: center;
+                justify-self: center;
+                grid-row: 1 / 2;
+            }
+            
+            .feature-img .dish-price {
+                grid-row: 2 / 3;
+                align-self: center;
+                justify-self: center;
+            }
+            
+            .dish-price {
+                
+                .feature-span {
+                }
+                
+                .shekel-logo {
+                }
+            }
+        }
+    }
+}
+
+.restaurant {
+    .card-title {
+        margin-top: 16px;
+    }
+
+}
 
 .restaurant-small {
     @include width-height(245px, 233px);
     
     @media screen and (min-width: 960px) {
-        @include width-height(231px, 360px);
+        @include width-height(231px, 350px);
     }
     
     .card-img {
@@ -149,7 +143,7 @@
         object-position: center;
 
         @media screen and (min-width: 960px) {
-            @include width-height(245px, 224px);
+            @include width-height(231px, 224px);
         }
     }
     

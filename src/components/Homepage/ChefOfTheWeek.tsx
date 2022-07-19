@@ -34,8 +34,8 @@ const ChefOfTheWeek: React.FC<props> = (props) => {
             {
             breakpoint: 1024,
             settings: {
-                slidesToShow: 1.1,
-                slidesToScroll: 1.1,
+                slidesToShow: 1.2,
+                slidesToScroll: 1,
                 infinite: true,
                 arrows: false
             }

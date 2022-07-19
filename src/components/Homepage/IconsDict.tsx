@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useEffect } from 'react';
 import './IconsDict.scss';
 
 import spicy from '../../assets/Dishes/logos/spicy.svg';
@@ -7,8 +7,9 @@ import veg from '../../assets/Dishes/logos/vegetarian.svg';
 import vegan from '../../assets/Dishes/logos/vegan.svg';
 
 const IconsDict: React.FC = () => {
+
     return (
-        <div className='icons-meaning'>
+        <div className='cards-animation icons-meaning'>
             <p className='icons-meaning-txt'>{'the meaning of our icons:'.toLocaleUpperCase()}</p>
             <div className='icons-dict'>
                 <div>

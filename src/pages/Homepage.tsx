@@ -12,6 +12,7 @@ import AboutUs from '../components/Homepage/AboutUs';
 import Footer from '../components/Shared/Footer';
 
 const Homepage: React.FC = () => {
+  
   return (
     <div className='homepage-wrapper'>
       <Header />

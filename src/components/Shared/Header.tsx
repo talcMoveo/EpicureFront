@@ -38,7 +38,6 @@ const Header: React.FC = () => {
         </nav>
       </div>
       {
-        // (showSearch) && 
         (
           (
             (window.innerWidth > 960) && 
@@ -50,10 +49,9 @@ const Header: React.FC = () => {
             >
               <input className='header-input' placeholder='Search for restaurant cuisine, chef' />
             </CSSTransition>
-          )
-          || (
-            (window.innerWidth <= 960) && 
-            <CSSTransition
+          ) ||
+          (window.innerWidth <= 960) && 
+          <CSSTransition
               in={showSearch}
               timeout={400}
               classNames='header-animation'
@@ -61,7 +59,6 @@ const Header: React.FC = () => {
             >
               <MobileSearch />
             </CSSTransition>
-          )
         )
       }
       <div className='header-actions'>
