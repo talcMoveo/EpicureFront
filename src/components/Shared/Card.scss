@@ -3,7 +3,7 @@
 .card-wrapper {
     display: inline-flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: flex-start;
     
     width: 245px;
@@ -45,26 +45,23 @@
     .dish-card-continue {
         text-align: left;
         margin-inline-start: 16px;
-        display: grid;
-        grid-template-rows: [row1] 140px [row2] 45px [row3] 26px;
         
         .dish-ingredients {
             padding-right: 10px;
-            grid-row: 1 / 2;
+            margin-top: 50px;
         }
         
         .feature-img {
             @include width-height(30px, auto);
-            justify-self: start;
-            grid-row: 2 / 3;
+            margin-top: 50px;
         }
         
         .dish-price {
             @include flex-row();
+            margin-top: 10px;
             justify-content: flex-start;
             align-items: center;
             gap: 5.5px;
-            grid-row: 3 / 4;
 
             .shekel-logo {
                 @include width-height(12px, auto);
@@ -111,14 +108,14 @@
                 justify-self: center;
             }
             
-            .dish-price {
+            // .dish-price {
                 
-                .feature-span {
-                }
+            //     // .feature-span {
+            //     // }
                 
-                .shekel-logo {
-                }
-            }
+            //     // .shekel-logo {
+            //     // }
+            // }
         }
     }
 }
