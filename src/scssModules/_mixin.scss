@@ -20,7 +20,7 @@
 }
 
 @mixin popup-window() {
-    z-index: 10;
+    z-index: 100;
     background: $white;
     box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);
 }

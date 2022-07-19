@@ -1,3 +1,5 @@
-@media screen and (min-width: 960px) {
-
+@mixin desktop {
+    @media screen and (min-width: $mobile-screen-size) {
+        @content;
+    }
 }

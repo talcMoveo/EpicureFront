@@ -1,65 +1,41 @@
 @import '../../pages/Homepage.scss';
 
 .shopping-cart {
-    position: absolute;
-    height: 218px;
-    width: 100%;
-    top: 46px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     @include popup-window();
+    @include flex-col();
+    @include width-height(100%, 218px);
+    position: absolute;
+    align-items: center;
+    top: 46px;
     
-    @media screen and (min-width: 960px) {
-        width: 497px;
-        height: 586px;
+    @include desktop {
+        @include width-height(500px, 586px);
         top: 64px;
-        left: 943px;
+        right: 0;
     }
     
     .shopping-cart-empty {
-        position: absolute;
-        padding: 0px;
         width: 121px;
-        height: auto;
-        margin-top: 63px;
         opacity: 0.5;
-        
-        @media screen and (min-width: 960px) {
-            margin-top: auto;
-        }
+        margin: auto;
         
         .shopping-cart-empty-img {
-            width: 44.92px;
-            height: 44.92px;
+            width: 45px;
         }
         
         .shopping-cart-empty-txt {
             font-size: 16px;
             line-height: 20px;
-            text-align: center;
             letter-spacing: 1.97px;
-        }
-        
-        @media screen and (min-width: 960px) {
-            gap: 16px;
-            left: 188px;
-            top: 241px;
         }
     }
     
     .order-history-btn {
-        background-color: transparent;
-        width: 220px;
-        height: 48px;
-        top: 495px;
-        border: 1px solid $black;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 20px;
-        text-align: center;
+        @include width-height(220px, 48px);
+        @include font-w-s-h(400, 18px, 20px);
         letter-spacing: 2.67px;
+        border: 1px solid $black;
+        bottom: 60px;
         position: absolute;
-        cursor: pointer;
     }
 }

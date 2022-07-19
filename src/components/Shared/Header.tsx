@@ -32,11 +32,12 @@ const Header: React.FC = () => {
       <img className='header-logo-mobile' src={logoCircle} />
       <div className='header-links-desktop'>
         <img className='header-logo' src={logo} alt="logo" />
-        <nav id='navbar'>
+        <nav className='header-navbar'>
           <a className='navbar-link'>Restaurants</a>
           <a className='navbar-link'>Chefs</a>
         </nav>
       </div>
+      
       {
         (
           (

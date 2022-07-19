@@ -35,7 +35,7 @@ const CardsSection: React.FC<{popularRestaurants: Restaurant[], signatureDishes:
     };
     
     return (
-        <div>
+        <div className='cards-section-wrapper'>
             <div className='cards-main-title'>{'popular restaurants in epicure:'.toLocaleUpperCase()}</div>
             <Slider {...settings} className='restaurant-cards'>
                 {props.popularRestaurants.map((item: Restaurant, index: number) => {

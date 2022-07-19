@@ -10,7 +10,7 @@
     padding-bottom: 15px;
     background-color: $cardBackground;
     
-    @media screen and (min-width: 960px) {
+    @include desktop {
         align-items: center;
         width: 379px;
     }
@@ -18,7 +18,7 @@
     .card-img {
         @include width-height(245px, 152px);
         
-        @media screen and (min-width: 960px) {
+        @include desktop {
             @include width-height(379px, 236px);
         }
     }
@@ -27,7 +27,7 @@
         @include font-w-s-h(400, 18px, 21px);
         margin-inline-start: 16px;
         
-        @media screen and (min-width: 960px) {
+        @include desktop {
             @include font-w-s-h(400, 40px, 47px);
             margin-inline-start: 0px;
         }
@@ -71,7 +71,7 @@
     }
 }
 
-@media screen and (min-width: 960px) {
+@include desktop {
     .dish {
         @include width-height(380px, 655px);
         
@@ -130,7 +130,7 @@
 .restaurant-small {
     @include width-height(245px, 233px);
     
-    @media screen and (min-width: 960px) {
+    @include desktop {
         @include width-height(231px, 350px);
     }
     
@@ -139,7 +139,7 @@
         object-fit: cover;
         object-position: center;
 
-        @media screen and (min-width: 960px) {
+        @include desktop {
             @include width-height(231px, 224px);
         }
     }
@@ -150,7 +150,7 @@
         position: absolute;
         margin-top: 170px;
 
-        @media screen and (min-width: 960px) {
+        @include desktop {
             @include width-height(245px, 224px);
             @include font-w-s-h(400, 30px, 47px);
             text-align: center;
@@ -167,7 +167,7 @@
     margin-inline-start: 16px;
     margin-top: 8px;
     
-    @media screen and (min-width: 960px) {
+    @include desktop {
         @include font-w-s-h(200, 24px, 30px);
         margin-inline-start: 0px;
     }

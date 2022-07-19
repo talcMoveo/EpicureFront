@@ -9,7 +9,7 @@
     padding-inline-start: 8%;
     gap: 40px;
     
-    @media screen and (min-width: 960px) {
+    @include desktop {
         @include flex-row();
         align-items: center;
         margin-bottom: 52px;

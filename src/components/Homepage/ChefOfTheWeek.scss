@@ -3,7 +3,7 @@
 .weekly-chef-title {
     text-align: left;
     margin-inline-start: 5%;
-    @media screen and (min-width: 960px) {
+    @include desktop {
         text-align: center;
     }
 }
@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: space-around;
     
-    @media screen and (min-width: 960px) {
+    @include desktop {
         @include flex-row();
         margin: 40px 0px 43px 0px;
     }
@@ -22,7 +22,7 @@
             width: 90%;
             height: auto;
             
-            @media screen and (min-width: 960px) {
+            @include desktop {
                 margin-left: 127.5px;
             }
         }
@@ -35,7 +35,7 @@
         font-size: 18px;
         line-height: 35px;
         
-        @media screen and (min-width: 960px) {
+        @include desktop {
             text-align: left;
             font-size: 24px;
             margin-right: 129px;
@@ -56,7 +56,7 @@
     }
 }
 
-@media screen and (min-width: 960px) {
+@include desktop {
     .weekly-chef-restaurants {
         text-align: left;
         margin-left: 127.5px;

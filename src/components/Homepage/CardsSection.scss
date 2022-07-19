@@ -1,66 +1,75 @@
 @import '../../pages/Homepage.scss';
 
-.cards-main-title {
-    margin-top: 48px;
-    text-align: left;
-    margin-inline-start: 16px;
-    margin-bottom: 16px;
+.cards-section-wrapper {
+    @include flex-col();
+    align-items: flex-start;
+    justify-content: space-between;
     
-    @media screen and (min-width: 960px) {
-        text-align: center;
-        margin-top: 120px; 
-        margin-bottom: 40px;
-    }
-}
-
-.restaurant-cards {
-    width: 85%;
-    margin-inline-start: 16px;
-    
-    @media screen and (min-width: 960px) {
-        margin-bottom: 40px;
-        margin: auto;
+    @include desktop {
+        align-items: center;
     }
 
-    .slick-dots {
-        top: 400px;
-    }
-}
-
-.all-restaurants-btn {
-    background-color: transparent;
-    border: none;
-    float: left;
-    margin-top: 16px;
-    margin-inline-start: 16px;
-
-    @include flex-row();
-    gap: 8px;
-    align-items: center;
-    @include font-w-s-h(400, 16px, 35px);
-    
-    @media screen and (min-width: 960px) {
-        float: right;
-        margin-right: 125.5px;
-        font-size: 24px;
-    }
-    
-    .all-restaurants-btn-img {
-        @include width-height(18px, 16px);
+    .cards-main-title {
+        margin-top: 48px;
+        text-align: left;
+        margin-inline-start: 16px;
+        margin-bottom: 16px;
         
-        @media screen and (min-width: 960px) {
-            margin-left: 12px;
-            @include width-height(24px, 18px);
+        @include desktop {
+            text-align: center;
+            margin-top: 120px; 
+            margin-bottom: 40px;
         }
     }
-}
-
-.dish-cards {
-    width: 85%;
-    margin: auto;
-
-    .slick-dots {
-        top: 530px;
+    
+    .restaurant-cards {
+        width: 85%;
+        margin-inline-start: 16px;
+        
+        @include desktop {
+            margin-bottom: 40px;
+            margin: auto;
+        }
+    
+        .slick-dots {
+            top: 400px;
+        }
     }
-}
-
+    
+    .all-restaurants-btn {
+        background-color: transparent;
+        border: none;
+        float: left;
+        margin-top: 16px;
+        margin-inline-start: 16px;
+    
+        @include flex-row();
+        gap: 8px;
+        align-items: center;
+        @include font-w-s-h(400, 16px, 35px);
+        
+        @include desktop {
+            float: right;
+            margin-right: 125.5px;
+            font-size: 24px;
+        }
+        
+        .all-restaurants-btn-img {
+            @include width-height(18px, 16px);
+            
+            @include desktop {
+                margin-left: 12px;
+                @include width-height(24px, 18px);
+            }
+        }
+    }
+    
+    .dish-cards {
+        width: 85%;
+        margin: auto;
+    
+        .slick-dots {
+            top: 530px;
+        }
+    }
+}    

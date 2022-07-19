@@ -9,7 +9,7 @@
     height: 870px;
     background: #FAFAFA;
     
-    @media screen and (min-width: 960px) {
+    @include desktop {
         @include flex-row();
         padding-left: 132px;
         height: 529px;
@@ -22,7 +22,7 @@
         margin-top: 20px;
         margin-bottom: 5%;
         
-        @media screen and (min-width: 960px) {
+        @include desktop {
             order: 2;
             align-self: center;
             margin-top: 0px;
@@ -37,7 +37,7 @@
         text-align: left;
         @include flex-col();
         
-        @media screen and (min-width: 960px) {
+        @include desktop {
             order: 1;
         }
 
@@ -45,7 +45,7 @@
             order: 3;
             margin-top: 48px;
             
-            @media screen and (min-width: 960px) {
+            @include desktop {
                 margin-top: auto;
             }
             
@@ -57,7 +57,7 @@
                 align-items: center;
                 padding-right: 20px;
                 
-                @media screen and (min-width: 960px) {
+                @include desktop {
                     @include width-height(569px, auto);
                 }
             }
@@ -68,7 +68,7 @@
             order: 2;
             @include flex-col();
             
-            @media screen and (min-width: 960px) {
+            @include desktop {
                 order: 3;
                 width: 180px;
                 @include flex-row();
@@ -87,7 +87,7 @@
             .google-btn {
                 order: 1;
                 
-                @media screen and (min-width: 960px) {
+                @include desktop {
                     order: 2;
                 }
             }
@@ -95,7 +95,7 @@
             .app-btn {
                 order: 2;
 
-                @media screen and (min-width: 960px) {
+                @include desktop {
                     order: 1;
                 }
             }

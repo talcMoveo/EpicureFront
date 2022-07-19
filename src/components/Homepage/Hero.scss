@@ -1,48 +1,39 @@
 @import '../../pages/Homepage.scss';
 
 .hero-wrapper {
-    display: flex;
-    align-items: center;
+    @include flex-row();
     height: 273px;
     background-image: url('../../assets/Hero/hero-picture.png');
     background-size: cover;
     background-position: 80%;
 
-    @media screen and (min-width: 960px) {
+    @include desktop {
         height: 693px;
     }
     
     .hero-inside-wrapper {
-        display: flex;
-        flex-direction: column;
+        @include flex-col();
         align-items: center;
         margin: auto;
         background: rgba(255, 255, 255, 0.88);
         
         width: 90%;
-        height: 144px;
+        height: 140px;
         
-        @media screen and (min-width: 960px) {
+        @include desktop {
             width: 55%;
             height: 270px;
         }
         
         .hero-text {
-            width: 95%;
-            height: 80px;
+            @include font-w-s-h(200, 24px, 27px);
             margin-top: 15px;
             margin-bottom: 15px;
-
-            @include font-w-s-h(200, 24px, 32px);
             
-            letter-spacing: 1.97px;
-            color: $black;
-            
-            @media screen and (min-width: 960px) {
+            @include desktop {
                 @include font-w-s-h(200, 32px, 40px);
-                width: 450px;
-                height: 80px;
-                margin-top: 50px;
+                width: 60%;
+                margin-top: 48px;
             }
         }
         
@@ -53,7 +44,7 @@
             font-size: 12px;
             padding-left: 40px;
             
-            @media screen and (min-width: 960px) {
+            @include desktop {
                 width: 470px;
                 margin-top: 18px;
     
@@ -74,7 +65,7 @@
             height: 20px;
             cursor: pointer;
 
-            @media screen and (min-width: 960px) {
+            @include desktop {
                 position: relative;
                 bottom: 42px;
                 left: -258px;
@@ -85,15 +76,12 @@
         
         .erase-img {
             width: 14.83px;
-            height: 14.83px;
 
             position: relative;
             bottom: 35px;
             left: 140px;
             
-            @media screen and (min-width: 960px) {
-                width: 14.83px;
-                height: 14.83px;
+            @include desktop {
                 position: relative;
                 bottom: 63.5px;
                 left: 265px;

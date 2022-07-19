@@ -1,77 +1,52 @@
 @import '../../pages/Homepage.scss';
 
 .header-wrapper {
+    @include flex-row();
     height: 46px;
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0px;
     
     .header-links-desktop {
         display: none;
     }
     
     .header-links-mobile {
+        @include flex-row();
         margin-inline-start: 5%;
-        display: flex;
-        flex-direction: row;
         width: 45%;
-        
-        .header-btn {
-            padding: 0;
-            padding-top: 0;
-            background-position: center;
-
-            .header-btn-img {
-                height: 16px;
-                width: 16px;
-            }
-        }
     }
     
     .header-logo-mobile {
-        align-self: center;
-        height: 32px;
-        width: 33px;
+        margin: auto;
     }
     
-    @media screen and (min-width: 960px) {
-        height: 65px;
-        margin-left: 127px;
+    @include desktop {
+        padding: 0 8%;
+        height: 64px;
+
 
         .header-links-mobile, .header-logo-mobile {
             display: none;
         }
 
         .header-links-desktop {
-            display: flex;
+            @include flex-row();
             align-items: center;
             
             .header-logo {
-                width: 162px;
-                height: 33px;
-                flex: none;
-                order: 0;
-                flex-grow: 0;
+                width: 161px;
                 cursor: pointer;
             }
         }
     }
     
-    #navbar {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0px;
+    .header-navbar {
+        @include flex-row();
+        justify-content: flex-start;
         gap: 32px;
-        height: 22px;
-
+        
         .navbar-link {
-            height: 22px;
             margin-left: 32px;
             font-size: 18px;
-            line-height: 22px;
-            letter-spacing: 1.92px;
             
             &:hover {
                 border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
@@ -81,26 +56,23 @@
     }
     
     .header-actions {
-        display: flex;
-        flex-direction: row;
+        @include flex-row();
         justify-content: flex-end;
-        gap: 6px;
-        width: 50%;
+        width: 45%;
         margin-inline-end: 3%;
         
         .header-btn {
-            width: auto;
-            z-index: 2;
+            z-index: 5;
         }
         
-        @media screen and (min-width: 960px) {
+        @include desktop() {
             width: 60%;
             gap: 25px;
         }
     }
 
     .header-search-mobile {
-        @media screen and (min-width: 960px) {
+        @include desktop() {
             display: none;
         }
     }
@@ -109,12 +81,10 @@
         @include width-height(410px, 41px);
         position: absolute;
         float: right;
-        margin-inline-start: 43.5%;
-        z-index: 1;
+        margin-inline-start: 38.5%;
     }
 
     .header-animation {
-
         &-enter, &-appear {
             opacity: 0.1;
         }
@@ -133,5 +103,4 @@
             transition: all 400ms;
         }
     }
-
 }

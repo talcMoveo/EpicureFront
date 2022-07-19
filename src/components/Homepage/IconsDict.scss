@@ -8,7 +8,7 @@
     background: #FAFAFA;
     margin-bottom: 90px;
     margin-top: 80px;
-    @media screen and (min-width: 960px) {
+    @include desktop {
         height: 258px;
     }
     
@@ -17,7 +17,7 @@
         font-size: 18px;
         letter-spacing: 2.14px;
         margin-bottom: 25px;
-        @media screen and (min-width: 960px) {
+        @include desktop {
             margin-bottom: 35px;
             font-size: 30px;
         }
@@ -27,14 +27,14 @@
         @include flex-col();
         gap: 60px;
         
-        @media screen and (min-width: 960px) {
+        @include desktop {
             @include flex-row();
             gap: 65px;
         }
         .icons-meaning-img {
             @include width-height(56px, 56px);
             
-            @media screen and (min-width: 960px) {
+            @include desktop {
                 @include width-height(77.42px, 60px);
             }
         }
