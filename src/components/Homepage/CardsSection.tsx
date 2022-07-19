@@ -13,7 +13,7 @@ import seeMore from '../../assets/General/>>.svg';
 
 const CardsSection: React.FC<{popularRestaurants: Restaurant[], signatureDishes: Dish[]}> = (props) => {
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
@@ -25,8 +25,8 @@ const CardsSection: React.FC<{popularRestaurants: Restaurant[], signatureDishes:
             {
             breakpoint: 1024,
             settings: {
-                slidesToShow: 1.1,
-                slidesToScroll: 1.1,
+                slidesToShow: 1.12,
+                slidesToScroll: 1,
                 infinite: true,
                 arrows: false
             }

@@ -11,8 +11,8 @@
     background-color: $cardBackground;
     
     @media screen and (min-width: 960px) {
-        width: 379px;
         align-items: center;
+        width: 379px;
     }
     
     .card-img {
@@ -35,15 +35,16 @@
     }
 }
 
+
 .dish {
-    @include width-height(245px, 390px);
+    height: 390px;
     
     .card-title {
         position: absolute;
         margin-top: 170px;
         
         @media screen and (min-width: 960px) {
-            // position: inherit;
+            margin-top: 270px;
         }
     }
     
@@ -56,15 +57,14 @@
         .dish-ingredients {
             position: absolute;
             margin-top: -120px;
-            // margin-bottom: 16px;
             width: 200px;
             
             @media screen and (min-width: 960px) {
                 @include width-height(295px, 176px);
                 @include font-w-s-h(200, 24px, 30px);
                 letter-spacing: 1.97px;
-                margin-top: 8px;
-                margin-bottom: 0;
+                // margin-bottom: 0;
+                margin-top: -250px;
             }
         }
         
@@ -78,7 +78,7 @@
                 padding-bottom: 16px;
             }
         }
-    
+        
         .dish-price {
             @include flex-row();
             justify-content: flex-start;
@@ -108,7 +108,33 @@
             }
         }
     }
+
+
+    /// ?????
+    @media screen and (min-width: 960px) {
+        display: grid;
+        grid-template-columns: [col1] 93px [col2] 194px [col3] 93px;
+        grid-template-rows: [row1] 306px [row2] 126px [row3] 176px [row4] 46px;
+        // height: 655px;
+    
+        .card-img {
+            grid-area: 1 / 1 / 2 / 4;
+        }
+    
+        .card-title {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+    
+        .dish-ingredients {
+            grid-area: 3 / 1 / 4 / 4;
+        }
+    
+        .dish-price {
+            grid-area: 4 / 1 / 5 / 4;
+        }
+    }
 }
+
 
 .restaurant-small {
     @include width-height(245px, 233px);

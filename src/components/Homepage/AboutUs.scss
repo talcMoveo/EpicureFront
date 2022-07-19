@@ -102,79 +102,10 @@
             
             .about-us-img {
                 @include width-height(180px, auto);
+                // width: fit-content;
+                // height: fit-content;
             }
         }
     }
     
 }
-
-// .about-us {
-//     @include flex-col();
-//     align-items: flex-start;
-//     margin-top: 80px;
-//     padding-inline-start: 20px;
-//     height: 870px;
-//     background: #FAFAFA;
-    
-//     @media screen and (min-width: 960px) {
-//         padding-left: 132px;
-//         height: 529px;
-//     }
-    
-//     .about-us-logo {
-//         order: 1;
-//         margin-bottom: 30px;
-//     }
-    
-//     .about-us-text-wrapper {
-//         order: 3;
-//         @include flex-col();
-        
-//         @media screen and (min-width: 960px) {
-//             @include flex-row();
-//             gap: 432px;
-//         }
-
-//         .about-us-text {
-//             @include width-height(569px, auto);
-//             text-align: left;
-//             font-size: 20px;
-//             line-height: 30px;
-//             letter-spacing: 2.14px;
-//             align-items: center;
-//         }
-//     }
-
-//     .about-us-wrapper-mobile {
-//         .about-us-logo {
-//             order: 1;
-//         }
-//         .about-us-txt {
-//             order: 3;
-//         }
-//     }
-    
-//     .about-us-buttons-wrapper {
-//         order: 2;
-//         @include flex-row();
-//         margin-top: 20px;
-//         width: 180px;
-        
-//         @media screen and (min-width: 960px) {
-//             order: 3;
-//         }
-        
-//         .about-us-buttons {
-//             @include width-height(180px, 52px);
-//             background-color: transparent;
-//             border: none;
-//             margin-right: 16px;
-//             align-items: center;
-//             padding: 0;
-//         }
-        
-//         .about-us-img {
-//             @include width-height(180px, auto);
-//         }
-//     }
-// }

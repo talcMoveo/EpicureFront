@@ -5,13 +5,10 @@
     height: 218px;
     width: 100%;
     top: 46px;
-    z-index: 10;
-    
-    background: $white;
-    box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);   
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include popup-window();
     
     @media screen and (min-width: 960px) {
         width: 497px;
@@ -26,8 +23,11 @@
         width: 121px;
         height: auto;
         margin-top: 63px;
-        
         opacity: 0.5;
+        
+        @media screen and (min-width: 960px) {
+            margin-top: auto;
+        }
         
         .shopping-cart-empty-img {
             width: 44.92px;
@@ -48,7 +48,6 @@
         }
     }
     
-    
     .order-history-btn {
         background-color: transparent;
         width: 220px;
@@ -63,5 +62,4 @@
         position: absolute;
         cursor: pointer;
     }
-    
 }

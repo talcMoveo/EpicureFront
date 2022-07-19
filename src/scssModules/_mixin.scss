@@ -18,3 +18,9 @@
     font-size: $size;
     line-height: $height;
 }
+
+@mixin popup-window() {
+    z-index: 10;
+    background: $white;
+    box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);
+}

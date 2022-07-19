@@ -9,10 +9,19 @@
     @media screen and (min-width: 960px) {
         text-align: center;
         margin-top: 120px; 
+        margin-bottom: 40px;
     }
 }
 
 .restaurant-cards {
+    width: 85%;
+    margin-inline-start: 16px;
+    
+    @media screen and (min-width: 960px) {
+        margin-bottom: 40px;
+        margin: auto;
+    }
+
     .slick-dots {
         top: 400px;
     }
@@ -47,6 +56,9 @@
 }
 
 .dish-cards {
+    width: 85%;
+    margin: auto;
+
     .slick-dots {
         top: 530px;
     }

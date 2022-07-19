@@ -58,18 +58,15 @@
         }
     }
     
-    
     #navbar {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         padding: 0px;
         gap: 32px;
-        width: 193px;
         height: 22px;
 
         .navbar-link {
-            width: 108px;
             height: 22px;
             margin-left: 32px;
             font-size: 18px;
@@ -93,7 +90,7 @@
         
         .header-btn {
             width: auto;
-            z-index: 10;
+            z-index: 2;
         }
         
         @media screen and (min-width: 960px) {
@@ -103,26 +100,16 @@
     }
 
     .header-search-mobile {
-        
         @media screen and (min-width: 960px) {
             display: none;
         }
-
-        .header-input {
-            display: none;
-
-            @media screen and (min-width: 960px) {
-                display: block;
-                position: absolute;
-                margin-inline-start: 20%;
-                box-sizing: border-box;
-                
-                width: 500px;
-                margin-inline-start: 570px;
-                width: 500px;
-                height: 48px;
-            }
-        }
     }
     
+    .header-input {
+        @include width-height(410px, 41px);
+        position: absolute;
+        float: right;
+        margin-inline-start: 43.5%;
+        z-index: 1;
+    }
 }

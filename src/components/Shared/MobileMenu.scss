@@ -2,19 +2,13 @@
 
 .mobile-menu {
     padding: 40px 12px 24px 20px;
-    
     position: absolute;
     width: 93%;
-    height: 367px;
+    height: 315px;
     left: -1px;
     top: 46px;
-    z-index: 10;
-    
-    // note: same design as shopping cart
-    background: $white;
-    box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);
+    @include popup-window();
 
-    
     .navbar {
         display: flex;
         flex-direction: column;

@@ -32,14 +32,14 @@
             height: 80px;
             margin-top: 15px;
             margin-bottom: 15px;
+
+            @include font-w-s-h(200, 24px, 32px);
             
-            font-size: 24px;
-            line-height: 32px;
             letter-spacing: 1.97px;
             color: $black;
             
             @media screen and (min-width: 960px) {
-                font-size: 32px;
+                @include font-w-s-h(200, 32px, 40px);
                 width: 450px;
                 height: 80px;
                 margin-top: 50px;
@@ -49,7 +49,7 @@
         .hero-input {
             width: 65%;
             height: 30px;
-
+            
             font-size: 12px;
             padding-left: 40px;
             

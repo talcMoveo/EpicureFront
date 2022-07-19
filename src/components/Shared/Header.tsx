@@ -39,6 +39,11 @@ const Header: React.FC = () => {
           <a className='navbar-link'>Chefs</a>
         </nav>
       </div>
+      {
+        (showSearch) && 
+        (((window.innerWidth > 960) && <input className='header-input' placeholder='Search for restaurant cuisine, chef' />)
+          || (window.innerWidth <= 960) && <MobileSearch />)
+      }
       <div className='header-actions'>
         <button className='header-btn search-btn' type="button" onClick={() => {setShowSearch(!showSearch);}}>
           <img src={search} /></button>
@@ -47,12 +52,6 @@ const Header: React.FC = () => {
         <button className='header-btn cart-btn' type="button" onClick={() => {setShowCart(!showCart);}}>
           <img src={cart} /></button>
       </div>
-      {
-        (showSearch) && (window.innerWidth > 960) && <input className='header-input' placeholder='Search for restaurant cuisine, chef' />
-      }
-      {
-        (showSearch) && (window.innerWidth <= 960) && <MobileSearch />
-      }
       {(showCart) && <ShoppingCart />}
     </div>
   );
