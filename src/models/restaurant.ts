@@ -1,3 +1,4 @@
+/* eslint-disable */
 class Restaurant {
   name: string;
   photoSrc: string;

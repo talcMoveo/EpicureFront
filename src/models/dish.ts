@@ -1,3 +1,4 @@
+/* eslint-disable */
 class Dish {
   name: string;
   photoSrc: string;

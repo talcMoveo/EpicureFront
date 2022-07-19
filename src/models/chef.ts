@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Restaurant from './restaurant';
 
 class Chef {

@@ -112,4 +112,26 @@
         margin-inline-start: 43.5%;
         z-index: 1;
     }
+
+    .header-animation {
+
+        &-enter, &-appear {
+            opacity: 0.1;
+        }
+        
+        &-enter-active, &-appear-active {
+            opacity: 1;
+            transition: all 400ms;
+        }
+        
+        &-exit {
+            opacity: 1;
+        }
+        
+        &-exit-active {
+            opacity: 0.1;
+            transition: all 400ms;
+        }
+    }
+
 }

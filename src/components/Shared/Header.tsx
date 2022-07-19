@@ -2,18 +2,19 @@
 
 import React, { useState } from 'react';
 import './Header.scss';
+import { CSSTransition } from 'react-transition-group';
 
+import ShoppingCart from '../Shared/ShoppingCart';
 import logo from '../../assets/General/logo.svg';
 import search from '../../assets/Header/searchLogo.svg';
 import profile from '../../assets/Header/profileLogo.svg';
 import cart from '../../assets/Header/cartLogo.svg';
-import ShoppingCart from '../Shared/ShoppingCart';
 
+import MobileMenu from './MobileMenu';
+import MobileSearch from './MobileSearch';
 import mobileMenu from '../../assets/Mobile/mobile-menu.svg'
 import mobileMenuExit from '../../assets/General/x.svg'
 import logoCircle from '../../assets/Mobile/logo-circle.svg'
-import MobileMenu from './MobileMenu';
-import MobileSearch from './MobileSearch';
 
 const Header: React.FC = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -26,10 +27,7 @@ const Header: React.FC = () => {
         <button className='header-btn' onClick={() => {setShowMobileMenu(!showMobileMenu);}}>
           <img className='header-btn-img' src={showMobileMenu ? mobileMenuExit : mobileMenu} />
         </button>
-        {
-          (showMobileMenu) &&
-          <MobileMenu />
-        }
+        { (showMobileMenu) && <MobileMenu /> }
       </div>
       <img className='header-logo-mobile' src={logoCircle} />
       <div className='header-links-desktop'>
@@ -40,9 +38,31 @@ const Header: React.FC = () => {
         </nav>
       </div>
       {
-        (showSearch) && 
-        (((window.innerWidth > 960) && <input className='header-input' placeholder='Search for restaurant cuisine, chef' />)
-          || (window.innerWidth <= 960) && <MobileSearch />)
+        // (showSearch) && 
+        (
+          (
+            (window.innerWidth > 960) && 
+            <CSSTransition
+              in={showSearch}
+              timeout={400}
+              classNames='header-animation'
+              unmountOnExit
+            >
+              <input className='header-input' placeholder='Search for restaurant cuisine, chef' />
+            </CSSTransition>
+          )
+          || (
+            (window.innerWidth <= 960) && 
+            <CSSTransition
+              in={showSearch}
+              timeout={400}
+              classNames='header-animation'
+              unmountOnExit
+            >
+              <MobileSearch />
+            </CSSTransition>
+          )
+        )
       }
       <div className='header-actions'>
         <button className='header-btn search-btn' type="button" onClick={() => {setShowSearch(!showSearch);}}>
@@ -52,7 +72,16 @@ const Header: React.FC = () => {
         <button className='header-btn cart-btn' type="button" onClick={() => {setShowCart(!showCart);}}>
           <img src={cart} /></button>
       </div>
-      {(showCart) && <ShoppingCart />}
+      {
+        <CSSTransition
+          in={showCart}
+          timeout={400}
+          classNames='header-animation'
+          unmountOnExit
+        >
+          <ShoppingCart />
+        </CSSTransition>
+      }
     </div>
   );
 };
