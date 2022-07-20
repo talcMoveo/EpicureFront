@@ -22,16 +22,28 @@ const Hero: React.FC = () => {
     <div className='hero-wrapper'>
       <div className='hero-inside-wrapper'>
         <span className='hero-text'>
-          <BlockRevealAnimation>
+          {/* <BlockRevealAnimation>
             Epicure works with the top chef
           </BlockRevealAnimation>
           <BlockRevealAnimation>
             restaurants in Tel Aviv
-          </BlockRevealAnimation>
+          </BlockRevealAnimation> */}
+            Epicure works with the top
+            chef restaurants in Tel Aviv
         </span>
-        <input className='hero-input' placeholder='Search for restaurant cuisine, chef' onChange={(event) => handleChange(event)} value={enteredInput} />
-        <img className='search-img' src={search} />
-        {(enteredInput.trim().length !== 0) && <img className='erase-img' src={erase} onClick={eraseClickHandler} />}
+        <div className='hero-input-div'>
+          <img className='search-img' src={search} />
+          <input
+            className='hero-input'
+            placeholder='Search for restaurant cuisine, chef'
+            onChange={(event) => handleChange(event)}
+            value={enteredInput}
+          />
+          {
+            (enteredInput.trim().length !== 0) &&
+            <img className='erase-img' src={erase} onClick={eraseClickHandler}/>
+          }
+        </div>
       </div>
     </div>
   );

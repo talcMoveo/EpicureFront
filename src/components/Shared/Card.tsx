@@ -2,14 +2,14 @@
 import React from 'react';
 import './Card.scss';
 
-import emptyStar from '../../assets/Restaurants/StarEmpty.svg';
-import fullStar from '../../assets/Restaurants/StarFull.svg';
-
 import priceLine from '../../assets/Dishes/logos/dishPriceLine.svg';
 import shekelLogo from '../../assets/Dishes/logos/shekelLogo.svg';
 import spicy from '../../assets/Dishes/logos/spicy.svg';
 import veg from '../../assets/Dishes/logos/vegetarian.svg';
 import vegan from '../../assets/Dishes/logos/vegan.svg';
+
+import emptyStar from '../../assets/Restaurants/StarEmpty.svg';
+import fullStar from '../../assets/Restaurants/StarFull.svg';
 
 import Restaurant from '../../models/restaurant';
 import Dish from '../../models/dish';
@@ -27,11 +27,11 @@ enum features {
 }
 
 const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: number }> = (props) => {
-    let cardWrapperClass = 'card-wrapper restaurant restaurant-big';
+    let cardClass = 'restaurant restaurant-big';
     if (props.cardType === 'restaurant-small') {
-        cardWrapperClass = 'card-wrapper restaurant restaurant-small';
+        cardClass = 'restaurant restaurant-small';
     } else if (props.cardType === 'dish') {
-        cardWrapperClass = 'card-wrapper dish';
+        cardClass = 'dish';
     }
     
     const isDish = (item: Dish | Restaurant): item is Dish => 'features' in item;
@@ -53,7 +53,7 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
         return featureLogos;
     };
 
-    const dishProperties = () => {
+    const dishPrice = () => {
         if (window.innerWidth <= 960) {
             return (<div className='dish-price'>
                         <img className='shekel-logo' src={shekelLogo} />
@@ -84,43 +84,49 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
         return ingredientsStr;
     }
 
+    const backgroundImg = require('../../' + currentItem.photoSrc);
+
     return (
-        <div className={cardWrapperClass}>
-            <img className='card-img' src={require('../../' + currentItem.photoSrc)} alt={currentItem.name} />
-            <div className='card-title'>{currentItem.name}</div>
-            {
-                isDish(currentItem) &&
-                <div className='dish-card-continue'>
-                    <div>
-                        <div className='dish-ingredients'>
-                            { dishIngredients() }
-                        </div>
-                    </div>
-                    {getFeatures().map((feat, index) => {
-                        return <img className='feature-img' src={feat} key={index} />;
-                    })}
-                    { dishProperties() }
-                </div>
-            }
-            {
-                (props.cardType === 'restaurant-big') &&
-                !isDish(currentItem) &&
-                <div>
-                    <div className='restaurant-chef-name'>{currentItem.chef}</div>
+        <div className='card-wrapper'>
+            <div className={cardClass}>
+                <div className='card-img' style={{ backgroundImage: `url(${backgroundImg})` }} />
+                <div className='card-content'>
+                    <div className='card-title'>{currentItem.name}</div>
                     {
-                        (window.innerWidth > 960) &&
-                        <div className='restaurant-rating-img'>
-                            {[...Array(currentItem.rating)].map((i, index) => {
-                                return <img className='rating-img' src={fullStar} alt="logo" key={index} />;
-                            })}
-                            {[...Array(5 - currentItem.rating)].map((i, index) => {
-                                return <img className='rating-img' src={emptyStar} alt="logo" key={index} />;
-                            })}
+                        isDish(currentItem) &&
+                        <div className='dish-cont'>
+                            <div className='dish-ingredients'>
+                                { dishIngredients() }
+                            </div>
+                            <div className='dish-features'>
+                                {getFeatures().map((feat, index) => {
+                                    return <img className='dish-feature-img' src={feat} key={index} />;
+                                })}
+                            </div>
+                            { dishPrice() }
                         </div>
                     }
-                    
+                    {
+                        (props.cardType === 'restaurant-big') &&
+                        !isDish(currentItem) &&
+                        <div className='res-big-cont'>
+                            <div className='restaurant-chef-name'>{currentItem.chef}</div>
+                            {
+                                (window.innerWidth > 960) &&
+                                <div className='restaurant-rating'>
+                                    {[...Array(currentItem.rating)].map((i, index) => {
+                                        return <img className='rating-img' src={fullStar} alt="logo" key={index} />;
+                                    })}
+                                    {[...Array(5 - currentItem.rating)].map((i, index) => {
+                                        return <img className='rating-img' src={emptyStar} alt="logo" key={index} />;
+                                    })}
+                                </div>
+                            }
+                            
+                        </div>
+                    }
                 </div>
-            }
+            </div>
         </div>
     );
 };

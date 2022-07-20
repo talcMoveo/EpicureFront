@@ -10,18 +10,27 @@ import IconsDict from '../components/Homepage/IconsDict';
 import ChefOfTheWeek from '../components/Homepage/ChefOfTheWeek';
 import AboutUs from '../components/Homepage/AboutUs';
 import Footer from '../components/Shared/Footer';
+import HomepageSection from '../components/Homepage/HomepageSection';
 
 const Homepage: React.FC = () => {
   
   return (
     <div className='homepage-wrapper'>
-      <Header />
-      <Hero />
-      <CardsSection popularRestaurants={mockData.popularRestaurants} signatureDishes={mockData.signatureDishes} />
-      <IconsDict />
-      <ChefOfTheWeek chefOfTheWeekData={mockData.chefOfTheWeekData} chefOfTheWeekRestaurants={mockData.chefOfTheWeekRestaurants} />
-      <AboutUs aboutUsText={mockData.AboutUsText} />
-      <Footer />
+      <HomepageSection section='hero'>
+        <Hero />
+      </HomepageSection>
+      <HomepageSection section='cardsSection'>
+        <CardsSection popularRestaurants={mockData.popularRestaurants} signatureDishes={mockData.signatureDishes} />
+      </HomepageSection>
+      <HomepageSection section='iconsDict'>
+        <IconsDict />
+      </HomepageSection>
+      <HomepageSection section='chefOfTheWeek'>
+        <ChefOfTheWeek chefOfTheWeekData={mockData.chefOfTheWeekData} chefOfTheWeekRestaurants={mockData.chefOfTheWeekRestaurants} />
+      </HomepageSection>
+      <HomepageSection section='aboutUs'>
+        <AboutUs aboutUsText={mockData.AboutUsText} />
+      </HomepageSection>
     </div>
   );
 };

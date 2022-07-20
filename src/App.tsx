@@ -8,6 +8,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useSpring  } from 'react-spring';
 
 import Homepage from './pages/Homepage';
+import Footer from './components/Shared/Footer';
+import Header from './components/Shared/Header';
 
 function App() {
 
@@ -17,7 +19,9 @@ function App() {
   
   return (
     <div className="App">
+      <Header />
       <Homepage></Homepage>
+      <Footer />
     </div>
   );
 }

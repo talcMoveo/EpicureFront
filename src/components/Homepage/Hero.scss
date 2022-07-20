@@ -2,89 +2,72 @@
 
 .hero-wrapper {
     @include flex-row();
-    height: 273px;
     background-image: url('../../assets/Hero/hero-picture.png');
     background-size: cover;
     background-position: 80%;
-
-    @include desktop {
-        height: 693px;
-    }
+    padding: 15% 6%;
     
+    @include desktop {
+        padding: 16% 18%;
+    }
+
     .hero-inside-wrapper {
         @include flex-col();
         align-items: center;
         margin: auto;
+        gap: 20px;
         background: rgba(255, 255, 255, 0.88);
-        
-        width: 90%;
-        height: 140px;
+        padding: 5% 3%;
         
         @include desktop {
-            width: 55%;
-            height: 270px;
+            padding: 50px 30px;
         }
-        
+
         .hero-text {
-            @include font-w-s-h(200, 24px, 27px);
-            margin-top: 15px;
-            margin-bottom: 15px;
+            font-size: 24px;
             
             @include desktop {
                 @include font-w-s-h(200, 32px, 40px);
                 width: 60%;
-                margin-top: 48px;
             }
         }
-        
-        .hero-input {
-            width: 65%;
-            height: 30px;
-            
-            font-size: 12px;
-            padding-left: 40px;
+
+        .hero-input-div {
+            @include flex-row();
+            align-items: center;
+            flex: 1;
+            border: 0.5px solid $black;
+            border-radius: 4px;
+            width: 98%;
+            padding: 0 10px;
             
             @include desktop {
-                width: 470px;
-                margin-top: 18px;
-    
-                font-size: 24px;
-                line-height: 29px;
+                width: 85%;
+            }
+
+            .hero-input {
+                font-size: 12px;
+                flex-grow: 2;
+                height: auto;
                 
-                padding-left: 60px;
-                padding-right: 40px;
-
-                height: 48px;
+                @include desktop {
+                    padding: 2% 3%;
+                    font-size: 24px;
+                    line-height: 29px;
+                }
             }
-        }
-        
-        .search-img {
-            position: relative;
-            bottom: 23px;
-            left: -40%;
-            height: 20px;
-            cursor: pointer;
-
-            @include desktop {
-                position: relative;
-                bottom: 42px;
-                left: -258px;
-                width: 32px;
-                height: 32px;
-            }
-        }
-        
-        .erase-img {
-            width: 14.83px;
-
-            position: relative;
-            bottom: 35px;
-            left: 140px;
             
-            @include desktop {
-                position: relative;
-                bottom: 63.5px;
-                left: 265px;
+            .search-img {
+                height: 20px;
+                cursor: pointer;
+                
+                @include desktop {
+                    height: 32px;
+                }
+            }
+            
+            .erase-img {
+                width: 14.83px;
             }
         }
     }

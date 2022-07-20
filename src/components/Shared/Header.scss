@@ -2,7 +2,7 @@
 
 .header-wrapper {
     @include flex-row();
-    height: 46px;
+    padding: 10px 0;
     align-items: center;
     
     .header-links-desktop {
@@ -31,6 +31,8 @@
         .header-links-desktop {
             @include flex-row();
             align-items: center;
+            gap: 40px;
+            width: 45%;
             
             .header-logo {
                 width: 161px;
@@ -45,7 +47,6 @@
         gap: 32px;
         
         .navbar-link {
-            margin-left: 32px;
             font-size: 18px;
             
             &:hover {
@@ -58,6 +59,8 @@
     .header-actions {
         @include flex-row();
         justify-content: flex-end;
+        flex-grow: 1;
+        flex: 1;
         width: 45%;
         margin-inline-end: 3%;
         
@@ -66,7 +69,6 @@
         }
         
         @include desktop() {
-            width: 60%;
             gap: 25px;
         }
     }
@@ -77,6 +79,23 @@
         }
     }
     
+    .header-search {
+        @include flex-row();
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        border-radius: 4px;
+        // flex-grow: 1;
+        padding-right: 10px;
+
+        .search-img {
+        }
+
+        .search-input {
+            flex-grow: 2;
+        }
+    }
+
     .header-input {
         @include width-height(410px, 41px);
         position: absolute;

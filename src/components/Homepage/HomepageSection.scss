@@ -1,0 +1,23 @@
+@import '../../pages/Homepage.scss';
+
+.hero-section{
+}
+
+.cardsSection-section{
+    padding: 48px 0 20px 20px;
+
+    @include desktop {
+        padding: 80px 0 40px 0;
+    }
+}
+
+.iconsDict-section{
+    padding: 40px 0;
+}
+
+.chefOfTheWeek-section{
+}
+
+.aboutUs-section{
+    padding-top: 80px;
+}
