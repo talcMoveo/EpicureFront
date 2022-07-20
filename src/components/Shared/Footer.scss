@@ -2,23 +2,18 @@
 
 .footer-wrapper {
     @include flex-col();
-    margin-top: 32px;
-    margin-bottom: 24px;
-    justify-content: center;
+    padding: 30px 0;
     align-items: flex-start;
     padding-inline-start: 8%;
-    gap: 40px;
+    gap: 38px;
     
     @include desktop {
         @include flex-row();
-        align-items: center;
-        margin-bottom: 52px;
+        justify-content: center;
         padding-inline-start: 0;
     }
     
     .footer-link {
         font-size: 18px;
-        line-height: 22px;
-        letter-spacing: 1.92px;
     }
 }

@@ -10,7 +10,7 @@ const IconsDict: React.FC = () => {
 
     return (
         <div className='cards-animation icons-meaning'>
-            <p className='icons-meaning-txt'>{'the meaning of our icons:'.toLocaleUpperCase()}</p>
+            <p className='icons-meaning-txt title'>{'the meaning of our icons:'.toLocaleUpperCase()}</p>
             <div className='icons-dict'>
                 <div>
                     <img className='spicy-icon icons-meaning-img' src={spicy} />

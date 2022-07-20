@@ -1,56 +1,50 @@
 @import '../../pages/Homepage.scss';
 
 .cards-section-wrapper {
-    @include flex-col();
-    align-items: flex-start;
-    justify-content: space-between;
+    // @include flex-col();
+    // align-items: flex-start;
+    // justify-content: space-between;
+    text-align: left;
     
     @include desktop {
-        align-items: center;
+        text-align: center;
     }
 
     .cards-main-title {
-        margin-top: 48px;
-        text-align: left;
         margin-inline-start: 16px;
+        margin-top: 48px;
         margin-bottom: 16px;
         
         @include desktop {
-            text-align: center;
             margin-top: 120px; 
             margin-bottom: 40px;
         }
     }
     
     .restaurant-cards {
-        width: 85%;
-        margin-inline-start: 16px;
+        width: 100%;
+        margin-inline-start: 12px;
         
         @include desktop {
-            margin-bottom: 40px;
+            padding-left: 5%;
+            padding-right: 5%;
             margin: auto;
-        }
-    
-        .slick-dots {
-            top: 400px;
         }
     }
     
     .all-restaurants-btn {
-        background-color: transparent;
-        border: none;
+        @include flex-row();
+        @include font-w-s-h(400, 16px, 35px);
         float: left;
-        margin-top: 16px;
+        margin-top: 10px;
         margin-inline-start: 16px;
     
-        @include flex-row();
-        gap: 8px;
+        gap: 10px;
         align-items: center;
-        @include font-w-s-h(400, 16px, 35px);
         
         @include desktop {
             float: right;
-            margin-right: 125.5px;
+            margin-inline-end: 6.5%;
             font-size: 24px;
         }
         
@@ -58,7 +52,6 @@
             @include width-height(18px, 16px);
             
             @include desktop {
-                margin-left: 12px;
                 @include width-height(24px, 18px);
             }
         }
@@ -67,9 +60,5 @@
     .dish-cards {
         width: 85%;
         margin: auto;
-    
-        .slick-dots {
-            top: 530px;
-        }
     }
 }    

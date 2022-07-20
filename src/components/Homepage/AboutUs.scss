@@ -6,21 +6,18 @@
     text-align: left;
     padding-inline-start: 8%;
     margin-top: 80px;
-    height: 870px;
-    background: #FAFAFA;
+    background: $light-gray;
+    padding: 5% 8%;
     
     @include desktop {
         @include flex-row();
-        padding-left: 132px;
-        height: 529px;
+        padding: 2% 8% 3% 8%;
     }
     
     .about-us-logo {
         order: 1;
         width: 102px;
-        height: 95px;
-        margin-top: 20px;
-        margin-bottom: 5%;
+        margin: 5% 0;
         
         @include desktop {
             order: 2;
@@ -28,14 +25,13 @@
             margin-top: 0px;
             margin-left: 30%;
             width: 178px;
-            height: 166px;
         }
     }
 
     .about-us-info {
         order: 2;
-        text-align: left;
         @include flex-col();
+        text-align: left;
         
         @include desktop {
             order: 1;
@@ -43,7 +39,7 @@
 
         .about-us-text-wrapper {
             order: 3;
-            margin-top: 48px;
+            margin-top: 5%;
             
             @include desktop {
                 margin-top: auto;
@@ -53,8 +49,6 @@
                 text-align: left;
                 font-size: 20px;
                 line-height: 30px;
-                letter-spacing: 2.14px;
-                align-items: center;
                 padding-right: 20px;
                 
                 @include desktop {
@@ -70,18 +64,17 @@
             
             @include desktop {
                 order: 3;
-                width: 180px;
                 @include flex-row();
+                width: 180px;
+                gap: 16px;
             }
             
             .about-us-button {
                 @include width-height(180px, 52px);
                 background-color: transparent;
                 border: none;
-                margin-right: 16px;
-                align-items: center;
                 padding: 0;
-                margin-top: 20px;
+                margin-top: 5%;
             }
             
             .google-btn {
@@ -99,13 +92,6 @@
                     order: 1;
                 }
             }
-            
-            .about-us-img {
-                @include width-height(180px, auto);
-                // width: fit-content;
-                // height: fit-content;
-            }
         }
     }
-    
 }
