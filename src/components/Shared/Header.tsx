@@ -22,13 +22,8 @@ const Header: React.FC = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [searchDisabled, setSearchDisabled] = useState(true);
 
-  // const divAttributesEnabled = {
-  //   borderRadius: "4px",
-  //   border: "0.5px solid $black"
-  // }
-
-  const divAttributesDisabled = {
-    border: "none"
+  const handleExit = () => {
+    setShowSearch(!showSearch);
   }
 
   return (
@@ -57,7 +52,7 @@ const Header: React.FC = () => {
               classNames='header-animation'
               unmountOnExit
             >
-              <MobileSearch />
+              <MobileSearch handleExit={handleExit}  />
             </CSSTransition>
       }
       
@@ -65,7 +60,7 @@ const Header: React.FC = () => {
         <div className='header-search' style={{border: showSearch && (window.innerWidth > 960) ? "0.5px solid black" : "none"}}>
           { (window.innerWidth > 960) && 
             <input className='search-input' placeholder='Search for restaurant cuisine, chef' disabled={!showSearch}
-              style={{visibility: showSearch ? "visible": "hidden"}}
+              style={{display: showSearch ? "": "none"}}
             />
           }
           <img src={search}  className='search-img' onClick={() => {setShowSearch(!showSearch);}}/>

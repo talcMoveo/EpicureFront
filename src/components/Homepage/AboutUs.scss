@@ -10,7 +10,7 @@
     
     @include desktop {
         @include flex-row();
-        padding: 2% 8% 3% 8%;
+        padding: 2% 4% 3% 8%;
     }
     
     .about-us-logo {
@@ -21,8 +21,7 @@
         @include desktop {
             order: 2;
             align-self: center;
-            margin-top: 0px;
-            margin-left: 30%;
+            margin: auto;
             width: 178px;
         }
     }
