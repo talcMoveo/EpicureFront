@@ -4,7 +4,6 @@ import './Homepage.scss';
 
 import mockData from '../mock-data.json';
 import Hero from '../components/Homepage/Hero';
-// import CardsSection from '../components/Homepage/CardsSection';
 import IconsDict from '../components/Homepage/IconsDict';
 import ChefOfTheWeek from '../components/Homepage/ChefOfTheWeek';
 import AboutUs from '../components/Homepage/AboutUs';
@@ -19,18 +18,12 @@ const Homepage: React.FC = () => {
       <HomepageSection section='hero'>
         <Hero />
       </HomepageSection>
-
       <HomepageSection section='cardsSection'>
         <CardsSectionRes popularRestaurants={mockData.popularRestaurants} />
       </HomepageSection>
       <HomepageSection section='cardsSection'>
         <CardsSectionDishes signatureDishes={mockData.signatureDishes} />
       </HomepageSection>
-      
-      {/* <HomepageSection section='cardsSection'>
-        <CardsSection popularRestaurants={mockData.popularRestaurants} signatureDishes={mockData.signatureDishes} />
-      </HomepageSection> */}
-
       <HomepageSection section='iconsDict'>
         <IconsDict />
       </HomepageSection>

@@ -10,7 +10,10 @@ const MobileSearch: React.FC<any> = (props: any) => {
   return (
     <div className='mobile-search'>
       <div className='mobile-search-header'>
-        <img src={exit} className='mobile-search-exit' onClick={props.handleExitSearch}/>
+        <img
+          src={exit} className='mobile-search-exit'
+          onClick={props.handleExit}
+        />
         <div className='mobile-search-title'>
           Search
         </div>
@@ -18,7 +21,10 @@ const MobileSearch: React.FC<any> = (props: any) => {
       <div className='mobile-search-content'>
         <div className='mobile-search-input-wrapper'>
           <img className='mobile-header-search-img' src={searchLogo}/>
-          <input className='mobile-header-input' placeholder='Search for restaurant cuisine, chef' />
+          <input
+            className='mobile-header-input'
+            placeholder='Search for restaurant cuisine, chef'
+          />
         </div>
       </div>
     </div>

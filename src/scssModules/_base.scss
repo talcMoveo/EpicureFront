@@ -7,13 +7,13 @@
     line-height: 24px;
     letter-spacing: 1.25px;
     font-weight: 200;
-    overflow-x: hidden;
     box-sizing: border-box;
+    // overflow-x: hidden;
     
     @media screen and (min-width: 960px) {
         font-size: 30px;
         line-height: 35px;
-        overflow-x: visible;
+        // overflow-x: visible;
     }
 }
 
@@ -56,7 +56,7 @@ a {
     @include flex-row();
     flex-wrap: nowrap;
     gap: 30px;
-    
+
     .slick-slide {
         height: inherit !important;
         width: min-content;

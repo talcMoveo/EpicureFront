@@ -39,6 +39,12 @@ const CardsSectionDishes: React.FC<{signatureDishes: Dish[]}> = (props) => {
                     return <Card cardType={CardType.dish} item={item} itemId={index} key={index} />;
                 })}
             </Slider>
+{/* 
+            <Slider {...settings} className='dish-cards'>
+<div style={{overflow: 'hidden'}}>klfkshfjkshkfdsklfkskfjksdhfjhsdjkf</div>
+<div style={{overflow: 'hidden'}}>dd</div>
+<div style={{overflow: 'hidden'}}>klfkshfjkshkfdsklfkskfdsfslfl;sdfsdfjksdhfjhsdjkf</div>
+            </Slider> */}
         </div>
     );
 };

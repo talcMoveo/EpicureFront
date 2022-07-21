@@ -13,13 +13,13 @@ import seeMore from '../../assets/General/>>.svg';
 const CardsSectionRes: React.FC<{popularRestaurants: Restaurant[]}> = (props) => {
     const settings = {
         dots: false,
+        arrows: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         swipeToSlide: true,
         slidesToScroll: 3,
         initialSlide: 0,
-        arrows: false,
         responsive: [
             {
             breakpoint: 1024,

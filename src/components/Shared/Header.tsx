@@ -34,8 +34,13 @@ const Header: React.FC = () => {
   return (
     <div className='header-wrapper'>
       <div className='header-links-mobile'>
-        <button className='header-btn' onClick={() => {setShowMobileMenu(!showMobileMenu);}}>
-          <img className='header-btn-img' src={showMobileMenu ? mobileMenuExit : mobileMenu} />
+        <button className='header-btn'
+          onClick={() => {setShowMobileMenu(!showMobileMenu);}}
+        >
+          <img
+            className='header-btn-img'
+            src={showMobileMenu ? mobileMenuExit : mobileMenu}
+          />
         </button>
         {
           <CSSTransition
@@ -71,17 +76,28 @@ const Header: React.FC = () => {
       }
       
       <div className='header-actions'>
-        <div className='header-search' style={{border: showSearch && (window.innerWidth > 960) ? "0.5px solid black" : "none"}}>
+        <div className='header-search'
+          style={{ border: showSearch && (window.innerWidth > 960) ? "0.5px solid black" : "none" }}
+        >
           { (window.innerWidth > 960) && 
-            <input className='search-input' placeholder='Search for restaurant cuisine, chef' disabled={!showSearch}
+            <input className='search-input'
+              placeholder='Search for restaurant cuisine, chef'
+              disabled={!showSearch}
               style={{display: showSearch ? "": "none"}}
             />
           }
-          <img src={search}  className='search-img' onClick={() => {setShowSearch(!showSearch);}}/>
+          <img src={search} 
+            className='search-img'
+            onClick={() => {setShowSearch(!showSearch);}}
+          />
         </div>
         <button className='header-btn profile-btn' type="button" >
           <img src={profile} /></button>
-        <button className='header-btn cart-btn' type="button" onClick={() => {setShowCart(!showCart);}}>
+        <button
+          className='header-btn cart-btn'
+          type="button"
+          onClick={() => {setShowCart(!showCart);}}
+        >
           <img src={cart} /></button>
       </div>
       {

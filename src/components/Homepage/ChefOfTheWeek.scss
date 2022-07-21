@@ -7,34 +7,16 @@
         text-align: center;
     }
     
-//     .weekly-chef-title {
-//         @include desktop {
-//             margin-inline-start: auto;
-//         }
-//     }
-    
     .weekly-chef {
         @include flex-col();
         gap: 20px;
         padding: 10px 0;
-        // justify-content: center;
-
-        // width: 90%;
-        // align-items: center;
-        // justify-content: space-around;
         
         @include desktop {
             @include flex-row();
             gap: 64px;
-            // padding: 40px 10px;
         }
-            
-        .weekly-chef-img {
-            // @include desktop {
-            //     padding-inline-start: 8%;
-            // }
-        }
-        
+
         .weekly-chef-desc {
             text-align: justify;
             line-height: 35px;
@@ -52,7 +34,14 @@
             .weekly-chef-dish-cards {
             @include flex-row();
             align-items: flex-start;
-            // width: 60%;
+
+            .slick-slide{
+                width: 245px;
+                
+                @include desktop {
+                    width: 231px;
+                }
+            }
             }
         }
     }

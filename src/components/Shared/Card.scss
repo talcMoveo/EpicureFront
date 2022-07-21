@@ -30,6 +30,7 @@
         }
         
         .card-content {
+            height: 100%;
             padding: 16px 16px 10px 20px;
             gap: 8px;
             
@@ -49,20 +50,19 @@
             
             .dish-cont {
                 @include flex-col();
-                // align-items: flex-start;
-                align-items: stretch;
-                justify-content: stretch;
+                justify-content: space-between;
                 gap: 16px;
-                flex: 1;
+                height: 150px;
                 
                 @include desktop {
                     align-items: center;
-                    gap: 24px;
+                    height: 210px;
                 }
                 
                 .dish-ingredients {
                     @include font-w-s-h(200, 16px, 20px);
-                    flex-grow: 10;
+                    flex-grow: 1;
+                    max-height: 160px;
                     
                     @include desktop {
                         @include font-w-s-h(200, 24px, 30px);
@@ -70,10 +70,9 @@
                 }
 
                 .dish-features {
+                    justify-self: end;
                     @include flex-row();
-                    flex-grow: 1;
                     align-items: center;
-                    // min-height: 24px;
                     
                     .dish-feature-img {
                         width: 30px;
@@ -89,11 +88,9 @@
                     @include flex-row();
                     gap: 5px;
                     align-items: baseline;
-                    flex-grow: 1;
                     
                     @include desktop {
                         align-items: center;
-                        // justify-self: center;
                     }
 
                     .shekel-logo {
@@ -110,7 +107,11 @@
     }
 
     .restaurant-small {
-        width: min-content;
+        width: 245px;
+        
+        @include desktop {
+            width: 213px;
+        }
 
         .card-img {
             @include width-height(245px, 152px);
