@@ -10,7 +10,7 @@ const MobileSearch: React.FC<any> = (props: any) => {
   return (
     <div className='mobile-search'>
       <div className='mobile-search-header'>
-        <img src={exit} className='mobile-search-exit' onClick={props.handleExit}/>
+        <img src={exit} className='mobile-search-exit' onClick={props.handleExitSearch}/>
         <div className='mobile-search-title'>
           Search
         </div>

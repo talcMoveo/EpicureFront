@@ -1,64 +1,32 @@
 @import '../../pages/Homepage.scss';
 
 .cards-section-wrapper {
-    // @include flex-col();
-    // align-items: flex-start;
-    // justify-content: space-between;
-    // text-align: left;
+    @include flex-col();
+    text-align: left;
+    gap: 18px;
     
-    // @include desktop {
-    //     text-align: center;
-    // }
+    @include desktop {
+        text-align: center;
+        gap: 25px;
+    }
 
-    // .cards-main-title {
-    //     margin-inline-start: 16px;
-    //     margin-top: 48px;
-    //     margin-bottom: 16px;
+    .all-restaurants-btn {
+        @include flex-row();
+        @include font-w-s-h(400, 16px, 35px);
+        gap: 10px;
+        align-items: center;
         
-    //     @include desktop {
-    //         margin-top: 120px; 
-    //         margin-bottom: 40px;
-    //     }
-    // }
-    
-    // .restaurant-cards {
-    //     width: 100%;
-    //     margin-inline-start: 12px;
+        @include desktop {
+            float: right;
+            font-size: 24px;
+        }
         
-    //     @include desktop {
-    //         padding-left: 5%;
-    //         padding-right: 5%;
-    //         margin: auto;
-    //     }
-    // }
-    
-    // .all-restaurants-btn {
-    //     @include flex-row();
-    //     @include font-w-s-h(400, 16px, 35px);
-    //     float: left;
-    //     margin-top: 10px;
-    //     margin-inline-start: 16px;
-    
-    //     gap: 10px;
-    //     align-items: center;
-        
-    //     @include desktop {
-    //         float: right;
-    //         margin-inline-end: 6.5%;
-    //         font-size: 24px;
-    //     }
-        
-    //     .all-restaurants-btn-img {
-    //         @include width-height(18px, 16px);
+        .all-restaurants-btn-img {
+            @include width-height(18px, 16px);
             
-    //         @include desktop {
-    //             @include width-height(24px, 18px);
-    //         }
-    //     }
-    // }
-    
-    // .dish-cards {
-    //     width: 85%;
-    //     margin: auto;
-    // }
+            @include desktop {
+                @include width-height(24px, 18px);
+            }
+        }
+    }
 }    

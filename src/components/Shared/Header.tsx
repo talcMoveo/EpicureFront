@@ -20,10 +20,15 @@ const Header: React.FC = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [searchDisabled, setSearchDisabled] = useState(true);
+  // const [searchDisabled, setSearchDisabled] = useState(true);
 
-  const handleExit = () => {
+  const handleExitSearch = () => {
     setShowSearch(!showSearch);
+  }
+
+  const handleExitNavbar = () => {
+    console.log('here')
+    setShowMobileMenu(!showMobileMenu);
   }
 
   return (
@@ -32,7 +37,16 @@ const Header: React.FC = () => {
         <button className='header-btn' onClick={() => {setShowMobileMenu(!showMobileMenu);}}>
           <img className='header-btn-img' src={showMobileMenu ? mobileMenuExit : mobileMenu} />
         </button>
-        { (showMobileMenu) && <MobileMenu /> }
+        {
+          <CSSTransition
+              in={showMobileMenu}
+              timeout={400}
+              classNames='header-animation'
+              unmountOnExit
+            >
+              <MobileMenu handleExit={handleExitNavbar}/>
+            </CSSTransition>
+          }
       </div>
 
       <img className='header-logo-mobile' src={logoCircle} />
@@ -52,7 +66,7 @@ const Header: React.FC = () => {
               classNames='header-animation'
               unmountOnExit
             >
-              <MobileSearch handleExit={handleExit}  />
+              <MobileSearch handleExit={handleExitSearch}  />
             </CSSTransition>
       }
       
