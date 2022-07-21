@@ -21,8 +21,6 @@ const CardsSection: React.FC<{popularRestaurants: Restaurant[], signatureDishes:
         slidesToScroll: 3,
         initialSlide: 0,
         arrows: false,
-        // adaptiveHeight: true,
-        // mobilefirst: true,
         responsive: [
             {
             breakpoint: 1024,

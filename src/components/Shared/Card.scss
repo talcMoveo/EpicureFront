@@ -1,8 +1,6 @@
 @import '../../pages/Homepage.scss';
 
 .card-wrapper {
-    // ??? how to make image height dynamic?
-    // aspect-ratio: initial;
     height: inherit !important;
     
     .card-content {
@@ -107,12 +105,6 @@
     }
 
     .restaurant-small {
-        width: 245px;
-        
-        @include desktop {
-            width: 213px;
-        }
-
         .card-img {
             @include width-height(245px, 152px);
             background-size: cover;

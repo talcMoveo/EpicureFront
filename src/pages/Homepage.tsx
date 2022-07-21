@@ -19,10 +19,14 @@ const Homepage: React.FC = () => {
         <Hero />
       </HomepageSection>
       <HomepageSection section='cardsSection'>
-        <CardsSectionRes popularRestaurants={mockData.popularRestaurants} />
+        <div data-aos="fade-right" data-aos-duration="1000">
+          <CardsSectionRes popularRestaurants={mockData.popularRestaurants} />
+        </div>
       </HomepageSection>
       <HomepageSection section='cardsSection'>
-        <CardsSectionDishes signatureDishes={mockData.signatureDishes} />
+        <div data-aos="fade-left" data-aos-duration="1000">
+          <CardsSectionDishes signatureDishes={mockData.signatureDishes} />
+        </div>
       </HomepageSection>
       <HomepageSection section='iconsDict'>
         <IconsDict />
@@ -31,7 +35,9 @@ const Homepage: React.FC = () => {
         <ChefOfTheWeek chefOfTheWeekData={mockData.chefOfTheWeekData} chefOfTheWeekRestaurants={mockData.chefOfTheWeekRestaurants} />
       </HomepageSection>
       <HomepageSection section='aboutUs'>
-        <AboutUs aboutUsText={mockData.AboutUsText} />
+        <div data-aos="flip-up" data-aos-duration="1000">
+          <AboutUs aboutUsText={mockData.AboutUsText} />
+        </div>
       </HomepageSection>
     </div>
   );

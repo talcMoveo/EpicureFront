@@ -2,33 +2,32 @@
 
 .about-us {
     @include flex-col();
+    gap: 30px;
     align-items: flex-start;
     text-align: left;
-    padding-inline-start: 8%;
     background: $light-gray;
-    padding: 5% 8%;
+    padding: 6% 8%;
     
     @include desktop {
         @include flex-row();
+        align-items: center;
         padding: 2% 4% 3% 8%;
     }
     
     .about-us-logo {
         order: 1;
         width: 102px;
-        margin: 5% 0;
         
         @include desktop {
             order: 2;
-            align-self: center;
-            margin: auto;
-            width: 178px;
+            min-width: 178px;
         }
     }
 
     .about-us-info {
         order: 2;
         @include flex-col();
+        gap: 20px;
         text-align: left;
         
         @include desktop {
@@ -37,20 +36,14 @@
 
         .about-us-text-wrapper {
             order: 3;
-            margin-top: 5%;
-            
-            @include desktop {
-                margin-top: auto;
-            }
             
             .about-us-text {
                 text-align: left;
                 font-size: 20px;
                 line-height: 30px;
-                padding-right: 20px;
                 
                 @include desktop {
-                    @include width-height(569px, auto);
+                    @include width-height(80%, auto);
                 }
             }
         }
@@ -59,6 +52,7 @@
         .about-us-buttons-wrapper {
             order: 2;
             @include flex-col();
+            gap: 10px;
             
             @include desktop {
                 order: 3;
@@ -72,7 +66,6 @@
                 background-color: transparent;
                 border: none;
                 padding: 0;
-                margin-top: 5%;
             }
             
             .google-btn {

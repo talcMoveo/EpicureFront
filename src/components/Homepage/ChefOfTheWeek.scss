@@ -17,6 +17,12 @@
             gap: 64px;
         }
 
+        .weekly-chef-img {
+            @include desktop {
+                min-width: 478px;
+            }
+        }
+
         .weekly-chef-desc {
             text-align: justify;
             line-height: 35px;

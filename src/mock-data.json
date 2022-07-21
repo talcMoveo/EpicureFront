@@ -7,9 +7,6 @@
     "chefOfTheWeekRestaurants": [
         { "name": "Onza", "photoSrc": "assets/Restaurants/onza.png", "chef": "Yossi Shitrit", "rating": 0 },
         { "name": "Kitchen Market", "photoSrc": "assets/Restaurants/kitchenMarket.png", "chef": "Yossi Shitrit", "rating": 0 },
-        { "name": "Mashya", "photoSrc": "assets/Restaurants/mashya.png", "chef": "Yossi Shitrit", "rating": 0 },
-        { "name": "Onza", "photoSrc": "assets/Restaurants/onza.png", "chef": "Yossi Shitrit", "rating": 0 },
-        { "name": "Kitchen Market", "photoSrc": "assets/Restaurants/kitchenMarket.png", "chef": "Yossi Shitrit", "rating": 0 },
         { "name": "Mashya", "photoSrc": "assets/Restaurants/mashya.png", "chef": "Yossi Shitrit", "rating": 0 }
     ],
     "popularRestaurants": [

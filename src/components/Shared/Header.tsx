@@ -20,7 +20,6 @@ const Header: React.FC = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  // const [searchDisabled, setSearchDisabled] = useState(true);
 
   const handleExitSearch = () => {
     setShowSearch(!showSearch);
