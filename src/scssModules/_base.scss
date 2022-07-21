@@ -52,14 +52,14 @@ a {
     cursor: pointer;
 }
 
-.slick-slide {
-    height: inherit !important;
-    background-color: $cardBackground;
-}
-
 .slick-track {
     @include flex-row();
     flex-wrap: nowrap;
-    // align-items: stretch;
     gap: 30px;
+    
+    .slick-slide {
+        height: inherit !important;
+        width: min-content;
+        background-color: $cardBackground;
+    }
 }

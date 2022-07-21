@@ -16,6 +16,10 @@
 }
 
 .chefOfTheWeek-section{
+    padding: 0 20px;
+    @include desktop {
+        padding: 0 125px;
+    }
 }
 
 .aboutUs-section{
