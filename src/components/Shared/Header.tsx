@@ -26,42 +26,69 @@ const Header: React.FC = () => {
   }
 
   const handleExitNavbar = () => {
-    console.log('here')
     setShowMobileMenu(!showMobileMenu);
   }
 
   return (
-    <div className='header-wrapper'>
-      <div className='header-links-mobile'>
-        <button className='header-btn'
-          onClick={() => {setShowMobileMenu(!showMobileMenu);}}
-        >
-          <img
-            className='header-btn-img'
-            src={showMobileMenu ? mobileMenuExit : mobileMenu}
-          />
-        </button>
-        {
-          <CSSTransition
-              in={showMobileMenu}
-              timeout={400}
-              classNames='header-animation'
-              unmountOnExit
-            >
-              <MobileMenu handleExit={handleExitNavbar}/>
-            </CSSTransition>
-          }
-      </div>
+    <div className='header-overall-wrapper'>
+      <div className='header-wrapper'>
+        <div className='header-links-mobile'>
+          <button className='header-btn'
+            onClick={() => {setShowMobileMenu(!showMobileMenu);}}
+          >
+            <img
+              className='header-btn-img'
+              src={showMobileMenu ? mobileMenuExit : mobileMenu}
+            />
+          </button>
+        </div>
 
-      <img className='header-logo-mobile' src={logoCircle} />
-      <div className='header-links-desktop'>
-        <img className='header-logo' src={logo} alt="logo" />
-        <nav className='header-navbar'>
-          <a className='navbar-link'>Restaurants</a>
-          <a className='navbar-link'>Chefs</a>
-        </nav>
+        <img className='header-logo-mobile' src={logoCircle} />
+        <div className='header-links-desktop'>
+          <img className='header-logo' src={logo} alt="logo" />
+          <nav className='header-navbar'>
+            <a className='navbar-link'>Restaurants</a>
+            <a className='navbar-link'>Chefs</a>
+          </nav>
+        </div>
+        
+        
+        <div className='header-actions'>
+          <div className='header-search'
+            style={{ border: showSearch && (window.innerWidth > 960) ? "0.5px solid black" : "none" }}
+            >
+            { (window.innerWidth > 960) && 
+              <input className='search-input'
+              placeholder='Search for restaurant cuisine, chef'
+              disabled={!showSearch}
+              style={{display: showSearch ? "": "none"}}
+              />
+            }
+            <img src={search} 
+              className='search-img'
+              onClick={() => {setShowSearch(!showSearch);}}
+              />
+          </div>
+          <button className='header-btn profile-btn' type="button" >
+            <img src={profile} /></button>
+          <button
+            className='header-btn cart-btn'
+            type="button"
+            onClick={() => {setShowCart(!showCart);}}
+            >
+            <img src={cart} /></button>
+        </div>
       </div>
-      
+      {
+        <CSSTransition
+          in={showMobileMenu}
+          timeout={400}
+          classNames='header-animation'
+          unmountOnExit
+        >
+          <MobileMenu handleExit={handleExitNavbar}/>
+        </CSSTransition>
+      }
       {
           (window.innerWidth <= 960) && 
           <CSSTransition
@@ -73,32 +100,6 @@ const Header: React.FC = () => {
               <MobileSearch handleExit={handleExitSearch}  />
             </CSSTransition>
       }
-      
-      <div className='header-actions'>
-        <div className='header-search'
-          style={{ border: showSearch && (window.innerWidth > 960) ? "0.5px solid black" : "none" }}
-        >
-          { (window.innerWidth > 960) && 
-            <input className='search-input'
-              placeholder='Search for restaurant cuisine, chef'
-              disabled={!showSearch}
-              style={{display: showSearch ? "": "none"}}
-            />
-          }
-          <img src={search} 
-            className='search-img'
-            onClick={() => {setShowSearch(!showSearch);}}
-          />
-        </div>
-        <button className='header-btn profile-btn' type="button" >
-          <img src={profile} /></button>
-        <button
-          className='header-btn cart-btn'
-          type="button"
-          onClick={() => {setShowCart(!showCart);}}
-        >
-          <img src={cart} /></button>
-      </div>
       {
         <CSSTransition
           in={showCart}

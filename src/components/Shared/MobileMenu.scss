@@ -4,10 +4,9 @@
     padding: 30px 12px 24px 20px;
     position: absolute;
     width: 100%;
-    left: 0;
     top: 0;
     @include popup-window();
-
+    
     .mobile-navbar {
         display: flex;
         flex-direction: column;

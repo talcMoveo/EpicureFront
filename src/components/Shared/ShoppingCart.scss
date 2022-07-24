@@ -6,7 +6,7 @@
     @include width-height(100%, 218px);
     position: absolute;
     align-items: center;
-    top: 46px;
+    top: 64px;
     
     @include desktop {
         @include width-height(500px, 586px);

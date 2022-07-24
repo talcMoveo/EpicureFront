@@ -6,7 +6,8 @@
     position: absolute;
     width: 100%;
     top: 0;
-    z-index: 10;
+    // z-index: 100;
+    @include popup-window();
 
     .mobile-search-header {
         @include flex-row();

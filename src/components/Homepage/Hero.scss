@@ -18,16 +18,21 @@
         gap: 20px;
         background: rgba(255, 255, 255, 0.88);
         padding: 5% 3%;
+        // height: 100px;
         
         @include desktop {
             padding: 50px 30px;
+            // height: auto;
         }
 
         .hero-text {
             font-size: 24px;
+            height: 50px;
+
             
             @include desktop {
                 @include font-w-s-h(200, 32px, 40px);
+                height: auto;
                 width: 60%;
             }
         }
