@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { Component } from 'react';
+import React from 'react';
 import './HomepageSection.scss';
 
 const HomepageSection = (props: {section: string, children: any}) => {

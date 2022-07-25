@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-import BlockRevealAnimation from 'react-block-reveal-animation';
 
 import './Hero.scss';
 import search from '../../assets/Header/searchLogo.svg';

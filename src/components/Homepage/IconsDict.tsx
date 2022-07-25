@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useEffect } from 'react';
+import React from 'react';
 import './IconsDict.scss';
 
 import spicy from '../../assets/Dishes/logos/spicy.svg';

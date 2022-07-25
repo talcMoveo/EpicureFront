@@ -27,8 +27,6 @@ enum features {
 }
 
 const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: number }> = (props) => {
-    const [error, setError] = useState(Error());
-
     let cardClass: string;
     if (props.cardType === 'restaurant-big') {
         cardClass = 'restaurant restaurant-big';
