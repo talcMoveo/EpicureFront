@@ -1,8 +1,9 @@
-@import '../scssModules/_variables.scss';
-@import '../scssModules/_mixin.scss';
+@import './_variables.scss';
+@import './_mixin.scss';
 
 * {
     font-family: 'Helvetica Neue';
+    font-style: normal;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 1.25px;
@@ -16,12 +17,15 @@
     }
 }
 
+body {
+    margin: 0;
+}
+
 input {
     background-color: transparent;
     border: none;
     letter-spacing: 1.29px;
     height: 48px;
-
     font-size: 18px;
     line-height: 26px;
     

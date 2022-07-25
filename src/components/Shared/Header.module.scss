@@ -1,4 +1,5 @@
-@import '../../pages/Homepage.scss';
+@import '../../scssModules/_mixin';
+@import '../../scssModules/_media';
 
 .header-wrapper {
     @include flex-row();
@@ -96,6 +97,11 @@
         .search-input {
             flex-grow: 2;
             animation: fade-in 1s 0s 1;
+            
+
+            &::-webkit-input-placeholder {
+                font-size: 18px;
+            }
         }
     }
 

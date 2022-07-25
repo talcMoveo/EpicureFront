@@ -13,9 +13,9 @@ const MobileMenu: React.FC<any> = (props: any) => {
             <a className={styles['navbar-link']}>Restaurants</a>
             <a className={styles['navbar-link']}>Chefs</a>
             <img className={styles['navbar-divider']} src={mobileMenuDivider}/>
-            <a className={styles['navbar-link footer-addition']}>Contact Us</a>
-            <a className={styles['navbar-link footer-addition']}>Terms of Use</a>
-            <a className={styles['navbar-link footer-addition']}>Privacy Policy</a>
+            <a className={`${styles['navbar-link']} ${styles['footer-addition']}`}>Contact Us</a>
+            <a className={`${styles['navbar-link']} ${styles['footer-addition']}`}>Terms of Use</a>
+            <a className={`${styles['navbar-link']} ${styles['footer-addition']}`}>Privacy Policy</a>
         </nav>
     </div>
   );

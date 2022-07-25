@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import './Homepage.scss';
+import styles from './Homepage.module.scss';
 
 import mockData from '../mock-data.json';
 import Hero from '../components/Homepage/Hero';

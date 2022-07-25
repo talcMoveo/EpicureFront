@@ -20,10 +20,10 @@ const AboutUs: React.FC<{ aboutUsText: string[] }> = (props) => {
           }
         </div>
         <div className={styles['about-us-buttons-wrapper']}>
-          <button type="button" className={styles['about-us-button app-btn']}>
+          <button type="button" className={`${styles['about-us-button']} ${styles['app-btn']}`}>
             <img src={appStore} className={styles['about-us-img']} />
           </button>
-          <button type="button" className={styles['about-us-button google-btn']}>
+          <button type="button" className={`${styles['about-us-button']} ${styles['google-btn']}`}>
             <img src={googlePlay} className={styles['about-us-img']} />
           </button>
         </div>

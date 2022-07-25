@@ -69,10 +69,10 @@ const Header: React.FC = () => {
               onClick={() => {setShowSearch(prev => !prev);}}
               />
           </div>
-          <button className={styles['header-btn profile-btn']} type="button" >
+          <button className={`${styles['header-btn']} ${styles['profile-btn']}`} type="button" >
             <img src={profile} /></button>
           <button
-            className={styles['header-btn cart-btn']}
+            className={`${styles['header-btn']} ${styles['cart-btn']}`}
             type="button"
             onClick={() => {setShowCart(prev => !prev);}}
             >

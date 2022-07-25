@@ -1,4 +1,6 @@
-@import '../../pages/Homepage.scss';
+@import '../../scssModules/_mixin';
+@import '../../scssModules/_media';
+@import '../../scssModules/_variables';
 
 .about-us {
     @include flex-col();

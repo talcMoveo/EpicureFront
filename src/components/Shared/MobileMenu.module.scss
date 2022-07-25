@@ -1,4 +1,6 @@
-@import '../../pages/Homepage.scss';
+@import '../../scssModules/_mixin';
+@import '../../scssModules/_media';
+@import '../../scssModules/_variables';
 
 .mobile-menu {
     padding: 30px 12px 24px 20px;

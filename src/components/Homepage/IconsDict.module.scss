@@ -1,4 +1,6 @@
-@import '../../pages/Homepage.scss';
+@import '../../scssModules/_mixin';
+@import '../../scssModules/_media';
+@import '../../scssModules/_variables';
 
 .icons-meaning {
     @include flex-col();
@@ -10,7 +12,7 @@
         height: auto;
         font-size: 18px;
         letter-spacing: 2.14px;
-        
+
         @include desktop {
             font-size: 30px;
         }

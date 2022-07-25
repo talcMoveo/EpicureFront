@@ -4,7 +4,7 @@ import styles from './HomepageSection.module.scss';
 
 const HomepageSection = (props: {section: string, children: any}) => {
     return (
-        <div className={'Homepage-section ' + styles[`${props.section}-section`]}>
+        <div className={styles[`${props.section}-section`]}>
         {props.children}
         </div>
     );
