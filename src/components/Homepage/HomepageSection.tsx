@@ -1,10 +1,10 @@
 /* eslint-disable */
 import React from 'react';
-import './HomepageSection.scss';
+import styles from './HomepageSection.module.scss';
 
 const HomepageSection = (props: {section: string, children: any}) => {
     return (
-        <div className={'Homepage-section ' + props.section + '-section'}>
+        <div className={'Homepage-section ' + styles[`${props.section}-section`]}>
         {props.children}
         </div>
     );

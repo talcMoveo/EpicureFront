@@ -1,12 +1,12 @@
 import React from 'react';
-import './Footer.scss';
+import styles from './Footer.module.scss';
 
 const Footer: React.FC = () => {
   return (
-    <div className='footer-wrapper'>
-      <a className='footer-link'>Contact Us</a>
-      <a className='footer-link'>Terms of Use</a>
-      <a className='footer-link'>Privacy Policy</a>
+    <div className={styles['footer-wrapper']}>
+      <a className={styles['footer-link']}>Contact Us</a>
+      <a className={styles['footer-link']}>Terms of Use</a>
+      <a className={styles['footer-link']}>Privacy Policy</a>
     </div>
   );
 };

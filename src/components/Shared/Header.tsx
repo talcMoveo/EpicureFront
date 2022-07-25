@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React, { useState } from 'react';
-import './Header.scss';
+import styles from './Header.module.scss';
 import { CSSTransition } from 'react-transition-group';
 
 import ShoppingCart from '../Shared/ShoppingCart';
@@ -22,59 +22,59 @@ const Header: React.FC = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const handleExitSearch = () => {
-    setShowSearch(!showSearch);
+    setShowSearch(prev => !prev);
   }
 
   const handleExitNavbar = () => {
-    setShowMobileMenu(!showMobileMenu);
+    setShowMobileMenu(prev => !prev);
   }
 
   return (
-    <div className='header-overall-wrapper'>
-      <div className='header-wrapper'>
-        <div className='header-links-mobile'>
-          <button className='header-btn'
-            onClick={() => {setShowMobileMenu(!showMobileMenu);}}
+    <div className={styles['header-overall-wrapper']}>
+      <div className={styles['header-wrapper']}>
+        <div className={styles['header-links-mobile']}>
+          <button className={styles['header-btn']}
+            onClick={() => {setShowMobileMenu(prev => !prev);}}
           >
             <img
-              className='header-btn-img'
+              className={styles['header-btn-img']}
               src={showMobileMenu ? mobileMenuExit : mobileMenu}
             />
           </button>
         </div>
 
-        <img className='header-logo-mobile' src={logoCircle} />
-        <div className='header-links-desktop'>
-          <img className='header-logo' src={logo} alt="logo" />
-          <nav className='header-navbar'>
-            <a className='navbar-link'>Restaurants</a>
-            <a className='navbar-link'>Chefs</a>
+        <img className={styles['header-logo-mobile']} src={logoCircle} />
+        <div className={styles['header-links-desktop']}>
+          <img className={styles['header-logo']} src={logo} alt="logo" />
+          <nav className={styles['header-navbar']}>
+            <a className={styles['navbar-link']}>Restaurants</a>
+            <a className={styles['navbar-link']}>Chefs</a>
           </nav>
         </div>
         
         
-        <div className='header-actions'>
-          <div className='header-search'
+        <div className={styles['header-actions']}>
+          <div className={styles['header-search']}
             style={{ border: showSearch && (window.innerWidth > 960) ? "0.5px solid black" : "none" }}
             >
             { (window.innerWidth > 960) && 
-              <input className='search-input'
+              <input className={styles['search-input']}
               placeholder='Search for restaurant cuisine, chef'
               disabled={!showSearch}
               style={{display: showSearch ? "": "none"}}
               />
             }
             <img src={search} 
-              className='search-img'
-              onClick={() => {setShowSearch(!showSearch);}}
+              className={styles['search-img']}
+              onClick={() => {setShowSearch(prev => !prev);}}
               />
           </div>
-          <button className='header-btn profile-btn' type="button" >
+          <button className={styles['header-btn profile-btn']} type="button" >
             <img src={profile} /></button>
           <button
-            className='header-btn cart-btn'
+            className={styles['header-btn cart-btn']}
             type="button"
-            onClick={() => {setShowCart(!showCart);}}
+            onClick={() => {setShowCart(prev => !prev);}}
             >
             <img src={cart} /></button>
         </div>

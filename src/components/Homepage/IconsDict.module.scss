@@ -10,6 +10,7 @@
         height: auto;
         font-size: 18px;
         letter-spacing: 2.14px;
+        
         @include desktop {
             font-size: 30px;
         }

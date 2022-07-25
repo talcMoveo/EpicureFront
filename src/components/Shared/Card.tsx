@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-import './Card.scss';
+import styles from './Card.module.scss';
 
 import priceLine from '../../assets/Dishes/logos/dishPriceLine.svg';
 import shekelLogo from '../../assets/Dishes/logos/shekelLogo.svg';
@@ -29,9 +29,9 @@ enum features {
 const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: number }> = (props) => {
     let cardClass: string;
     if (props.cardType === 'restaurant-big') {
-        cardClass = 'restaurant restaurant-big';
+        cardClass = 'restaurant-big';
     } else if (props.cardType === 'restaurant-small') {
-        cardClass = 'restaurant restaurant-small';
+        cardClass = 'restaurant-small';
     } else if (props.cardType === 'dish') {
         cardClass = 'dish';
     } else {
@@ -59,15 +59,15 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
 
     const dishPrice = () => {
         if (window.innerWidth <= 960) {
-            return (<div className='dish-price'>
-                        <img className='shekel-logo' src={shekelLogo} />
-                        <span className='feature-span'>{isDish(currentItem) && currentItem.price}</span>
+            return (<div className={styles['dish-price']}>
+                        <img className={styles['shekel-logo']} src={shekelLogo} />
+                        <span className={styles['feature-span']}>{isDish(currentItem) && currentItem.price}</span>
                     </div>);
         } else if ((featureLogos.length == 0) && (window.innerWidth > 960)) {
-            return (<div className='dish-price'>
+            return (<div className={styles['dish-price']}>
                         <img src={priceLine} />
-                        <img className='shekel-logo' src={shekelLogo} />
-                        <span className='feature-span'>{isDish(currentItem) && currentItem.price}</span>
+                        <img className={styles['shekel-logo']} src={shekelLogo} />
+                        <span className={styles['feature-span']}>{isDish(currentItem) && currentItem.price}</span>
                         <img src={priceLine} />
                     </div>);
         };
@@ -91,20 +91,20 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
     const backgroundImg = require('../../' + currentItem.photoSrc);
 
     return (
-        <div className='card-wrapper'>
-            <div className={cardClass}>
-                <div className='card-img' style={{ backgroundImage: `url(${backgroundImg})` }} />
-                <div className='card-content'>
-                    <div className='card-title'>{currentItem.name}</div>
+        <div className={styles['card-wrapper']}>
+            <div className={styles[cardClass]}>
+                <div className={styles['card-img']} style={{ backgroundImage: `url(${backgroundImg})` }} />
+                <div className={styles['card-content']}>
+                    <div className={styles['card-title']}>{currentItem.name}</div>
                     {
                         isDish(currentItem) &&
-                        <div className='dish-cont'>
-                            <div className='dish-ingredients'>
+                        <div className={styles['dish-cont']}>
+                            <div className={styles['dish-ingredients']}>
                                 { dishIngredients() }
                             </div>
-                            <div className='dish-features'>
+                            <div className={styles['dish-features']}>
                                 {getFeatures().map((feat, index) => {
-                                    return <img className='dish-feature-img' src={feat} key={index} />;
+                                    return <img className={styles['dish-feature-img']} src={feat} key={index} />;
                                 })}
                             </div>
                             { dishPrice() }
@@ -113,20 +113,19 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
                     {
                         (props.cardType === 'restaurant-big') &&
                         !isDish(currentItem) &&
-                        <div className='res-big-cont'>
-                            <div className='restaurant-chef-name'>{currentItem.chef}</div>
+                        <div className={styles['res-big-cont']}>
+                            <div className={styles['restaurant-chef-name']}>{currentItem.chef}</div>
                             {
                                 (window.innerWidth > 960) &&
-                                <div className='restaurant-rating'>
+                                <div className={styles['restaurant-rating']}>
                                     {[...Array(currentItem.rating)].map((i, index) => {
-                                        return <img className='rating-img' src={fullStar} alt="logo" key={index} />;
+                                        return <img className={styles['rating-img']} src={fullStar} alt="logo" key={index} />;
                                     })}
                                     {[...Array(5 - currentItem.rating)].map((i, index) => {
-                                        return <img className='rating-img' src={emptyStar} alt="logo" key={index} />;
+                                        return <img className={styles['rating-img']} src={emptyStar} alt="logo" key={index} />;
                                     })}
                                 </div>
                             }
-                            
                         </div>
                     }
                 </div>

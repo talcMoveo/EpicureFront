@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import './MobileSearch.scss';
+import styles from './MobileSearch.module.scss';
 
 import searchLogo from '../../assets/Header/searchLogo.svg';
 import exit from '../../assets/General/x.svg';
@@ -8,21 +8,21 @@ import exit from '../../assets/General/x.svg';
 const MobileSearch: React.FC<any> = (props: any) => {
 
   return (
-    <div className='mobile-search'>
-      <div className='mobile-search-header'>
+    <div className={styles['mobile-search']}>
+      <div className={styles['mobile-search-header']}>
         <img
-          src={exit} className='mobile-search-exit'
+          src={exit} className={styles['mobile-search-exit']}
           onClick={props.handleExit}
         />
-        <div className='mobile-search-title'>
+        <div className={styles['mobile-search-title']}>
           Search
         </div>
       </div>
-      <div className='mobile-search-content'>
-        <div className='mobile-search-input-wrapper'>
-          <img className='mobile-header-search-img' src={searchLogo}/>
+      <div className={styles['mobile-search-content']}>
+        <div className={styles['mobile-search-input-wrapper']}>
+          <img className={styles['mobile-header-search-img']} src={searchLogo}/>
           <input
-            className='mobile-header-input'
+            className={styles['mobile-header-input']}
             placeholder='Search for restaurant cuisine, chef'
           />
         </div>

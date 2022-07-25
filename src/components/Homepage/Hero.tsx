@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useState } from 'react';
+import styles from './Hero.module.scss';
 
-import './Hero.scss';
 import search from '../../assets/Header/searchLogo.svg';
 import erase from '../../assets/General/x.svg';
 
@@ -17,23 +17,23 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div className='hero-wrapper'>
-      <div className='hero-inside-wrapper'>
-        <span className='hero-text'>
+    <div className={styles['hero-wrapper']}>
+      <div className={styles['hero-inside-wrapper']}>
+        <span className={styles['hero-text']}>
             Epicure works with the top
             chef restaurants in Tel Aviv
         </span>
-        <div className='hero-input-div'>
-          <img className='search-img' src={search} />
+        <div className={styles['hero-input-div']}>
+          <img className={styles['search-img']} src={search} />
           <input
-            className='hero-input'
+            className={styles['hero-input']}
             placeholder='Search for restaurant cuisine, chef'
             onChange={(event) => handleChange(event)}
             value={enteredInput}
           />
           {
             (enteredInput.trim().length !== 0) &&
-            <img className='erase-img' src={erase} onClick={eraseClickHandler}/>
+            <img className={styles['erase-img']} src={erase} onClick={eraseClickHandler}/>
           }
         </div>
       </div>
