@@ -19,7 +19,7 @@ const Homepage: React.FC = () => {
         <Hero />
       </HomepageSection>
       <HomepageSection section='cardsSection'>
-        <div data-aos="fade-right" data-aos-duration="1000">
+        <div>
           <CardsSectionRes popularRestaurants={mockData.popularRestaurants} />
         </div>
       </HomepageSection>

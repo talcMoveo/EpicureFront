@@ -8,7 +8,7 @@
     padding: 13% 6%;
     
     @include desktop {
-        padding: 16% 18%;
+        padding: 13% 18%;
     }
 
     .hero-inside-wrapper {
@@ -18,11 +18,9 @@
         gap: 20px;
         background: rgba(255, 255, 255, 0.88);
         padding: 5% 3%;
-        // height: 100px;
         
         @include desktop {
             padding: 50px 30px;
-            // height: auto;
         }
 
         .hero-text {

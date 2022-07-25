@@ -22,12 +22,6 @@ const Hero: React.FC = () => {
     <div className='hero-wrapper'>
       <div className='hero-inside-wrapper'>
         <span className='hero-text'>
-          {/* <BlockRevealAnimation>
-            Epicure works with the top chef
-          </BlockRevealAnimation>
-          <BlockRevealAnimation>
-            restaurants in Tel Aviv
-          </BlockRevealAnimation> */}
             Epicure works with the top
             chef restaurants in Tel Aviv
         </span>

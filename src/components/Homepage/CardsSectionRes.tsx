@@ -22,7 +22,7 @@ const CardsSectionRes: React.FC<{popularRestaurants: Restaurant[]}> = (props) =>
         initialSlide: 0,
         responsive: [
             {
-            breakpoint: 1024,
+            breakpoint: 756,
             settings: {
                 slidesToShow: 1.12,
                 slidesToScroll: 1,

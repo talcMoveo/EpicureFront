@@ -20,7 +20,7 @@ const CardsSectionDishes: React.FC<{signatureDishes: Dish[]}> = (props) => {
         arrows: false,
         responsive: [
             {
-            breakpoint: 1024,
+            breakpoint: 765,
             settings: {
                 slidesToShow: 1.12,
                 slidesToScroll: 1,

@@ -5,7 +5,7 @@
     text-align: left;
     gap: 18px;
     
-    @include desktop {
+    @include tablet {
         text-align: center;
         gap: 25px;
     }
@@ -16,7 +16,7 @@
         gap: 10px;
         align-items: center;
         
-        @include desktop {
+        @include tablet {
             float: right;
             font-size: 24px;
         }
@@ -24,7 +24,7 @@
         .all-restaurants-btn-img {
             @include width-height(18px, 16px);
             
-            @include desktop {
+            @include tablet {
                 @include width-height(24px, 18px);
             }
         }
