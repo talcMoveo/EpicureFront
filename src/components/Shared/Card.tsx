@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
 import './Card.scss';
 
 import priceLine from '../../assets/Dishes/logos/dishPriceLine.svg';
@@ -27,11 +27,17 @@ enum features {
 }
 
 const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: number }> = (props) => {
-    let cardClass = 'restaurant restaurant-big';
-    if (props.cardType === 'restaurant-small') {
+    const [error, setError] = useState(Error());
+
+    let cardClass: string;
+    if (props.cardType === 'restaurant-big') {
+        cardClass = 'restaurant restaurant-big';
+    } else if (props.cardType === 'restaurant-small') {
         cardClass = 'restaurant restaurant-small';
     } else if (props.cardType === 'dish') {
         cardClass = 'dish';
+    } else {
+        throw Error("Card type was not well defined - should be [restaurant-big / restaurant-small / dish]");
     }
     
     const isDish = (item: Dish | Restaurant): item is Dish => 'features' in item;

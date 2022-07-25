@@ -8,7 +8,6 @@ import erase from '../../assets/General/x.svg';
 
 const Hero: React.FC = () => {
   const [enteredInput, setEnteredInput] = useState('');
-  const heroText = ' restaurants in Tel Aviv';
 
   const handleChange = (event: any) => {
     setEnteredInput(event.target.value);

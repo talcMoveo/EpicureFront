@@ -1,13 +1,12 @@
 @import '../../pages/Homepage.scss';
 
 .mobile-search {
+    @include popup-window();
     background-color: $white;
     height: 367px;
     position: absolute;
     width: 100%;
     top: 0;
-    // z-index: 100;
-    @include popup-window();
 
     .mobile-search-header {
         @include flex-row();
