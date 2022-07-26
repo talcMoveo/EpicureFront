@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import styles from './ChefOfTheWeek.module.scss';
+import styles from '../../styles/Homepage/ChefOfTheWeek.module.scss';
 
 import Card from '../Shared/Card';
 import { CardType } from '../Shared/Card';

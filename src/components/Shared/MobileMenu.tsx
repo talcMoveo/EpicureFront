@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import styles from './MobileMenu.module.scss';
+import styles from '../../styles/Shared/MobileMenu.module.scss';
 
 import mobileMenuDivider from '../../assets/Mobile/mobile-menu-divider.svg'
 import exit from '../../assets/General/x.svg';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-import styles from './Hero.module.scss';
+import styles from '../../styles/Homepage/Hero.module.scss';
 
 import search from '../../assets/Header/searchLogo.svg';
 import erase from '../../assets/General/x.svg';

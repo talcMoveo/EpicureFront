@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React, { useState } from 'react';
-import styles from './Header.module.scss';
+import styles from '../../styles/Shared/Header.module.scss';
 import { CSSTransition } from 'react-transition-group';
 
 import ShoppingCart from '../Shared/ShoppingCart';

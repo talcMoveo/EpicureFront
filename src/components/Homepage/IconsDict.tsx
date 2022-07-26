@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import styles from './IconsDict.module.scss';
+import styles from '../../styles/Homepage/IconsDict.module.scss';
 
 import spicy from '../../assets/Dishes/logos/spicy.svg';
 import veg from '../../assets/Dishes/logos/vegetarian.svg';

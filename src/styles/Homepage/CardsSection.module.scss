@@ -1,5 +1,6 @@
 @import '../../scssModules/_mixin';
 @import '../../scssModules/_media';
+@import '../../scssModules/_variables';
 
 .cards-section-wrapper {
     @include flex-col();

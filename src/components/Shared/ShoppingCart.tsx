@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import styles from './ShoppingCart.module.scss';
+import styles from '../../styles/Shared/ShoppingCart.module.scss';
 
 import cartLogo from '../../assets/Header/cartLogo.svg';
 import Dish from '../../models/dish';

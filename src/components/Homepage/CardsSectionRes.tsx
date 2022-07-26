@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from 'react';
-import styles from './CardsSection.module.scss';
+import styles from '../../styles/Homepage/CardsSection.module.scss';
+import '../../scssModules/_slick.scss';
 
 import Card from '../Shared/Card';
 import { CardType } from '../Shared/Card';

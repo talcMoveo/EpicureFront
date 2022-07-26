@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import styles from './MobileSearch.module.scss';
+import styles from '../../styles/Shared/MobileSearch.module.scss';
 
 import searchLogo from '../../assets/Header/searchLogo.svg';
 import exit from '../../assets/General/x.svg';

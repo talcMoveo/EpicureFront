@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-import styles from './Card.module.scss';
+import styles from '../../styles/Shared/Card.module.scss';
 
 import priceLine from '../../assets/Dishes/logos/dishPriceLine.svg';
 import shekelLogo from '../../assets/Dishes/logos/shekelLogo.svg';
@@ -27,17 +27,6 @@ enum features {
 }
 
 const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: number }> = (props) => {
-    let cardClass: string;
-    if (props.cardType === 'restaurant-big') {
-        cardClass = 'restaurant-big';
-    } else if (props.cardType === 'restaurant-small') {
-        cardClass = 'restaurant-small';
-    } else if (props.cardType === 'dish') {
-        cardClass = 'dish';
-    } else {
-        throw Error("Card type was not well defined - should be [restaurant-big / restaurant-small / dish]");
-    }
-    
     const isDish = (item: Dish | Restaurant): item is Dish => 'features' in item;
     const currentItem = props.item;
     let featureLogos: string[] = [];
@@ -92,7 +81,7 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
 
     return (
         <div className={styles['card-wrapper']}>
-            <div className={styles[cardClass]}>
+            <div className={styles[props.cardType]}>
                 <div className={styles['card-img']} style={{ backgroundImage: `url(${backgroundImg})` }} />
                 <div className={styles['card-content']}>
                     <div className={styles['card-title']}>{currentItem.name}</div>

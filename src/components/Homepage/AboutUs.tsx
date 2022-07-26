@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import styles from './AboutUs.module.scss';
+import styles from '../../styles/Homepage/AboutUs.module.scss';
 
 import verticalLogo from '../../assets/General/epicureLogoVertical.svg';
 import appStore from '../../assets/General/appStore.svg';
