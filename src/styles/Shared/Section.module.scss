@@ -1,0 +1,25 @@
+@import '../../scssModules/_mixin';
+@import '../../scssModules/_media';
+
+.cardsSection-section{
+    padding: 48px 0 20px 20px;
+
+    @include desktop {
+        padding: 55px 120px 40px 120px;
+    }
+}
+
+.iconsDict-section{
+    padding: 40px 0;
+}
+
+.chefOfTheWeek-section{
+    padding: 0 20px;
+    @include desktop {
+        padding: 0 125px;
+    }
+}
+
+.aboutUs-section{
+    padding-top: 80px;
+}

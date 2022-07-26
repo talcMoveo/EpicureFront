@@ -1,0 +1,176 @@
+@import '../../scssModules/_mixin';
+@import '../../scssModules/_media';
+
+.card-wrapper {
+    height: inherit !important;
+    
+    .card-content {
+        @include flex-col();
+        text-align: left;
+
+        @include desktop {
+            text-align: center;
+            align-items: center;
+        }
+    }
+
+    .card-img {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dish {
+        .card-img {
+            height: 152px;
+
+            @include desktop {
+                height: 306px;
+            }
+        }
+        
+        .card-content {
+            height: 100%;
+            padding: 16px 16px 10px 20px;
+            gap: 8px;
+            
+            @include desktop {
+                padding: 24px 42.5px 10px 42.5px;
+            }
+
+            .card-title {
+                @include font-w-s-h(400, 18px, 21.5px);
+                
+                @include desktop {
+                    @include font-w-s-h(400, 40px, 47px);
+                    min-height: 94px;
+                    padding: 0 60px;
+                }
+            }
+            
+            .dish-cont {
+                @include flex-col();
+                justify-content: space-between;
+                gap: 16px;
+                height: 150px;
+                
+                @include tablet {
+                    align-items: center;
+                    height: 210px;
+                }
+                
+                .dish-ingredients {
+                    @include font-w-s-h(200, 16px, 20px);
+                    flex-grow: 1;
+                    max-height: 160px;
+                    
+                    @include desktop {
+                        @include font-w-s-h(200, 24px, 30px);
+                    }
+                }
+
+                .dish-features {
+                    justify-self: end;
+                    @include flex-row();
+                    align-items: center;
+                    
+                    .dish-feature-img {
+                        width: 30px;
+                        
+                        @include desktop {
+                            width: 40px;
+                        }
+                    }
+                    
+                }
+                
+                .dish-price {
+                    @include flex-row();
+                    gap: 5px;
+                    align-items: baseline;
+                    
+                    @include desktop {
+                        align-items: center;
+                    }
+
+                    .shekel-logo {
+                        width: 8.15px;
+                        
+                        @include desktop {
+                            width: 14px;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .restaurant-small {
+        .card-img {
+            @include width-height(245px, 152px);
+            background-size: cover;
+            
+            @include desktop {
+                @include width-height(231px, 224px);
+            }
+        }
+
+        .card-content {
+            padding: 16px 16px 44px 16px;
+            
+            @include desktop {
+                padding: 20px 10px;
+            }
+
+            .card-title {
+                @include font-w-s-h(400, 18px, 21.5px);
+                
+                @include desktop {
+                    @include font-w-s-h(400, 30px, 47px);
+                }
+            }
+        }
+    }
+
+    .restaurant-big {
+        
+        .card-img {
+            height: 152px;
+            background-size: cover;
+    
+            @include desktop {
+                height: 236px;
+            }
+        }
+
+        .card-content {
+            padding: 16px 16px 16px 20px;
+            gap: 8px;
+            
+            @include desktop {
+                padding: 20px 0;
+            }
+
+            .card-title {
+                @include font-w-s-h(400, 18px, 21.5px);
+                
+                @include desktop {
+                    @include font-w-s-h(400, 40px, 47px);
+                }
+            }
+        }
+
+        .res-big-cont {
+            @include flex-col();
+            gap: 10px;
+
+            .restaurant-rating {
+                @include flex-row();
+    
+                .rating-img{
+                    @include width-height(40px, 40px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import '../../scssModules/_mixin';
+@import '../../scssModules/_media';
+@import '../../scssModules/_variables';
+
+.mobile-search {
+    @include popup-window();
+    background-color: $white;
+    height: 367px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+
+    .mobile-search-header {
+        @include flex-row();
+        align-items: center;
+        padding: 4% 3%;
+
+        .mobile-search-exit {
+            width: 15px;
+        }
+
+        .mobile-search-title {
+            margin: auto;
+        }
+    }
+    
+    .mobile-search-content {
+        padding: 3% 5%;
+
+        .mobile-search-input-wrapper {
+            @include flex-row();
+            align-items: center;
+            flex: 1;
+            align-items: center;
+            
+            border: 0.5px solid $black;
+            border-radius: 4px;
+            padding: 5px 10px;
+    
+            .mobile-header-input {
+                font-size: 12px;
+                flex-grow: 1;
+                height: auto;
+            }
+        
+            .mobile-header-search-img {
+                width: 20px;
+            }
+        }
+    }
+}

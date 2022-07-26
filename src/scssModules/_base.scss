@@ -1,0 +1,58 @@
+@import './_variables.scss';
+@import './_mixin.scss';
+
+* {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.25px;
+    font-weight: 200;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+    @media screen and (min-width: 960px) {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    letter-spacing: 1.29px;
+    height: 48px;
+    font-size: 18px;
+    line-height: 26px;
+    
+    padding-left: 15px;
+    padding-right: 45px;
+
+    &:focus {
+        outline: 1px;
+    }
+    
+    &::-webkit-input-placeholder {
+        color: $black;
+    }
+
+    &:focus::-webkit-input-placeholder {
+        opacity: 20%;
+    }
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+

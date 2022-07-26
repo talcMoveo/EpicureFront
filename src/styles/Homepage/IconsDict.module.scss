@@ -1,0 +1,42 @@
+@import '../../scssModules/_mixin';
+@import '../../scssModules/_media';
+@import '../../scssModules/_variables';
+
+.icons-meaning {
+    @include flex-col();
+    align-items: center;
+    gap: 2px;
+    background: $light-gray;
+
+    .icons-meaning-txt {
+        height: auto;
+        font-size: 18px;
+        letter-spacing: 2.14px;
+
+        @include desktop {
+            font-size: 30px;
+        }
+    }
+
+    .title {
+        padding-bottom: 15px;
+    }
+    
+    .icons-dict {
+        @include flex-col();
+        gap: 30px;
+        
+        @include desktop {
+            @include flex-row();
+            gap: 65px;
+        }
+        .icons-meaning-img {
+            @include width-height(65px, auto);
+            
+            @include desktop {
+                @include width-height(77.42px, 60px);
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,26 @@
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin width-height ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font-w-s-h($weight, $size, $height) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin popup-window() {
+    z-index: 100;
+    background: $white;
+    box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);
+}

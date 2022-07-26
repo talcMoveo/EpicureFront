@@ -10,9 +10,20 @@
     "@types/node": "^16.11.43",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
+    "aos": "^2.3.4",
+    "framer-motion": "^6.5.1",
+    "ios": "^0.0.1",
     "react": "^18.2.0",
+    "react-block-reveal-animation": "^1.0.1",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.3.5",
     "react-scripts": "5.0.1",
+    "react-scroll-motion": "^0.3.0",
+    "react-slick": "^0.29.0",
+    "react-spring": "^9.5.0",
+    "react-transition-group": "^4.4.2",
+    "reveal.js": "^4.3.1",
+    "slick-carousel": "^1.8.1",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
@@ -39,5 +50,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "@types/react-slick": "^0.23.10",
+    "@types/react-transition-group": "^4.4.5",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.30.1",
+    "sass": "^1.53.0"
   }
 }

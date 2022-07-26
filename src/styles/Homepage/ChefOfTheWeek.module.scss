@@ -1,0 +1,55 @@
+@import '../../scssModules/_mixin';
+@import '../../scssModules/_media';
+
+.weekly-chef-wrapper {
+    text-align: left;
+
+    @include desktop {
+        text-align: center;
+    }
+    
+    .weekly-chef {
+        @include flex-col();
+        gap: 20px;
+        padding: 10px 0;
+        
+        @include desktop {
+            @include flex-row();
+            gap: 64px;
+        }
+
+        .weekly-chef-img {
+            @include desktop {
+                min-width: 478px;
+            }
+        }
+
+        .weekly-chef-desc {
+            text-align: justify;
+            line-height: 35px;
+            
+            @include desktop {
+                font-size: 24px;
+            }
+        }
+    }
+    
+    .weekly-chef-restaurants {
+        @include desktop {
+            text-align: left;
+
+            .weekly-chef-dish-cards {
+            @include flex-row();
+            align-items: flex-start;
+
+            .slick-slide{
+                width: 245px;
+                
+                @include desktop {
+                    width: 231px;
+                }
+            }
+            }
+        }
+    }
+}

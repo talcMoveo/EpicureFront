@@ -1,0 +1,12 @@
+.slick-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+
+    .slick-slide {
+        height: inherit !important;
+        width: min-content;
+        background-color: #F9F4EA;
+    }
+}

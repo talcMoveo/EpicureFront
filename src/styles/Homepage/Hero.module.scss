@@ -1,0 +1,83 @@
+@import '../../scssModules/_mixin';
+@import '../../scssModules/_media';
+@import '../../scssModules/_variables';
+
+.hero-wrapper {
+    @include flex-row();
+    background-image: url('../../assets/Hero/hero-picture.png');
+    background-size: cover;
+    background-position: 80%;
+    padding: 13% 6%;
+    margin-top: 64px;
+    
+    @include desktop {
+        padding: 13% 18%;
+    }
+
+    .hero-inside-wrapper {
+        @include flex-col();
+        align-items: center;
+        margin: auto;
+        gap: 20px;
+        background: rgba(255, 255, 255, 0.88);
+        padding: 5% 3%;
+        
+        @include desktop {
+            padding: 50px 30px;
+        }
+
+        .hero-text {
+            font-size: 24px;
+            height: 50px;
+
+            
+            @include desktop {
+                @include font-w-s-h(200, 32px, 40px);
+                height: auto;
+                width: 60%;
+            }
+        }
+
+        .hero-input-div {
+            @include flex-row();
+            align-items: center;
+            flex: 1;
+            border: 0.5px solid $black;
+            border-radius: 4px;
+            width: 98%;
+            padding: 0 10px;
+            
+            @include desktop {
+                width: 85%;
+            }
+
+            .hero-input {
+                font-size: 12px;
+                flex-grow: 2;
+                height: auto;
+                
+                @include desktop {
+                    padding: 2% 3%;
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+            }
+            
+            .search-img {
+                height: 20px;
+                cursor: pointer;
+                
+                @include desktop {
+                    height: 32px;
+                }
+            }
+            
+            .erase-img {
+                width: 14.83px;
+            }
+        }
+    }
+}
+
+
+
