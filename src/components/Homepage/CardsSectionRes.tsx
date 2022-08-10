@@ -34,7 +34,9 @@ const settings = {
   ],
 };
 
-const CardsSectionRes: React.FC<{ popularRestaurants: Restaurant[] }> = ( props ) => {
+const CardsSectionRes: React.FC<{ popularRestaurants: Restaurant[] }> = (
+  props
+) => {
   const [popularRestaurants, setPopularRestaurants] = useState([]);
 
   useEffect(() => {
@@ -45,8 +47,8 @@ const CardsSectionRes: React.FC<{ popularRestaurants: Restaurant[] }> = ( props 
       setPopularRestaurants(res.data);
     };
 
-    getData().catch(console.error);;
-}, []);
+    getData().catch(console.error);
+  }, []);
 
   return !popularRestaurants ? null : (
     <div className={styles["cards-section-wrapper"]}>
