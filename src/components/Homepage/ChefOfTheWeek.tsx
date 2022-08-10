@@ -10,7 +10,7 @@ import Slider from 'react-slick';
 interface props {
     chefOfTheWeekData: {
         name: string,
-        photoSrc: string,
+        img: string,
         description: string
     },
     chefOfTheWeekRestaurants: Restaurant[]
@@ -39,7 +39,7 @@ const settings = {
 };
 
 const ChefOfTheWeek: React.FC<props> = (props) => {
-    const chefPhotoSrc = require('../../' + props.chefOfTheWeekData.photoSrc);
+    const chefimg = require('../../' + props.chefOfTheWeekData.img);
     const chefDesc = props.chefOfTheWeekData.description;
     const chefName = props.chefOfTheWeekData.name;
     const chefRestaurants = props.chefOfTheWeekRestaurants;
@@ -48,7 +48,7 @@ const ChefOfTheWeek: React.FC<props> = (props) => {
         <div className={styles['weekly-chef-wrapper']}>
             <p className={styles['weekly-chef-title']}>{'chef of the week:'.toLocaleUpperCase()}</p>
             <div className={styles['weekly-chef']}>
-                <img className={styles['weekly-chef-img']} src={chefPhotoSrc} />
+                <img className={styles['weekly-chef-img']} src={chefimg} />
                 <p className={styles['weekly-chef-desc']}>{chefDesc}</p>
             </div>
             <div className={styles['weekly-chef-restaurants']}>

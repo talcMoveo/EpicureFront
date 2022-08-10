@@ -1,14 +1,14 @@
 /* eslint-disable */
 class Dish {
   name: string;
-  photoSrc: string;
+  img: string;
   ingredients: string[];
   price: number;
   features: string[];
 
-  constructor(name: string, photoSrc: string, ingredients: string[], price: number = -1, features: string[] = []) {
+  constructor(name: string, img: string, ingredients: string[], price: number = -1, features: string[] = []) {
     this.name = name;
-    this.photoSrc = photoSrc;
+    this.img = img;
     this.ingredients = ingredients;
     this.features = features;
     this.price = price;

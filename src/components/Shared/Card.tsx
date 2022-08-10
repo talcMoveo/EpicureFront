@@ -77,7 +77,8 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
         return ingredientsStr;
     }
 
-    const backgroundImg = require('../../' + currentItem.photoSrc);
+    // const backgroundImg = require("../../assets/" + currentItem.img);
+    const backgroundImg = "../../assets/" + currentItem.img;
 
     return (
         <div className={styles['card-wrapper']}>
@@ -105,9 +106,9 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
                         <div className={styles['res-big-cont']}>
                             <div className={styles['restaurant-chef-name']}>{currentItem.chef}</div>
                             {
-                                (window.innerWidth > 960) &&
+                                (window.innerWidth > 960) && currentItem.rating &&
                                 <div className={styles['restaurant-rating']}>
-                                    {[...Array(currentItem.rating)].map((i, index) => {
+                                    { [...Array(currentItem.rating)].map((i, index) => {
                                         return <img className={styles['rating-img']} src={fullStar} alt="logo" key={index} />;
                                     })}
                                     {[...Array(5 - currentItem.rating)].map((i, index) => {

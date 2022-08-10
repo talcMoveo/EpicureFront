@@ -1,13 +1,13 @@
 /* eslint-disable */
 class Restaurant {
   name: string;
-  photoSrc: string;
+  img: string;
   chef: string;
   rating: number;
 
-  constructor(name: string, photoSrc: string, chef: string, rating: number) {
+  constructor(name: string, img: string, chef: string, rating: number) {
     this.name = name;
-    this.photoSrc = photoSrc;
+    this.img = img;
     this.chef = chef;
     this.rating = rating;
   }
