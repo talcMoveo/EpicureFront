@@ -26,7 +26,7 @@ enum features {
     vegan = 'vegan'
 }
 
-const imagesRes = {
+const imagesRes: any = {
     Lumina: "https://i.ibb.co/0Yq0xvQ/Lumina.png",
     Claro: "https://i.ibb.co/vsFg88S/claro.png",
     'Kitchen Market': "https://i.ibb.co/xhmZvwJ/kitchen-Market.png",
@@ -35,7 +35,7 @@ const imagesRes = {
     'Tiger Lily': "https://i.ibb.co/Wyp6sbV/tiger-lily.png"
 }
 
-const imagesDishes = {
+const imagesDishes: any = {
     'Smoked Pizza': "https://i.ibb.co/0YS9wnK/Smoked-Pizza.png",
     'Pad Ki Mao': "https://i.ibb.co/0KZb96R/PadKiMao.png",
     'Garbanzo Frito': "https://i.ibb.co/SQsZ8np/Garbanzo-Frito.png"
