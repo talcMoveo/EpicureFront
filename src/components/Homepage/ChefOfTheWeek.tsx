@@ -38,6 +38,10 @@ const settings = {
     ]
 };
 
+const imagesChefs: any = {
+    'Yossi Shitrit' : "https://i.ibb.co/Ytv0Q83/yossi-shitrit.png"
+}
+
 const ChefOfTheWeek: React.FC<props> = (props) => {
     const chefimg = require('../../' + props.chefOfTheWeekData.img);
     const chefDesc = props.chefOfTheWeekData.description;
@@ -48,7 +52,9 @@ const ChefOfTheWeek: React.FC<props> = (props) => {
         <div className={styles['weekly-chef-wrapper']}>
             <p className={styles['weekly-chef-title']}>{'chef of the week:'.toLocaleUpperCase()}</p>
             <div className={styles['weekly-chef']}>
-                <img className={styles['weekly-chef-img']} src={chefimg} />
+                <div className={styles['weekly-chef-img']} style={{ backgroundImage: `url(${imagesChefs[chefName]})` }}>
+                    <span className={styles['weekly-chef-img-name']}>{chefName}</span>
+                </div>
                 <p className={styles['weekly-chef-desc']}>{chefDesc}</p>
             </div>
             <div className={styles['weekly-chef-restaurants']}>
