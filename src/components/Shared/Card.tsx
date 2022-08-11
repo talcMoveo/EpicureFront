@@ -26,6 +26,21 @@ enum features {
     vegan = 'vegan'
 }
 
+const imagesRes: any = {
+    Lumina: "https://i.ibb.co/0Yq0xvQ/Lumina.png",
+    Claro: "https://i.ibb.co/vsFg88S/claro.png",
+    'Kitchen Market': "https://i.ibb.co/xhmZvwJ/kitchen-Market.png",
+    Mashya: "https://i.ibb.co/5jQjNmQ/mashya.png",
+    Onza: "https://i.ibb.co/8cdVLWq/onza.png",
+    'Tiger Lily': "https://i.ibb.co/Wyp6sbV/tiger-lily.png"
+}
+
+const imagesDishes: any = {
+    'Smoked Pizza': "https://i.ibb.co/0YS9wnK/Smoked-Pizza.png",
+    'Pad Ki Mao': "https://i.ibb.co/0KZb96R/PadKiMao.png",
+    'Garbanzo Frito': "https://i.ibb.co/SQsZ8np/Garbanzo-Frito.png"
+}
+
 const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: number }> = (props) => {
     const isDish = (item: Dish | Restaurant): item is Dish => 'features' in item;
     const currentItem = props.item;
@@ -77,12 +92,11 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
         return ingredientsStr;
     }
 
-    const backgroundImg = require('../../' + currentItem.photoSrc);
-
     return (
         <div className={styles['card-wrapper']}>
             <div className={styles[props.cardType]}>
-                <div className={styles['card-img']} style={{ backgroundImage: `url(${backgroundImg})` }} />
+                { !isDish(currentItem) && <div className={styles['card-img']} style={{ backgroundImage: `url(${imagesRes[currentItem.name]})` }} /> }
+                { isDish(currentItem) && <div className={styles['card-img']} style={{ backgroundImage: `url(${imagesDishes[currentItem.name]})` }} /> }
                 <div className={styles['card-content']}>
                     <div className={styles['card-title']}>{currentItem.name}</div>
                     {
@@ -105,9 +119,9 @@ const Card: React.FC<{ cardType: CardType, item: Restaurant | Dish, itemId?: num
                         <div className={styles['res-big-cont']}>
                             <div className={styles['restaurant-chef-name']}>{currentItem.chef}</div>
                             {
-                                (window.innerWidth > 960) &&
+                                (window.innerWidth > 960) && currentItem.rating &&
                                 <div className={styles['restaurant-rating']}>
-                                    {[...Array(currentItem.rating)].map((i, index) => {
+                                    { [...Array(currentItem.rating)].map((i, index) => {
                                         return <img className={styles['rating-img']} src={fullStar} alt="logo" key={index} />;
                                     })}
                                     {[...Array(5 - currentItem.rating)].map((i, index) => {

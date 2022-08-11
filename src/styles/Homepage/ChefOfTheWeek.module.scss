@@ -19,14 +19,45 @@
         }
 
         .weekly-chef-img {
-            @include desktop {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            height: 280px;
+
+            @include tablet {
+                background-position: top;
                 min-width: 478px;
+                min-height: 520px;
+            }
+            
+            @include desktop {
+                min-height: 372px;
+            }
+            
+            .weekly-chef-img-name {
+                @include font-w-s-h(400, 18px, 47px);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 4px 0;
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                width: 100%;
+                text-align: center;
+                
+                @include tablet {
+                    @include font-w-s-h(400, 40px, 47px);
+                    padding: 15.5px 0;
+                    min-width: 478px;
+                }
             }
         }
+
 
         .weekly-chef-desc {
             text-align: justify;
             line-height: 35px;
+            // max-width: 642;
             
             @include desktop {
                 font-size: 24px;
