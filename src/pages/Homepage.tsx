@@ -11,6 +11,7 @@ import CardsSectionDishes from '../components/Homepage/CardsSectionDishes';
 import IconsDict from '../components/Homepage/IconsDict';
 import ChefOfTheWeek from '../components/Homepage/ChefOfTheWeek';
 import AboutUs from '../components/Homepage/AboutUs';
+import HeroSearch from '../components/Homepage/HeroSearch';
 
 const Homepage: React.FC = () => {
   

@@ -49,15 +49,19 @@ const ChefOfTheWeek: React.FC<props> = (props) => {
 
   useEffect(() => {
     const getRes = async () => {
-      const res = await axios.get("http://localhost:3000/api/v1/weeklyChef/res");
-      setWeeklyChefRestaurants(res.data.map((result: any) => {
-        return result.restaurants;
-      }));
+      const res = await axios.get(
+        "http://localhost:3000/api/v1/weeklyChef/res"
+      );
+      setWeeklyChefRestaurants(
+        res.data.map((result: any) => {
+          return result.restaurants;
+        })
+      );
       setWeeklyChefData(res.data[0].chef[0]);
     };
-    
+
     getRes().catch(console.error);
-}, []);
+  }, []);
 
   return !weeklyChefData ? null : (
     <div className={styles["weekly-chef-wrapper"]}>
@@ -67,11 +71,17 @@ const ChefOfTheWeek: React.FC<props> = (props) => {
       <div className={styles["weekly-chef"]}>
         <div
           className={styles["weekly-chef-img"]}
-          style={{ backgroundImage: `url(${imagesChefs[weeklyChefData.name]})` }}
+          style={{
+            backgroundImage: `url(${imagesChefs[weeklyChefData.name]})`,
+          }}
         >
-        <span className={styles["weekly-chef-img-name"]}>{weeklyChefData.name}</span>
+          <span className={styles["weekly-chef-img-name"]}>
+            {weeklyChefData.name}
+          </span>
         </div>
-        <p className={styles["weekly-chef-desc"]}>{weeklyChefData.description}</p>
+        <p className={styles["weekly-chef-desc"]}>
+          {weeklyChefData.description}
+        </p>
       </div>
       <div className={styles["weekly-chef-restaurants"]}>
         <p className={styles["weekly-chef-dishes-title"]}>
