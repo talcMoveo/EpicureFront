@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import axios from 'axios';
 
 import Homepage from './pages/Homepage';
 import Footer from './components/Shared/Footer';

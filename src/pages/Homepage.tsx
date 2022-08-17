@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import styles from './Homepage.module.scss';
+// import styles from './Homepage.module.scss';
 
 import mockData from '../mock-data.json';
 import Section from '../components/Shared/Section';
@@ -11,6 +11,7 @@ import CardsSectionDishes from '../components/Homepage/CardsSectionDishes';
 import IconsDict from '../components/Homepage/IconsDict';
 import ChefOfTheWeek from '../components/Homepage/ChefOfTheWeek';
 import AboutUs from '../components/Homepage/AboutUs';
+// import HeroSearch from '../components/Homepage/HeroSearch';
 
 const Homepage: React.FC = () => {
   
@@ -23,13 +24,13 @@ const Homepage: React.FC = () => {
 
       <Section section='cardsSection'>
         <div>
-          <CardsSectionRes popularRestaurants={mockData.popularRestaurants} />
+          <CardsSectionRes />
         </div>
       </Section>
 
       <Section section='cardsSection'>
         <div data-aos="fade-left" data-aos-duration="1000">
-          <CardsSectionDishes signatureDishes={mockData.signatureDishes} />
+          <CardsSectionDishes />
         </div>
       </Section>
 
