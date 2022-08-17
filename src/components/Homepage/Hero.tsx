@@ -9,20 +9,13 @@ import HeroSearch from "./HeroSearch";
 
 const Hero: React.FC = () => {
   const [enteredInput, setEnteredInput] = useState("");
-  const [allData, setAllData] = useState("");
+  // const [allData, setAllData] = useState("");
   const [ops, setOps] = useState<string[]>([]);
 
   useEffect(() => {
     const getRes = async () => {
       const res = await axios.get("http://localhost:3000/api/v1/search");
-      setAllData(res.data);
-
-      const allOptions = [
-        ...res.data["chefResults"],
-        ...res.data["dishResults"],
-        ...res.data["restaurantResults"],
-      ];
-
+      const allOptions = [].concat(res.data.chefs).concat(res.data.dishes).concat(res.data.restaurants);
       const options: string[] = await allOptions.map((item: any) => {
         return item.name;
       });
@@ -31,7 +24,6 @@ const Hero: React.FC = () => {
 
     getRes().catch(console.error);
   }, []);
-  console.log("all options after: ", ops);
 
   const handleChange = (event: any) => {
     const inputVal = event.target.value;
@@ -41,7 +33,6 @@ const Hero: React.FC = () => {
     }
     closeAllOptions();
     setEnteredInput(event.target.value);
-    console.log(event.target.value);
     let divElement = document.createElement("div");
     divElement.setAttribute("className", "autocomplete-items");
     divElement.setAttribute("id", "autocomplete-items");
@@ -79,7 +70,6 @@ const Hero: React.FC = () => {
 
   const closeAllOptions = () => {
     const element = document.getElementById("autocomplete-items");
-    console.log(element);
     element?.remove();
   };
 

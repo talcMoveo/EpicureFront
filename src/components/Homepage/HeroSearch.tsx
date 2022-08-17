@@ -64,7 +64,6 @@ const HeroSearch: React.FC = () => {
       });
       setOps(options);
 
-    //   console.log("all options after: ", options);
     };
 
     getRes().catch(console.error);
@@ -77,8 +76,6 @@ const HeroSearch: React.FC = () => {
   const eraseClickHandler = () => {
     setEnteredInput("");
   };
-
-//   console.log("all options after: ", options);
 
   return (
     <div>

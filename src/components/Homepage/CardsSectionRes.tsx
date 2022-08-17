@@ -34,9 +34,7 @@ const settings = {
   ],
 };
 
-const CardsSectionRes: React.FC<{ popularRestaurants: Restaurant[] }> = (
-  props
-) => {
+const CardsSectionRes: React.FC = () => {
   const [popularRestaurants, setPopularRestaurants] = useState([]);
 
   useEffect(() => {
@@ -44,7 +42,7 @@ const CardsSectionRes: React.FC<{ popularRestaurants: Restaurant[] }> = (
       const res = await axios.get(
         "http://localhost:3000/api/v1/restaurants/popular"
       );
-      setPopularRestaurants(res.data);
+      await setPopularRestaurants(res.data);
     };
 
     getData().catch(console.error);

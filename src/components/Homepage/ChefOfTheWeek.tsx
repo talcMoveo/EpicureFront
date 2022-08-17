@@ -52,10 +52,8 @@ const ChefOfTheWeek: React.FC<props> = (props) => {
       const res = await axios.get(
         "http://localhost:3000/api/v1/weeklyChef/res"
       );
-      setWeeklyChefRestaurants(
-        res.data.map((result: any) => {
-          return result.restaurants;
-        })
+      await setWeeklyChefRestaurants(
+        res.data[0].chefRestaurants
       );
       setWeeklyChefData(res.data[0].chef[0]);
     };
