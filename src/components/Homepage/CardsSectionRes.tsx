@@ -13,13 +13,13 @@ import seeMore from "../../assets/General/>>.svg";
 import axios from "axios";
 
 const settings = {
+  swipeToSlide: true,
   dots: false,
   arrows: false,
   infinite: true,
   speed: 500,
   slidesToShow: 3,
-  swipeToSlide: true,
-  slidesToScroll: 3,
+  slidesToScroll: 1,
   initialSlide: 0,
   responsive: [
     {
@@ -28,7 +28,7 @@ const settings = {
         slidesToShow: 1.12,
         slidesToScroll: 1,
         infinite: true,
-        arrows: false,
+        arrows: true,
       },
     },
   ],
@@ -48,7 +48,7 @@ const CardsSectionRes: React.FC = () => {
     getData().catch(console.error);
   }, []);
 
-  return !popularRestaurants ? null : (
+  return popularRestaurants.length == 0 ? null : (
     <div className={styles["cards-section-wrapper"]}>
       <div className={styles["cards-main-title"]}>
         {"popular restaurants in epicure:".toLocaleUpperCase()}

@@ -47,7 +47,7 @@ const CardsSectionDishes: React.FC = () => {
     getData().catch(console.error);
   }, []);
 
-  return !signatureDishes ? null : (
+  return signatureDishes.length == 0 ? null : (
     <div className={styles["cards-section-wrapper"]}>
       <div className={styles["cards-main-title"]}>
         {"signature dish of:".toLocaleUpperCase()}
