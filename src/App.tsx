@@ -4,8 +4,13 @@ import './App.css';
 
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
+
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 import axios from 'axios';
 
 import Homepage from './pages/Homepage';

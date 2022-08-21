@@ -23,13 +23,13 @@
         padding: 5% 3%;
 
         @include desktop {
-            padding: 50px 30px;
+            padding: 40px 30px 30px;
         }
 
         .hero-text {
             font-size: 24px;
             height: 50px;
-
+            padding-bottom: 20px;
 
             @include desktop {
                 @include font-w-s-h(200, 32px, 40px);
@@ -53,14 +53,14 @@
             }
 
             .hero-autocomplete {
-                // position: relative;
+                position: relative;
                 flex-grow: 2;
 
                 .hero-input {
                     font-size: 12px;
                     width: 100%;
 
-                    @include desktop {
+                    @include tablet {
                         padding: 2% 3%;
                         font-size: 20px;
                         line-height: 29px;

@@ -5,17 +5,18 @@ import styles from "../../styles/Homepage/Hero.module.scss";
 import search from "../../assets/Header/searchLogo.svg";
 import erase from "../../assets/General/x.svg";
 import axios from "axios";
-import HeroSearch from "./HeroSearch";
 
 const Hero: React.FC = () => {
   const [enteredInput, setEnteredInput] = useState("");
-  // const [allData, setAllData] = useState("");
   const [ops, setOps] = useState<string[]>([]);
 
   useEffect(() => {
     const getRes = async () => {
       const res = await axios.get("http://localhost:3000/api/v1/search");
-      const allOptions = [].concat(res.data.chefs).concat(res.data.dishes).concat(res.data.restaurants);
+      const allOptions = []
+        .concat(res.data.chefs)
+        .concat(res.data.dishes)
+        .concat(res.data.restaurants);
       const options: string[] = await allOptions.map((item: any) => {
         return item.name;
       });
@@ -36,12 +37,7 @@ const Hero: React.FC = () => {
     let divElement = document.createElement("div");
     divElement.setAttribute("className", "autocomplete-items");
     divElement.setAttribute("id", "autocomplete-items");
-    divElement.setAttribute(
-      "style",
-      `
-        position: static;
-      `
-    );
+    divElement.setAttribute("style", "position: absolute; display: none;");
     let autocompleteContainer = document.getElementById("option-items-wrapper");
     autocompleteContainer?.appendChild(divElement);
 
@@ -79,6 +75,19 @@ const Hero: React.FC = () => {
         <span className={styles["hero-text"]}>
           Epicure works with the top chef restaurants in Tel Aviv
         </span>
+        {/* <Autocomplete
+          disablePortal
+          id="hero-autocomplete"
+          options={ops}
+          sx={{ width: "98%", margin: "0 10px" }}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              InputProps={{ style: { fontSize: 12 } }}
+              label="Search for restaurant cuisine, chef"
+            />
+          )}
+        /> */}
         <div className={styles["hero-input-div"]}>
           <img className={styles["search-img"]} src={search} />
           <span

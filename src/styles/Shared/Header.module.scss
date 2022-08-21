@@ -96,13 +96,16 @@
 
         .search-input {
             flex-grow: 2;
-            animation: fade-in 1s 0s 1;
             
-
             &::-webkit-input-placeholder {
                 font-size: 18px;
             }
         }
+    }
+
+    .searchDiv {
+        transition: opacity 2s ;
+        opacity: 1;
     }
 
     .header-animation {
